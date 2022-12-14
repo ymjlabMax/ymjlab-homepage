@@ -1,0 +1,124 @@
+.mobile {
+    display: none;
+}
+
+a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(252, 219, 86);
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(252, 219, 86);
+    text-decoration: none;
+}
+
+body {
+    font-family: Segoe UI;
+    margin: 0;
+}
+
+.main-content {
+    width: 100%;
+    height: auto;
+}
+
+.btn-box {
+    text-align: center;
+}
+
+.btn-box > a > img {
+    height: 80px;
+    margin-bottom: 6px;
+}
+
+.btn-box-center {
+    position: relative;
+}
+
+.btn-box-right {
+    position: absolute;
+    top: 0;
+}
+
+/* footer class */
+.footer-container {
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(49, 49, 49, 1);
+    margin: -8px 0px -20px 0px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+.footer-box {
+    display: flex;
+    font-size: 14px;
+}
+
+.footer-box-left {
+    width: 65%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer-box-left .top {
+    margin-bottom: 30px;
+}
+
+.footer-box-right {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sns-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.btn-youtube {
+    margin-top: 20px;
+    position: absolute;
+    right: 80px;
+}
+
+@media screen and (max-width: 1304px) {
+    .btn-youtube {
+        position: inherit;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: inline;
+    }
+
+    .btn-youtube {
+        margin-top: 40px;
+    }
+}
