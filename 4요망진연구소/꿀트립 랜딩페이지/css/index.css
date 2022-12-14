@@ -1,5 +1,6 @@
-.mobile {
-    display: none;
+body {
+    font-family: Segoe UI;
+    margin: 0;
 }
 
 a:link {
@@ -22,11 +23,7 @@ a:active {
     text-decoration: none;
 }
 
-body {
-    font-family: Segoe UI;
-    margin: 0;
-}
-
+/* content */
 .main-content {
     width: 100%;
     height: auto;
@@ -39,6 +36,8 @@ body {
 .btn-box > a > img {
     height: 80px;
     margin-bottom: 6px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .btn-box-center {
@@ -48,6 +47,14 @@ body {
 .btn-box-right {
     position: absolute;
     top: 0;
+}
+
+.btn-youtube {
+    margin-top: 20px;
+    position: absolute;
+    right: 80px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 /* footer class */
@@ -97,10 +104,8 @@ li {
     margin-right: 10px;
 }
 
-.btn-youtube {
-    margin-top: 20px;
-    position: absolute;
-    right: 80px;
+.mobile {
+    display: none;
 }
 
 @media screen and (max-width: 1304px) {
@@ -120,5 +125,6 @@ li {
 
     .btn-youtube {
         margin-top: 40px;
+        margin-bottom: 40px;
     }
 }
