@@ -1,6 +1,6 @@
 /* 전체 적용 */
 body {
-    font-family: Segoe UI;
+    font-family: "Open Sans", sans-serif;
     margin: 0;
 }
 
@@ -25,6 +25,16 @@ a:active {
 }
 
 /* content */
+.header {
+    color: #ffffff;
+    background-color: #ffb127;
+    margin: -8px -10px -10px -10px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
 .main-content {
     width: 100%;
     height: auto;
@@ -71,8 +81,6 @@ ul {
     margin: 0;
 }
 
-
-
 li {
     display: inline-block;
 }
@@ -106,6 +114,22 @@ li {
     height: 70px;
     margin-right: 10px;
 }
+.moveTopBtn {
+    background-image: url(../images/kkultripImg/btn-up.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    position: fixed;
+    bottom: 13rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #eee;
+    border-radius: 50% 50% 50% 50%;
+}
+.moveTopBtn:hover {
+    cursor: pointer;
+}
 
 .mobile {
     display: none;
@@ -129,7 +153,6 @@ li {
 
     .mobile > ul {
         padding: 0px;
-
     }
 
     .footer-container {
@@ -143,5 +166,9 @@ li {
 
     .mobile > p {
         margin: 5px;
+    }
+
+    .moveTopBtn {
+        bottom: 16rem;
     }
 }
