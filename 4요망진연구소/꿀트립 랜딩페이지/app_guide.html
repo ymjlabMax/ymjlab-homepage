@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>꿀트립 이용 가이드 </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #414141;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        area {
+            background-color: red;
+        }
+
+        .show {
+            display: inherit
+        }
+
+        .hide {
+            display: none
+        }
+
+        img {
+            height: 100%;
+        }
+
+        .item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+</head>
+
+<script>
+    $(document).ready(function () {
+        $('img[usemap]').rwdImageMaps();    //반응형. 이미지 로드 후 맵 사이즈 조정
+    });
+    function click(page) {
+        document.getElementById('page' + (page - 1)).className = "hide";
+        document.getElementById('page' + page).className = "item show";
+        $('img[usemap]').rwdImageMaps();    //반응형. 이미지 로드 후 맵 사이즈 조정
+    }
+
+</script>
+
+<body>
+    <div style="position:absolute; display:flex; padding:16px; width:calc(100% - 32px); z-index: 1;">
+        <a><img src="./images/APPIMG/ic_delete_28.png" style='width:7vw; height:100%;'
+                href="javascript:APP.close(0);"></a>
+        <a style='display:flex;align-items:center; justify-content:right;  color:#bfbfbf; font-size:4vw; flex:1;'
+            href="javascript:APP.close(1);">다시 보지
+            않기 </a>
+    </div>
+
+    <div id="page1" class="item">
+        <img src="./images/APPIMG/ic_1_bg_guide.png" usemap="#image-map">
+        <map name="image-map">
+            <area target="_parent" alt="naver" title="다음페이지" href="javascript:click(2);" coords="316,1650,1087,1826"
+                shape="rect" />
+        </map>
+    </div>
+
+    <div id="page2" class="item hide">
+        <img src="./images/APPIMG/ic_2_bg_guide.png" usemap="#image-map2">
+        <map name="image-map2">
+            <area target="_parent" alt="a" title="다음페이지" href="javascript:click(3);" coords="718,2336,1437,2560"
+                shape="rect">
+        </map>
+    </div>
+
+    <div id="page3" class="item hide">
+        <img src="./images/APPIMG/ic_3_bg_guide.png" usemap="#image-map3">
+        <map name="image-map3">
+            <area target="_parent" alt="a" title="다음페이지" href="javascript:click(4);" coords="61,2271,1379,2497"
+                shape="rect">
+        </map>
+    </div>
+
+    <div id="page4" class="item hide">
+        <img src="./images/APPIMG/ic_4_bg_guide.png" usemap="#image-map4">
+        <map name="image-map4">
+            <area target="_parent" alt="a" title="다음페이지" href="javascript:click(5);" coords="735,1320,1027,1513"
+                shape="rect">
+        </map>
+    </div>
+
+    <div id="page5" class="item hide">
+        <img src="./images/APPIMG/ic_5_bg_guide.png" usemap="#image-map5">
+        <map name="image-map5">
+            <area target="_parent" alt="a" title="다음페이지" href="javascript:click(6);" coords="675,1445,1175,1516"
+                shape="rect">
+        </map>
+    </div>
+
+    <div id="page6" class="item hide">
+        <img src="./images/APPIMG/ic_6_bg_guide.png" usemap="#image-map6">
+        <map name="image-map6">
+            <area target="_parent" alt="a" title="다음페이지" href="javascript:click(7);" coords="719,2336,1439,2557"
+                shape="rect">
+        </map>
+    </div>
+
+    <div id="page7" class="item hide">
+        <img src="./images/APPIMG/ic_7_bg_guide.png" usemap="#image-map7">
+        <map name="image-map7">
+            <area target="_parent" alt="a" title="다음페이지" href="javascript:click(8);" coords="156,1366,1282,1533"
+                shape="rect">
+        </map>
+    </div>
+
+    <div id="page8" class="item hide">
+        <img src="./images/APPIMG/ic_8_bg_guide.png" usemap="#image-map8">
+        <map name="image-map8">
+            <area target="_parent" alt="a" title="다음페이지" href="javascript:APP.close(0);" coords="64,2231,1375,2458"
+                shape="rect">
+        </map>
+    </div>
+
+</body>
