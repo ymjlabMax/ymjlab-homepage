@@ -6,6 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.4",
+    "@mui/styles": "^5.11.2",
     "clax": "^0.0.6",
     "clsx": "^1.2.1",
     "next": "latest",

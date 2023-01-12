@@ -4,6 +4,8 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
+import Button from "@mui/material/Button";
+
 const name = "Max";
 export const siteTitle = "Next.js Sample Website";
 
@@ -47,6 +49,9 @@ export default function Layout({ children, home }) {
                     <Link href="/">← Back to home</Link>
                 </div>
             )}
+
+            <Button variant="contained">Contained</Button>
+            <Button variant="outlined">Outlined</Button>
         </div>
     );
 }
