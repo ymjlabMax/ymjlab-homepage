@@ -9,27 +9,27 @@ const Summary = () => (
         <div className="left-box">
             <p>
                 <span>회 사 명</span>
-                {`&nbsp;&nbsp;&nbsp;`}주식회사 요망진 연구소
+                &nbsp;&nbsp;&nbsp;주식회사 요망진 연구소
             </p>
             <p>
                 <span>대표 이사</span>
-                {`&nbsp;&nbsp;&nbsp;`}최성기
+                &nbsp;&nbsp;&nbsp;최성기
             </p>
             <p>
                 <span>주요서비스</span>
-                {`&nbsp;&nbsp;&nbsp;`}관광 소비데이터 기반 사후정산 서비스 {`"꿀트립", 에이전시 서비스 "UMH"`} 등
+                &nbsp;&nbsp;&nbsp;관광 소비데이터 기반 사후정산 서비스 {`"꿀트립", 에이전시 서비스 "UMH"`} 등
             </p>
             <p>
                 <span>주요 사업</span>
-                {`&nbsp;&nbsp;&nbsp;`}서비스(꿀트립, 메타버스 에이전시 마케팅)및 콘텐츠 개발
+                &nbsp;&nbsp;&nbsp;서비스(꿀트립, 메타버스 에이전시 마케팅)및 콘텐츠 개발
             </p>
             <p>
                 <span>설 립 일</span>
-                {`&nbsp;&nbsp;&nbsp;`}2020년 12월 23일
+                &nbsp;&nbsp;&nbsp;2020년 12월 23일
             </p>
             <p>
                 <span>직 원 수</span>
-                {`&nbsp;&nbsp;&nbsp;`}10명 (2022.11 기준)
+                &nbsp;&nbsp;&nbsp;10명 (2022.11 기준)
             </p>
         </div>
         <div className="right-box">

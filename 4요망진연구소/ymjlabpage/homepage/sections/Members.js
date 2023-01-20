@@ -12,7 +12,7 @@ const Members = () => (
         <div className="title">요망진연구소 멤버를 소개합니다.</div>
         <div className="grid grid-cols-5 gap-5">
             {MemberInfo.map((el) => (
-                <img key={el.name} src={el.imgUrl} alt={el.name} />
+                <Image key={el.name} src={el.imgUrl} alt={el.name} width={140} height={140} />
             ))}
         </div>
 
