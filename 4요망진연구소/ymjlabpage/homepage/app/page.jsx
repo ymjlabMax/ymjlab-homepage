@@ -1,4 +1,4 @@
-import { Mainpage } from "@/components";
+import { Mainpage } from "@/sections";
 
 export default function Page() {
     return (
