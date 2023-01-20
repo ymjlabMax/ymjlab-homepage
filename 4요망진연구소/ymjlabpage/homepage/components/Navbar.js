@@ -29,7 +29,7 @@ const Navbar = () => (
                 <Link href="/kkultrip">꿀트립 서비스</Link>
             </li>
             <li>
-                <Link href="/kkultrip">메타버스 서비스</Link>
+                <Link href="/metaverse">메타버스 서비스</Link>
             </li>
             <li>위치</li>
             <li>Contact</li>

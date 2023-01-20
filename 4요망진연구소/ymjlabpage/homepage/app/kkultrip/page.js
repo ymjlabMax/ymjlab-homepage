@@ -1,3 +1,3 @@
 export default function Page() {
-    return <h1>Hello, Next.js!2222</h1>;
+    return <h1>꿀트립 페이지를 꾸며주세요.</h1>;
 }

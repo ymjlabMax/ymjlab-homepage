@@ -73,3 +73,70 @@ export const socials = [
         url: "/images/facebook.svg",
     },
 ];
+
+export const MemberInfo = [
+    {
+        No: 1,
+        imgUrl: "/images/members/Boom_img.svg",
+        name: "Boom",
+        position: "대표이사",
+        email: "boom@ymjlab.com",
+    },
+    {
+        No: 2,
+        imgUrl: "/images/members/Sue_img.svg",
+        name: "Eddie",
+        position: "제휴사업총괄",
+        email: "eddie@ymjlab.com",
+    },
+    {
+        No: 3,
+        imgUrl: "/images/members/Sue_img.svg",
+        name: "Elliott",
+        position: "COO",
+        email: "cj@ymjlab.com",
+    },
+    {
+        No: 4,
+        imgUrl: "/images/members/Sue_img.svg",
+        name: "Jason",
+        position: "개발팀장",
+        email: "jason@ymjlab.com",
+    },
+    {
+        No: 5,
+        imgUrl: "/images/members/Sue_img.svg",
+        name: "Zest",
+        position: "책임",
+        email: "zest@ymjlab.com",
+    },
+    {
+        No: 6,
+        imgUrl: "/images/members/Sue_img.svg",
+        name: "Lina",
+        position: "경영지원",
+        email: "iihie@ymjlab.com",
+    },
+    {
+        No: 7,
+        imgUrl: "/images/members/Sue_img.svg",
+        name: "Max",
+        position: "개발자",
+        email: "sud665@ymjlab.com",
+    },
+    {
+        No: 8,
+        imgUrl: "/images/members/Sue_img.svg",
+        name: "Alfie",
+        position: "개발자",
+        email: "wonjink96@ymjlab.com",
+    },
+    {
+        No: 9,
+        imgUrl: "/images/members/Sue_img.svg",
+        name: "Mando",
+        position: "개발자",
+        email: "bestdeveloper.jo@ymjlab.com",
+    },
+    { No: 10, imgUrl: "/images/members/Sue_img.svg", name: "Sue", position: "디자이너", email: "sue@ymjlab.com" },
+];

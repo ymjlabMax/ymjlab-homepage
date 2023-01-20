@@ -8,22 +8,28 @@ const Summary = () => (
     <section>
         <div className="left-box">
             <p>
-                <span>회 사 명</span> 주식회사 요망진 연구소
+                <span>회 사 명</span>
+                {`&nbsp;&nbsp;&nbsp;`}주식회사 요망진 연구소
             </p>
             <p>
-                <span>대 표 이 사 </span> 최성기
+                <span>대표 이사</span>
+                {`&nbsp;&nbsp;&nbsp;`}최성기
             </p>
             <p>
-                <span>주요서비스</span> 관광 소비데이터 기반 사후정산 서비스 "꿀트립", 에이전시 서비스 "UMH" 등
+                <span>주요서비스</span>
+                {`&nbsp;&nbsp;&nbsp;`}관광 소비데이터 기반 사후정산 서비스 {`"꿀트립", 에이전시 서비스 "UMH"`} 등
             </p>
             <p>
-                <span>주 요 사 업</span> 서비스(꿀트립, 메타버스 에이전시 마케팅)및 콘텐츠 개발
+                <span>주요 사업</span>
+                {`&nbsp;&nbsp;&nbsp;`}서비스(꿀트립, 메타버스 에이전시 마케팅)및 콘텐츠 개발
             </p>
             <p>
-                <span>설 립 일</span> 2020년 12월 23일
+                <span>설 립 일</span>
+                {`&nbsp;&nbsp;&nbsp;`}2020년 12월 23일
             </p>
             <p>
-                <span>직 원 수</span> 10녕 (2022.11 기준)
+                <span>직 원 수</span>
+                {`&nbsp;&nbsp;&nbsp;`}10명 (2022.11 기준)
             </p>
         </div>
         <div className="right-box">
