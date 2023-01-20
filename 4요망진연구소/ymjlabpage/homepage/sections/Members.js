@@ -10,9 +10,17 @@ import { MemberInfo } from "../constants";
 const Members = () => (
     <section>
         <div className="title">요망진연구소 멤버를 소개합니다.</div>
-        <div className="grid grid-cols-5 gap-5">
-            {MemberInfo.map((el) => (
-                <Image key={el.name} src={el.imgUrl} alt={el.name} width={140} height={140} />
+        <div className="container">
+            {MemberInfo.map((el, index) => (
+                <div key={index}>
+                    <Image key={el.name} src={el.imgUrl} alt={el.name} width={140} height={140} />
+                    <div className="content">
+                        <p>
+                            <span className="bold">{el.name}</span> {el.position}
+                        </p>
+                        <p className="small">{el.email}</p>
+                    </div>
+                </div>
             ))}
         </div>
 
@@ -36,14 +44,13 @@ const Members = () => (
                 /* f_500 */
                 color: #181818;
                 text-align: center;
+                margin-bottom: 70px;
             }
             .container {
                 display: grid;
-                gird-template-colums: 140px 140px 140px 140px 140px;
-                gird-template-row: 202px 202px;
-                column-gap: 30px;
-                row-gap: 20px;
-                margin-top: 100px;
+                grid-template-columns: repeat(5, 140px);
+                grid-template-rows: repeat(2, 202px);
+                gap: 70px 100px;
             }
 
             .item {
@@ -53,6 +60,18 @@ const Members = () => (
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+
+            .content {
+                margin-top: 8px;
+            }
+
+            .bold {
+                font-weight: 700;
+            }
+
+            .small {
+                color: #767676;
             }
 
             @media only screen and (max-width: 600px) {

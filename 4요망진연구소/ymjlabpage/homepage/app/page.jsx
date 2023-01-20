@@ -1,4 +1,4 @@
-import { Mainpage, Companypage, Members } from "@/sections";
+import { Mainpage, Companypage, Members, Servicepage } from "@/sections";
 
 export default function Page() {
     return (
@@ -6,6 +6,7 @@ export default function Page() {
             <Mainpage />
             <Companypage />
             <Members />
+            <Servicepage />
         </div>
     );
 }
