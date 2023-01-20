@@ -22,7 +22,7 @@ const Mainpage = () => (
         </div>
         <style jsx>{`
             section {
-                width: 100vw;
+                width: 100%;
                 height: 768px;
                 display: flex;
                 justify-content: center;
@@ -35,7 +35,7 @@ const Mainpage = () => (
                 height: 100%;
             }
             .right-box {
-                padding: 100px 100px 100px 100px;
+                padding: 100px 140px 100px 100px;
                 display: flex;
                 justify-content: center;
                 align-items: center;

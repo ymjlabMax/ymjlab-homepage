@@ -65,12 +65,12 @@ export const insights = [
 
 export const socials = [
     {
-        name: "instagram",
-        url: "/images/instagram.svg",
+        name: "youtube",
+        url: "/images/logo_youtube.svg",
     },
     {
         name: "facebook",
-        url: "/images/facebook.svg",
+        url: "/images/logo_facebook.svg",
     },
 ];
 

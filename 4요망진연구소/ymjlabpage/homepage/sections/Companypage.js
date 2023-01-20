@@ -30,7 +30,7 @@ const Companypage = () => (
         <style jsx>{`
             section {
                 margin-top: 100px;
-                width: 100vw;
+                width: 100%;
                 /* height: 768px; */
                 display: flex;
                 justify-content: center;

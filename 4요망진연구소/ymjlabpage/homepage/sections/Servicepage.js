@@ -15,14 +15,18 @@ const Servicepage = () => (
             <div className="right">
                 <h3>꿀트립 서비스</h3>
                 <p>관광데이터 기반 사후정산 솔루션</p>
-                <button>꿀트립 알아보기</button>
+                <Link href="/kkultrip">
+                    <button>꿀트립 알아보기</button>
+                </Link>
             </div>
         </div>
         <div className="second-box">
             <div className="left">
                 <h3>메타버스 에이전시 서비스</h3>
                 <p>공공 및 기업을 위한 메타버스 마케팅 솔루션</p>
-                <button>메타버스 알아보기</button>
+                <Link href="/metaverse">
+                    <button>메타버스 알아보기</button>
+                </Link>
             </div>
             <div className="right">
                 <Image src="/images/metaverse_img.svg" width={500} height={700} alt="메타버스 이미지" />
@@ -31,7 +35,7 @@ const Servicepage = () => (
         <style jsx>{`
             section {
                 margin-top: 150px;
-                width: 100vw;
+                width: 100%;
                 /* height: 768px; */
                 display: flex;
                 justify-content: center;

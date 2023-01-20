@@ -8,12 +8,12 @@ const Summary = () => (
     <section>
         <div className="left-box">
             <p>
-                <span>회 사 명</span>
-                &nbsp;&nbsp;&nbsp;주식회사 요망진 연구소
+                <span>주소</span>
+                &nbsp;&nbsp;&nbsp;제주시 신산로 82, B103호(제주콘텐츠코리아랩 지하)
             </p>
             <p>
-                <span>대표 이사</span>
-                &nbsp;&nbsp;&nbsp;최성기
+                <span>팩스</span>
+                &nbsp;&nbsp;&nbsp;
             </p>
             <p>
                 <span>주요서비스</span>
@@ -45,17 +45,14 @@ const Summary = () => (
                 font-family: "Spoqa Han Sans Neo";
                 font-style: normal;
                 font-size: 16px;
-
-                padding: 0 50px 0 50px;
+                padding: 0 50px 0 100px;
             }
             .left-box {
                 display: flex;
                 flex-direction: column;
-                /* justify-content: center;
-                align-items: center; */
+                justify-content: center;
                 width: 60%;
                 height: 100%;
-                padding: 30px 0 0 200px;
                 line-height: 20px;
             }
             .right-box {
@@ -64,7 +61,6 @@ const Summary = () => (
                 align-items: center;
                 width: 40%;
                 height: 100%;
-                padding-right: 100px;
             }
             span {
                 font-weight: 700;

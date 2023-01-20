@@ -11,9 +11,11 @@ export default function RootLayout({ children }) {
       */}
             <head />
             <body>
-                <Navbar />
-                {children}
-                <Footer />
+                <div className="wrap">
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </div>
             </body>
         </html>
     );
