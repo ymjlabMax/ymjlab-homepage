@@ -25,14 +25,14 @@ const Navbar = () => (
             <li>
                 <Link href="/">회사소개</Link>
             </li>
-            <li>위치</li>
-            <li>Contact</li>
             <li>
                 <Link href="/kkultrip">꿀트립 서비스</Link>
             </li>
             <li>
                 <Link href="/kkultrip">메타버스 서비스</Link>
             </li>
+            <li>위치</li>
+            <li>Contact</li>
         </ul>
         <style jsx>{`
             nav {
@@ -48,6 +48,11 @@ const Navbar = () => (
                 top: 0;
                 background: #ffffffc1;
                 z-index: 1;
+                font-family: "Spoqa Han Sans Neo";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 19px;
             }
             li {
                 float: left;
