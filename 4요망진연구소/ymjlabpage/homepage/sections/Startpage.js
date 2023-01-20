@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "../styles";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,7 +11,7 @@ const Mainpage = () => (
             <content>
                 <h1>요망진 연구소는</h1>
                 <h1>
-                    여행에 <span className="main_color">짐이 되지 않는 여행편의 서비스</span> 를{" "}
+                    여행에 <span className="main-color">짐이 되지 않는 여행편의 서비스</span> 를{" "}
                 </h1>
                 <h1>제공하기 위해 노력하겠습니다. </h1>
             </content>
@@ -52,7 +51,7 @@ const Mainpage = () => (
                 letter-spacing: -0.015em;
                 color: #232323;
             }
-            .main_color {
+            .main-color {
                 color: #ff8f0b;
             }
 

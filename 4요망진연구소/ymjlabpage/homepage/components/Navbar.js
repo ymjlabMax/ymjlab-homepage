@@ -19,7 +19,7 @@ const Navbar = () => (
     // </motion.nav>
     <nav>
         <Link href="/">
-            <img className="logo_img" src="/images/logo_ymj.svg" alt="logo" width="100" height="50" />
+            <img className="logo-img" src="/images/logo_ymj.svg" alt="logo" width="100" height="50" />
         </Link>
         <ul>
             <li>
@@ -58,7 +58,7 @@ const Navbar = () => (
                 float: left;
                 margin-left: 20px;
             }
-            .logo_img {
+            .logo-img {
                 margin-left: 30px;
                 opacity: 1;
             }

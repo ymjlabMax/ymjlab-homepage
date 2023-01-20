@@ -1,4 +1,4 @@
 import Mainpage from "../sections/Startpage";
-import About from "../sections/About";
+import Companypage from "./Companypage";
 
-export { About, Mainpage };
+export { Companypage, Mainpage };
