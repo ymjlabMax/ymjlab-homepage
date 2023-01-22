@@ -21,7 +21,7 @@ const Servicepage = () => (
             </div>
         </div>
         <div className="second-box">
-            <div className="left">
+            <div className="meta-left">
                 <h3>메타버스 에이전시 서비스</h3>
                 <p>공공 및 기업을 위한 메타버스 마케팅 솔루션</p>
                 <Link href="/metaverse">
@@ -36,7 +36,7 @@ const Servicepage = () => (
             section {
                 margin-top: 150px;
                 width: 100%;
-                /* height: 768px; */
+                height: 1536px;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -84,6 +84,7 @@ const Servicepage = () => (
                 flex-direction: column;
                 /* align-items: center; */
                 justify-content: center;
+                margin-left: 50px;
             }
 
             button {
@@ -111,6 +112,12 @@ const Servicepage = () => (
 
             .main_color {
                 color: #ff8f0b;
+            }
+
+            .meta-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
             }
 
             @media only screen and (max-width: 600px) {

@@ -1,9 +1,10 @@
-import { Mainpage, Companypage, Members, Servicepage, Locationpage } from "@/sections";
+
+import { Startpage, Companypage, Members, Servicepage, Locationpage } from "@/sections";
 
 export default function Page() {
     return (
         <div>
-            <Mainpage />
+            <Startpage />
             <Companypage />
             <Members />
             <Servicepage />

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { socials } from "../constants";
-
+import Image from "next/image";
 import styles from "../styles";
 import { footerVariants } from "../utils/motion";
 
@@ -57,14 +57,15 @@ const Footer = () => (
         <div className="right">
             <div className="logo">
                 {socials.map((social, index) => (
-                    <img key={index} src={social.url} alt={social.name} className="logo-margin" />
+                    <div key={index} className="logo-margin">
+                        <Image src={social.url} alt={social.name} width={50} height={50} />
+                    </div>
                 ))}
             </div>
         </div>
 
         <style jsx>{`
             footer {
-                margin-top: 100px;
                 width: 100%;
                 height: 250px;
                 background: #f2f2f2;

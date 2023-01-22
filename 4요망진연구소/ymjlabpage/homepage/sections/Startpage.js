@@ -5,7 +5,7 @@ import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const Mainpage = () => (
+const Startpage = () => (
     <section>
         <div className="left-box">
             <content>
@@ -18,7 +18,7 @@ const Mainpage = () => (
         </div>
         <div className="right-box">
             {/* <img src="/images/main_image.svg" alt="메인이미지" /> */}
-            <Image src="/images/main_image.svg" alt="메인이미지" width={500} height={500} />
+            <Image src="/images/main_image.svg" alt="메인이미지" width={500} height={500} priority />
         </div>
         <style jsx>{`
             section {
@@ -61,4 +61,4 @@ const Mainpage = () => (
     </section>
 );
 
-export default Mainpage;
+export default Startpage;

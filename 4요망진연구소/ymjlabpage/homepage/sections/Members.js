@@ -17,7 +17,7 @@ const Members = () => (
                         <Image key={el.name} src={el.imgUrl} alt={el.name} width={140} height={140} />
                         <div className="content">
                             <p>
-                                <span className="bold">{el.name}</span> {el.position}
+                                <span className="bold">{el.name}</span> | {el.position}
                             </p>
                             <p className="small">{el.email}</p>
                         </div>
@@ -30,13 +30,11 @@ const Members = () => (
             section {
                 margin-top: 100px;
                 width: 100%;
-                /* height: 768px; */
+                height: 768px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                font-family: "Spoqa Han Sans Neo";
-                font-style: normal;
             }
             .title {
                 font-weight: 700;
@@ -54,7 +52,7 @@ const Members = () => (
                 display: grid;
                 grid-template-columns: repeat(5, 140px);
                 grid-template-rows: repeat(2, 202px);
-                gap: 70px 100px;
+                gap: 70px 60px;
             }
 
             .item {
