@@ -16,20 +16,24 @@ const Mainpage = () => {
 
     return (
         <section>
-            <div
-                style={{
-                    backgroundImage: `url(${Metaverse.src})`,
-                    width: "100%",
-                    height: "768px",
-                    backgroundRepeat: "no-repeat",
-                    zIndex: -1,
-                    backgroundSize: "cover",
-                }}
-            >
-                <div className="title">
-                    <h1>메타버스</h1>
-                </div>
+            <div className={styles.bgWrap}>
+                <Image
+                    alt="Mountains"
+                    src={Metaverse}
+                    placeholder="blur"
+                    quality={100}
+                    fill
+                    sizes="100%"
+                    style={{
+                        objectFit: "cover",
+                    }}
+                />
             </div>
+            <div className="title">
+                <h1>메타버스 에이전시 서비스</h1>
+                <h2>공공 및 기업을 위한 메타버스 마케팅 솔루션 </h2>
+            </div>
+
             <style jsx>{`
                 section {
                     width: 100%;
@@ -37,23 +41,36 @@ const Mainpage = () => {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    font-family: "Spoqa Han Sans Neo";
+                    font-style: normal;
                 }
 
                 h1 {
-                    font-family: "Spoqa Han Sans Neo";
-                    font-style: normal;
                     font-weight: 700;
                     font-size: 32px;
                     line-height: 40px;
                     letter-spacing: -0.015em;
                     color: #ffffff;
                 }
+                h2 {
+                    font-size: 32px;
+                    line-height: 40px;
+                    color: #ffffff;
+                }
+
+                .bg-img {
+                    object-fit: cover;
+                    object-position: "center";
+                }
 
                 .title {
-                    width: 100vw;
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    align-items: center;
                 }
 
                 @media only screen and (max-width: 600px) {
@@ -64,3 +81,10 @@ const Mainpage = () => {
 };
 
 export default Mainpage;
+
+{
+    /* <div className="title">
+                    <h1>메타버스 에이전시 서비스</h1>
+                    <h2>공공 및 기업을 위한 메타버스 마케팅 솔루션 </h2>
+                </div> */
+}

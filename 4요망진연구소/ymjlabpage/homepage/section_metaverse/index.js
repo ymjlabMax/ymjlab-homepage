@@ -1,3 +1,4 @@
 import Mainpage from "./Mainpage";
+import Summary from "./Summary";
 
-export { Mainpage };
+export { Mainpage, Summary };

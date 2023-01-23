@@ -35,7 +35,6 @@ const Startpage = () => (
                 height: 100%;
             }
             .right-box {
-                padding: 100px 140px 100px 100px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
