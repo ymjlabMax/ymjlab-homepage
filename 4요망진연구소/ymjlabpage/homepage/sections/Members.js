@@ -13,7 +13,7 @@ const Members = () => (
         <div>
             <div className="container">
                 {MemberInfo.map((el, index) => (
-                    <div key={index}>
+                    <motion.div key={index} whileHover={{ scale: 1.2 }}>
                         <Image key={el.name} src={el.imgUrl} alt={el.name} width={140} height={140} />
                         <div className="content">
                             <p>
@@ -21,7 +21,7 @@ const Members = () => (
                             </p>
                             <p className="small">{el.email}</p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

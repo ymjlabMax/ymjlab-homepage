@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { navVariants } from "../utils/motion";
+import { slideIn, staggerContainer } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -17,9 +17,17 @@ const Startpage = () => (
             </content>
         </div>
         <div className="right-box">
-            {/* <img src="/images/main_image.svg" alt="메인이미지" /> */}
-            <Image src="/images/main_image.svg" alt="메인이미지" width={500} height={500} priority />
+            <motion.div
+                animate={{
+                    scale: [4, 3, 3, 2, 1],
+                    rotate: [90, 180, 270, 360, 0],
+                    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                }}
+            >
+                <Image src="/images/main_image.svg" alt="메인이미지" width={500} height={500} priority quality={100} />
+            </motion.div>
         </div>
+
         <style jsx>{`
             section {
                 width: 100%;

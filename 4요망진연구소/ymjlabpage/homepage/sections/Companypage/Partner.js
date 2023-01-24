@@ -9,9 +9,11 @@ import { PartnerInfo } from "../../constants";
 const Partner = () => (
     <section>
         {PartnerInfo.map((el, index) => (
-            <div className="aff-box" key={index}>
-                <Image src={el.url} alt={el.name} width={150} height={150} />
-            </div>
+            <motion.div key={index} whileHover={{ scale: 1.4 }}>
+                <div className="aff-box">
+                    <Image src={el.url} alt={el.name} width={150} height={150} />
+                </div>
+            </motion.div>
         ))}
         <style jsx>{`
             section {
@@ -28,6 +30,7 @@ const Partner = () => (
                 display: flex;
                 justify-content: center;
                 margin-right: 50px;
+                margin-left: 50px;
             }
 
             @media only screen and (max-width: 600px) {

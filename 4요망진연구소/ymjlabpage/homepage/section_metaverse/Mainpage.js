@@ -8,12 +8,6 @@ import styles from "./Mainpage.module.css";
 import Metaverse from "../public/images/metaverse_bg.jpg";
 
 const Mainpage = () => {
-    const styling = {
-        backgroundImage: `url('${Metaverse}')`,
-        width: "100%",
-        height: "100%",
-    };
-
     return (
         <section>
             <div className={styles.bgWrap}>

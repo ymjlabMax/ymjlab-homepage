@@ -1,37 +1,52 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { navVariants } from "../utils/motion";
+import { slideIn, staggerContainer, textVariant } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 
 const Servicepage = () => (
     <section>
-        <div className="title">요망진연구소의 서비스를 소개합니다.</div>
-        <div className="first-box">
-            <div className="left">
-                <Image src="/images/kkultrip_img.svg" width={500} height={500} alt="꿀트립 이미지" />
+        <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.25 }}
+            //viewport is an framer arg used when we want it to render everytime we scroll through it. if once set to true then
+            //it'll only animate at frst scroll. Checkk framer documentation for me.
+        >
+            <motion.h1 variants={textVariant(0.5)}>
+                <div className="title">요망진연구소의 서비스를 소개합니다.</div>
+            </motion.h1>
+            <div className="first-box">
+                <motion.div variants={slideIn("left", "tween", 0.1, 1)}>
+                    <div className="left">
+                        <Image src="/images/kkultrip_img.svg" width={500} height={500} alt="꿀트립 이미지" />
+                    </div>
+                </motion.div>
+                <div className="right">
+                    <motion.div variants={slideIn("right", "tween", 0.1, 1)}>
+                        <h3>꿀트립 서비스</h3>
+                        <p>관광데이터 기반 사후정산 솔루션</p>
+                        <Link href="/kkultrip">
+                            <button>꿀트립 알아보기</button>
+                        </Link>
+                    </motion.div>
+                </div>
             </div>
-            <div className="right">
-                <h3>꿀트립 서비스</h3>
-                <p>관광데이터 기반 사후정산 솔루션</p>
-                <Link href="/kkultrip">
-                    <button>꿀트립 알아보기</button>
-                </Link>
+            <div className="second-box">
+                <div className="meta-left">
+                    <h3>메타버스 에이전시 서비스</h3>
+                    <p>공공 및 기업을 위한 메타버스 마케팅 솔루션</p>
+                    <Link href="/metaverse">
+                        <button>메타버스 알아보기</button>
+                    </Link>
+                </div>
+                <div className="right">
+                    <Image src="/images/metaverse_img.svg" width={500} height={700} alt="메타버스 이미지" />
+                </div>
             </div>
-        </div>
-        <div className="second-box">
-            <div className="meta-left">
-                <h3>메타버스 에이전시 서비스</h3>
-                <p>공공 및 기업을 위한 메타버스 마케팅 솔루션</p>
-                <Link href="/metaverse">
-                    <button>메타버스 알아보기</button>
-                </Link>
-            </div>
-            <div className="right">
-                <Image src="/images/metaverse_img.svg" width={500} height={700} alt="메타버스 이미지" />
-            </div>
-        </div>
+        </motion.div>
         <style jsx>{`
             section {
                 margin-top: 150px;

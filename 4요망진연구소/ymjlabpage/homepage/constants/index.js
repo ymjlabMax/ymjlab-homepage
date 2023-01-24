@@ -90,3 +90,9 @@ export const PartnerInfo = [
     { no: 4, name: "맘모식스", url: "images/Partner/맘모식스.svg" },
     { no: 4, name: "디캐릭", url: "images/Partner/dcarrick.svg" },
 ];
+
+export const MetaverseInfo = [
+    { no: 1, name: "메타버스 첫번째 이미지", content: "경쟁력 확보 및 차별화를 위한 Asset 재사용 솔루션 개발", url: "images/metaverse/Rectangle.svg" },
+    { no: 2, name: "메타버스 두번째 이미지", content: "경쟁력 확보 및 차별화를 위한 Asset 재사용 솔루션 개발", url: "images/metaverse/Rectangle.svg" },
+    { no: 3, name: "메타버스 세번째 이미지", content: "경쟁력 확보 및 차별화를 위한 Asset 재사용 솔루션 개발", url: "images/metaverse/Rectangle.svg" },
+];

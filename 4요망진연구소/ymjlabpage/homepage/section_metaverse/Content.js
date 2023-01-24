@@ -4,32 +4,30 @@ import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
 
-export default function Summary() {
+export default function Content() {
     return (
         <section>
-            <div className="left-box">
-                <h1>Unified Metaverse Hub One Source </h1>
-                <p>
-                    메타버스 시대에 공공 및 기업이 메타버스를 활용한 새로운 비즈니스 영역으로 효과적으로 진입할 수 있도록 UMH 기반 메타버스 마케팅 솔루션을
-                    제공합니다.
-                </p>
-                <div className="btn-container">
-                    <div className="btn-box">Asset</div>
-                    <div className="btn-box">world</div>
-                </div>
+            <div className="title">
+                <h1>
+                    국내외 유명 메타버스 플랫폼에 대한 철저한 분석과 개발툴 분석, Asset 개발 등을 통해 공공 및 기업의 디지털 마케팅 신시장 개척을 위한 메타버스
+                    공간 개발은 물론 규격형 메타버스 렌탈을 통한 빠르고 저렴한 메타버스 보급, 메타버스를 활용한 홍보·마케팅 솔루션을 제공하여 성공적인 메타버스
+                    시대로의 진입을 돕습니다.
+                </h1>
             </div>
-            <div className="right-box">
-                <div className="map-box"></div>
+            <div className="content-wrap">
+                <div className="content-box">
+                    <h3></h3>
+                    <div></div>
+                </div>
             </div>
             <style jsx>{`
                 section {
-                    margin-bottom: 100px;
+                    padding: 60px 255px 60px 255px;
                     width: 100%;
                     height: 768px;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    padding: 190px 255px 150px 255px;
+                    background: #4d3e59;
                 }
                 .left-box {
                     /* display: flex;
@@ -47,6 +45,9 @@ export default function Summary() {
                     width: 50%;
                     height: 100%;
                 }
+                .title {
+                    padding: 0 100px 0 100px;
+                }
 
                 span {
                     font-weight: 700;
@@ -58,27 +59,26 @@ export default function Summary() {
                 }
 
                 h1 {
-                    font-weight: 700;
-                    font-size: 32px;
+                    font-weight: 400;
+                    font-size: 16px;
                     line-height: 40px;
                     letter-spacing: -0.015em;
-                    color: #181818;
-                    margin-bottom: 10px;
+                    color: #ffffff;
                 }
 
-                .btn-container {
+                .content-wrap {
                     display: flex;
-                    margin-top: 54px;
+                    margin-top: 120px;
+                }
+
+                .content-box {
+                    margin-right: 15px;
+                    background: #ffffff;
+                    width: 300px;
+                    height: 300px;
                 }
 
                 .btn-box {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 200px;
-                    height: 105px;
-                    border: 1px solid #181818;
-                    margin-right: 10px;
                 }
 
                 @media only screen and (max-width: 600px) {

@@ -9,9 +9,11 @@ import { AffInfo } from "../../constants";
 const Affiliation = () => (
     <section>
         {AffInfo.map((el, index) => (
-            <div className="aff-box" key={index}>
-                <Image src={el.url} alt={el.name} width={200} height={200} />
-            </div>
+            <motion.div key={index} whileHover={{ scale: 1.4 }}>
+                <div className="aff-box">
+                    <Image src={el.url} alt={el.name} width={200} height={200} />
+                </div>
+            </motion.div>
         ))}
         <style jsx>{`
             section {
@@ -27,7 +29,8 @@ const Affiliation = () => (
             .aff-box {
                 display: flex;
                 justify-content: center;
-                margin-right: 50px;
+                margin-right: 40px;
+                margin-left: 40px;
             }
 
             @media only screen and (max-width: 600px) {

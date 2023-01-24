@@ -2,10 +2,7 @@ import Link from "next/link";
 import "./globals.css";
 import { Navbar, Footer } from "../components";
 
-
 export default function RootLayout({ children }) {
-    
-
     return (
         <html lang="en">
             {/*
@@ -20,7 +17,6 @@ export default function RootLayout({ children }) {
                     <Footer />
                 </div>
             </body>
-           
         </html>
     );
 }
