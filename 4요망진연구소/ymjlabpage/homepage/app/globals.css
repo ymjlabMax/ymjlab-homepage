@@ -115,3 +115,19 @@ a {
     flex-direction: column;
     align-items: center;
 }
+
+.bgwrap {
+    position: absolute;
+    /* overflow: hidden; */
+    top: 0;
+    right: 0;
+    z-index: -3;
+    /* visibility: hidden; */
+}
+.circle {
+    border-radius: 50%;
+    border: 400px solid transparent;
+    background-image: linear-gradient(#fff, #f1f1f1), linear-gradient(to right, #01c9ca 0%, #3886ff 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}

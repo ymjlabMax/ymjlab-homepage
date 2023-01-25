@@ -56,6 +56,7 @@ const Servicepage = () => (
                 flex-direction: column;
                 font-family: "Spoqa Han Sans Neo";
                 font-style: normal;
+                overflow: hidden;
             }
             .title {
                 font-weight: 700;
