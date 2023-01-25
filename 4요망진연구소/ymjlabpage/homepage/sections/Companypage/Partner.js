@@ -29,8 +29,8 @@ const Partner = () => (
             .aff-box {
                 display: flex;
                 justify-content: center;
-                margin-right: 50px;
-                margin-left: 50px;
+                margin-right: 30px;
+                margin-left: 30px;
             }
 
             @media only screen and (max-width: 600px) {
