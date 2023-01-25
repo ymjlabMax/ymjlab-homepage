@@ -16,6 +16,9 @@ export default function RootLayout({ children }) {
             <head />
             <body>
                 <div className="wrap">
+                    <div className="bgwrap">
+                        <div className="circle"></div>
+                    </div>
                     <Navbar />
                     {children}
                     <Footer />
