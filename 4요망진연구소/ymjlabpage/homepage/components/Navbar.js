@@ -6,6 +6,7 @@ import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import AnchorLink from "react-anchor-link-smooth-scroll-v2";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 
@@ -29,12 +30,11 @@ export default function Navbar() {
     };
 
     const pathname = usePathname();
-    const segment = useSelectedLayoutSegment();
 
     return (
         <nav>
             <Link href="/">
-                <img className="logo-img" src="/images/logo_ymj.svg" alt="logo" width="100" height="50" />
+                <Image className="logo-img" src="/images/logo_ymj.svg" alt="logo" width={100} height={50} />
             </Link>
             <ul>
                 {pathname === "/" ? (

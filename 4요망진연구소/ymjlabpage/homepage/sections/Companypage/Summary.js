@@ -13,7 +13,7 @@ const Summary = () => (
             </p>
             <p>
                 <span>팩스</span>
-                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;0303-3440-1223
             </p>
             <p>
                 <span>주요서비스</span>
@@ -33,7 +33,9 @@ const Summary = () => (
             </p>
         </div>
         <div className="right-box">
-            <img src="/images/summary_img.svg" alt="개요 이미지" />
+            <motion.div whileHover={{ scale: 1.4 }}>
+                <Image src="/images/summary_img.svg" alt="개요 이미지" width={200} height={200} />
+            </motion.div>
         </div>
 
         <style jsx>{`

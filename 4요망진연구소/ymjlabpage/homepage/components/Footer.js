@@ -124,6 +124,10 @@ const Footer = () => (
             .logo-margin {
                 margin-right: 10px;
             }
+
+            .content > p {
+                margin-bottom: 6px;
+            }
         `}</style>
     </footer>
 );

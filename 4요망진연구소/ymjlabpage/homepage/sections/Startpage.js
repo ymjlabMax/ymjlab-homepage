@@ -17,15 +17,16 @@ const Startpage = () => (
             </content>
         </div>
         <div className="right-box">
-            <motion.div
+            {/* <motion.div
                 animate={{
                     scale: [4, 3, 3, 2, 1],
                     rotate: [90, 180, 270, 360, 0],
                     borderRadius: ["20%", "20%", "50%", "50%", "20%"],
                 }}
             >
-                <Image src="/images/main_image.svg" alt="메인이미지" width={500} height={500} priority quality={100} />
-            </motion.div>
+                
+            </motion.div> */}
+            <Image src="/images/main_image.svg" alt="메인이미지" width={500} height={500} priority quality={100} />
         </div>
 
         <style jsx>{`

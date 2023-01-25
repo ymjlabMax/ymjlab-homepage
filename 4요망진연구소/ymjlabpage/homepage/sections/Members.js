@@ -40,9 +40,7 @@ const Members = () => (
                 font-weight: 700;
                 font-size: 32px;
                 line-height: 40px;
-                /* identical to box height */
                 letter-spacing: -0.015em;
-                /* f_500 */
                 color: #181818;
                 text-align: center;
                 margin-bottom: 70px;

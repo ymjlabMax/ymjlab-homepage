@@ -7,23 +7,17 @@ import Image from "next/image";
 
 const Servicepage = () => (
     <section>
-        <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-            //viewport is an framer arg used when we want it to render everytime we scroll through it. if once set to true then
-            //it'll only animate at frst scroll. Checkk framer documentation for me.
-        >
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }}>
             <motion.h1 variants={textVariant(0.5)}>
                 <div className="title">요망진연구소의 서비스를 소개합니다.</div>
             </motion.h1>
             <div className="first-box">
-                <motion.div variants={slideIn("left", "tween", 0.1, 1)}>
-                    <div className="left">
-                        <Image src="/images/kkultrip_img.svg" width={500} height={500} alt="꿀트립 이미지" />
-                    </div>
-                </motion.div>
+                <div className="left">
+                    <motion.div variants={slideIn("left", "tween", 0.1, 0.5)}>
+                        <Image src="/images/kkultrip_img.svg" width={450} height={200} alt="꿀트립 이미지" />
+                    </motion.div>
+                </div>
+
                 <div className="right">
                     <motion.div variants={slideIn("right", "tween", 0.1, 1)}>
                         <h3>꿀트립 서비스</h3>
@@ -36,14 +30,19 @@ const Servicepage = () => (
             </div>
             <div className="second-box">
                 <div className="meta-left">
-                    <h3>메타버스 에이전시 서비스</h3>
-                    <p>공공 및 기업을 위한 메타버스 마케팅 솔루션</p>
-                    <Link href="/metaverse">
-                        <button>메타버스 알아보기</button>
-                    </Link>
+                    <motion.div variants={slideIn("left", "tween", 0.1, 1)}>
+                        <h3>메타버스 에이전시 서비스</h3>
+                        <p>공공 및 기업을 위한 메타버스 마케팅 솔루션</p>
+                        <Link href="/metaverse">
+                            <button>메타버스 알아보기</button>
+                        </Link>
+                    </motion.div>
                 </div>
+
                 <div className="right">
-                    <Image src="/images/metaverse_img.svg" width={500} height={700} alt="메타버스 이미지" />
+                    <motion.div variants={slideIn("right", "tween", 0.1, 1)}>
+                        <Image src="/images/metaverse_img.svg" width={500} height={700} alt="메타버스 이미지" />
+                    </motion.div>
                 </div>
             </div>
         </motion.div>
@@ -114,7 +113,7 @@ const Servicepage = () => (
 
             button:hover {
                 background: #ff8f0b;
-                border: 1px solid #ff8f0b;
+                border: 2px solid #ff8f0b;
                 color: #ffffff;
                 transition: all 0.3s;
             }
@@ -133,6 +132,7 @@ const Servicepage = () => (
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+                margin-left: 50px;
             }
 
             @media only screen and (max-width: 600px) {
