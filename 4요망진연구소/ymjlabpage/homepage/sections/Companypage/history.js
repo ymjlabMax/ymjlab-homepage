@@ -14,40 +14,6 @@ export default function History() {
             <h1>요망진 연구소가 걸어온 길</h1>
             <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
             <div className="history-box">
-                {/* <div className="year-box">
-                    <h2>2022</h2>
-                    <div className="grid-container">
-                        {HistoryInfo_2022.map((el, index) => (
-                            <div className="line-box" key={index}>
-                                <h3>{el.title}</h3>
-                                <p>{el.content}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="year-box">
-                    <h2>2021</h2>
-                    <div className="grid-container">
-                        {HistoryInfo_2021.map((el, index) => (
-                            <div className="line-box" key={index}>
-                                <h3>{el.title}</h3>
-                                <p>{el.content}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="year-box">
-                    <h2>2020</h2>
-                    <div className="grid-container">
-                        {HistoryInfo_2020.map((el, index) => (
-                            <div className="line-box" key={index}>
-                                <h3>{el.title}</h3>
-                                <p>{el.content}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div> */}
-
                 <div className="md-width">
                     <h2>2022</h2>
                     <div className="flex-container">

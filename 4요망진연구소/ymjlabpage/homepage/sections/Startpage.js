@@ -11,21 +11,12 @@ const Startpage = () => (
             <content>
                 <h1>요망진 연구소는</h1>
                 <h1>
-                    여행에 <span className="main-color">짐이 되지 않는 여행편의 서비스</span> 를{" "}
+                    여행에 <span className="main-color">짐이 되지 않는 여행편의 서비스</span> 를
                 </h1>
                 <h1>제공하기 위해 노력하겠습니다. </h1>
             </content>
         </div>
         <div className="right-box">
-            {/* <motion.div
-                animate={{
-                    scale: [4, 3, 3, 2, 1],
-                    rotate: [90, 180, 270, 360, 0],
-                    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                }}
-            >
-                
-            </motion.div> */}
             <Image src="/images/main_image.svg" alt="메인이미지" width={500} height={500} priority quality={100} />
         </div>
 
@@ -35,6 +26,20 @@ const Startpage = () => (
                 height: 768px;
                 display: flex;
                 justify-content: center;
+            }
+            .bgWrap {
+                position: fixed;
+                /* overflow: hidden; */
+                right: 0;
+                left: 0;
+                z-index: -3;
+            }
+            .circle {
+                border-radius: 50%;
+                border: 5px solid transparent;
+                background-image: transparent, linear-gradient(#8acfc6, #6db8b6, #58a8ab, #4c9ea4, #489ba2);
+                background-origin: border-box;
+                background-clip: content-box, border-box;
             }
             .left-box {
                 display: flex;
