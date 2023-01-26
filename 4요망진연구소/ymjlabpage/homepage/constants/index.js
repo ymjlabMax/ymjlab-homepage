@@ -1,5 +1,9 @@
 export const socials = [
     {
+        name: "instagram",
+        url: "/images/logo_instagram.svg",
+    },
+    {
         name: "youtube",
         url: "/images/logo_youtube.svg",
     },

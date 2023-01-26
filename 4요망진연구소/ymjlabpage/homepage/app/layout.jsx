@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
                 <div className="bg-container">
                     {pathname === "/" && (
                         <div className="bgwrap">
-                            <Image className="rotate-img" src="/images/Rectangle.svg" width={1200} height={500} quality={100} priority />
+                            <Image className="rotate-img" alt="메인이미지" src="/images/Rectangle.svg" width={1200} height={500} quality={100} priority />
                         </div>
                     )}
                 </div>

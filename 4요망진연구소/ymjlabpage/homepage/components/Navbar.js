@@ -66,13 +66,14 @@ export default function Navbar() {
                 nav {
                     width: 100vw;
                     padding: 10px 50px 10px 50px;
-                    height: 100%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
-                    position: sticky;
+                    position: fixed;
                     top: 0;
+                    left: 0;
+                    right: 0;
                     background: #ffffffc1;
                     z-index: 1;
                     font-family: "Spoqa Han Sans Neo";
