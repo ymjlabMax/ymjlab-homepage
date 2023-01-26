@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Servicepage = () => (
     <section>
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }}>
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
             <motion.h1 variants={textVariant(0.5)}>
                 <div className="title">요망진연구소 서비스</div>
             </motion.h1>
