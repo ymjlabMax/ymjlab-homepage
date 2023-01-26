@@ -132,7 +132,7 @@ a {
     position: absolute;
     /* overflow: hidden; */
     top: -350px;
-    right: -200px;
+    right: calc(100% / 2 - 950px);
     z-index: -3;
     /* visibility: hidden; */
 }
