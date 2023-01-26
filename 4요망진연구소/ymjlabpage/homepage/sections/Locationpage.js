@@ -31,7 +31,7 @@ export default function Locationpage() {
 
     return (
         <section id="location">
-            <div className="title">요망진연구소 찾아오시는길</div>
+            <div className="title">찾아오시는길</div>
             <div className="location-box">
                 <div className="left-box">
                     <p>

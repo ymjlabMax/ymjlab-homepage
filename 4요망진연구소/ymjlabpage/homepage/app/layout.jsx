@@ -15,14 +15,11 @@ export default function RootLayout({ children }) {
             <head />
             <body>
                 <div className="wrap">
-                    {pathname === "/" ? (
+                    {pathname === "/" && (
                         <div className="bgwrap">
                             <Image className="rotate-img" src="/images/Rectangle.svg" width={1000} height={1000} quality={100} priority />
                         </div>
-                    ) : (
-                        <></>
                     )}
-
                     <Navbar />
                     {children}
                     <Footer />

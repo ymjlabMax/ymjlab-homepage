@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { navVariants } from "../utils/motion";
+import { navVariants, staggerContainer, textVariant } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ export default function Companypage() {
 
     return (
         <section id="content">
-            <div className="title">요망진연구소를 소개합니다.</div>
+            <div className="title">요망진연구소 소개</div>
             <content className="content">
                 <p>
                     우리는 스마트관광 산업에 획기적인 변화를 이끌고, 새로운 가치를 창출하기 위해 관광 소비데이터를 활용한 AI Holistic benefit 서비스를
@@ -33,7 +33,7 @@ export default function Companypage() {
             </content>
             <div className="btn_list">
                 <button
-                    className={companyInfo === "Summary" ? "active" : ""}
+                    className={companyInfo === "Summary" && "active"}
                     onClick={() => {
                         companyInfoHandler(() => "Summary");
                     }}
@@ -41,7 +41,7 @@ export default function Companypage() {
                     개요
                 </button>
                 <button
-                    className={companyInfo === "History" ? "active" : ""}
+                    className={companyInfo === "History" && "active"}
                     onClick={() => {
                         companyInfoHandler(() => "History");
                     }}
@@ -49,7 +49,7 @@ export default function Companypage() {
                     연혁
                 </button>
                 <button
-                    className={companyInfo === "Affiliation" ? "active" : ""}
+                    className={companyInfo === "Affiliation" && "active"}
                     onClick={() => {
                         setCompanyInfo(() => "Affiliation");
                     }}
@@ -57,7 +57,7 @@ export default function Companypage() {
                     소속
                 </button>
                 <button
-                    className={companyInfo === "Partner" ? "active" : ""}
+                    className={companyInfo === "Partner" && "active"}
                     onClick={() => {
                         setCompanyInfo(() => "Partner");
                     }}
@@ -92,7 +92,7 @@ export default function Companypage() {
                     text-align: center;
                 }
                 .content {
-                    margin-top: 50px;
+                    margin-top: 32px;
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 20px;
@@ -104,7 +104,7 @@ export default function Companypage() {
                 .btn_list {
                     display: flex;
                     justify-content: center;
-                    margin-top: 50px;
+                    margin-top: 80px;
                 }
                 button {
                     width: 190px;

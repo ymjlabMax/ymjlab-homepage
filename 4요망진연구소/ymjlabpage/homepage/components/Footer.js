@@ -49,8 +49,8 @@ const Footer = () => (
                 </p>
             </div>
             <div className="bottom">
-                <div className="sub-title">이용약관</div>
-                <div className="sub-title">개인정보처리방침</div>
+                {/* <div className="sub-title">이용약관</div>
+                <div className="sub-title">개인정보처리방침</div> */}
                 <div className="sub-title">Copyright © YMJLAB Inc. 2023</div>
             </div>
         </div>

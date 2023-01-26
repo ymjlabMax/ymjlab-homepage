@@ -9,14 +9,19 @@ const Servicepage = () => (
     <section>
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }}>
             <motion.h1 variants={textVariant(0.5)}>
-                <div className="title">요망진연구소의 서비스를 소개합니다.</div>
+                <div className="title">요망진연구소 서비스</div>
             </motion.h1>
             <div className="first-box">
-                <div className="left">
-                    <motion.div variants={slideIn("left", "tween", 0.1, 0.5)}>
-                        <Image src="/images/kkultrip_img.svg" width={450} height={200} alt="꿀트립 이미지" />
-                    </motion.div>
-                </div>
+                <motion.div variants={slideIn("left", "tween", 0.1, 0.5)}>
+                    <div className="kkultrip-left">
+                        <div className="side-img">
+                            <Image src="/images/img_mountain.svg" width={300} height={300} alt="꿀트립 사이드 이미지" />
+                        </div>
+                        <div>
+                            <Image src="/images/mockup_trip_bg.gif" width={200} height={200} alt="꿀트립 이미지" />
+                        </div>
+                    </div>
+                </motion.div>
 
                 <div className="right">
                     <motion.div variants={slideIn("right", "tween", 0.1, 1)}>
@@ -133,6 +138,15 @@ const Servicepage = () => (
                 flex-direction: column;
                 justify-content: flex-end;
                 margin-left: 50px;
+            }
+
+            .kkultrip-left {
+                display: flex;
+            }
+
+            .side-img {
+                display: flex;
+                justify-content: flex-end;
             }
 
             @media only screen and (max-width: 600px) {

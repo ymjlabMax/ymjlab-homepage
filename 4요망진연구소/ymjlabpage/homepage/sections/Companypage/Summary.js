@@ -8,12 +8,12 @@ const Summary = () => (
     <section>
         <div className="left-box">
             <p>
-                <span>주소</span>
-                &nbsp;&nbsp;&nbsp;제주시 신산로 82, B103호(제주콘텐츠코리아랩 지하)
+                <span>회 사 명</span>
+                &nbsp;&nbsp;&nbsp;주식회사 요망진연구소
             </p>
             <p>
-                <span>팩스</span>
-                &nbsp;&nbsp;&nbsp;0303-3440-1223
+                <span>대표 이사</span>
+                &nbsp;&nbsp;&nbsp;최성기
             </p>
             <p>
                 <span>주요서비스</span>
@@ -23,6 +23,7 @@ const Summary = () => (
                 <span>주요 사업</span>
                 &nbsp;&nbsp;&nbsp;서비스(꿀트립, 메타버스 에이전시 마케팅)및 콘텐츠 개발
             </p>
+
             <p>
                 <span>설 립 일</span>
                 &nbsp;&nbsp;&nbsp;2020년 12월 23일
@@ -44,10 +45,8 @@ const Summary = () => (
                 height: 360px;
                 display: flex;
                 justify-content: center;
-                font-family: "Spoqa Han Sans Neo";
-                font-style: normal;
                 font-size: 16px;
-                padding: 0 50px 0 100px;
+                padding: 0 50px 0 150px;
             }
             .left-box {
                 display: flex;
@@ -66,6 +65,8 @@ const Summary = () => (
             }
             span {
                 font-weight: 700;
+                text-align: justify;
+                width: 100%;
             }
             p {
                 margin: 12px 12px 12px 12px;

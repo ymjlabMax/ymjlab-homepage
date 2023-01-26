@@ -11,7 +11,7 @@ const Members = () => (
     <section>
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }}>
             <motion.h1 variants={textVariant(0.5)}>
-                <div className="title">요망진연구소 멤버를 소개합니다.</div>
+                <div className="title">멤버 소개</div>
                 <div>
                     <div className="container">
                         {MemberInfo.map((el, index) => (

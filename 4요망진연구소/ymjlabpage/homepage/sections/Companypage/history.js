@@ -11,7 +11,6 @@ export default function History() {
 
     return (
         <section>
-            <h1>요망진 연구소가 걸어온 길</h1>
             <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
             <div className="history-box">
                 <div className="md-width">
@@ -67,11 +66,8 @@ export default function History() {
                     display: flex;
                     flex-direction: column;
                     padding: 40px 50px 10px 50px;
-                    /* justify-content: center;
                     align-items: center;
-                    font-family: "Spoqa Han Sans Neo";
-                    font-style: normal;
-                    font-size: 16px; */
+                    font-size: 16px;
                 }
                 h1 {
                     font-weight: 700;
@@ -79,6 +75,8 @@ export default function History() {
                     line-height: 40px;
                     letter-spacing: -0.015em;
                     color: #181818;
+                    display: flex;
+                    justify-content: flex-start;
                 }
 
                 .history-box {
@@ -132,7 +130,6 @@ export default function History() {
                     align-items: center;
                     letter-spacing: -0.015em;
                     color: #767676;
-                    /* margin-left: 38px; */
                 }
 
                 .month-box {
@@ -174,6 +171,11 @@ export default function History() {
                 }
                 .sd-width {
                     min-width: 300px;
+                }
+
+                .title {
+                    display: flex;
+                    justify-content: flex-start;
                 }
 
                 @media only screen and (max-width: 600px) {
