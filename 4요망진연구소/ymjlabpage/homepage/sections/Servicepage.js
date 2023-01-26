@@ -48,7 +48,6 @@ const Servicepage = () => (
         </motion.div>
         <style jsx>{`
             section {
-                margin-top: 150px;
                 width: 100%;
                 height: 1536px;
                 display: flex;

@@ -73,7 +73,6 @@ export default function Companypage() {
             </div>
             <style jsx>{`
                 section {
-                    margin-top: 100px;
                     width: 100%;
                     height: 768px;
                     display: flex;

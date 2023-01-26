@@ -6,9 +6,8 @@ import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import AnchorLink from "react-anchor-link-smooth-scroll-v2";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
-import { usePathname, useSelectedLayoutSegment } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
     // <motion.nav variants={navVariants} initial="hidden" whileInView="show" className={`${styles.xPaddings} py-8 relative`}>
@@ -65,7 +64,7 @@ export default function Navbar() {
             </ul>
             <style jsx>{`
                 nav {
-                    width: 100%;
+                    width: 100vw;
                     padding: 10px 50px 10px 50px;
                     height: 100%;
                     display: flex;

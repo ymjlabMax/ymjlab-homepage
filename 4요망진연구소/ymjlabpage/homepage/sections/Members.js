@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { navVariants } from "../utils/motion";
+import { navVariants, textVariant, staggerContainer } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,26 +9,37 @@ import { MemberInfo } from "../constants";
 
 const Members = () => (
     <section>
-        <div className="title">요망진연구소 멤버를 소개합니다.</div>
-        <div>
-            <div className="container">
-                {MemberInfo.map((el, index) => (
-                    <motion.div key={index} whileHover={{ scale: 1.2 }}>
-                        <Image key={el.name} src={el.imgUrl} alt={el.name} width={140} height={140} />
-                        <div className="content">
-                            <p>
-                                <span className="bold">{el.name}</span> | {el.position}
-                            </p>
-                            <p className="small">{el.email}</p>
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
-        </div>
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }}>
+            <motion.h1 variants={textVariant(0.5)}>
+                <div className="title">요망진연구소 멤버를 소개합니다.</div>
+                <div>
+                    <div className="container">
+                        {MemberInfo.map((el, index) => (
+                            <motion.div key={index} whileHover={{ scale: 1.2 }}>
+                                <Image key={el.name} src={el.imgUrl} alt={el.name} width={140} height={140} />
+                                <div className="content">
+                                    <p>
+                                        <span className="bold">{el.name}</span> | {el.position}
+                                    </p>
+                                    {el.name === "Mando" ? (
+                                        <p className="small">
+                                            bestdeveloper.jo
+                                            <br />
+                                            @ymjlab.com
+                                        </p>
+                                    ) : (
+                                        <p className="small">{el.email}</p>
+                                    )}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </motion.h1>
+        </motion.div>
 
         <style jsx>{`
             section {
-                margin-top: 100px;
                 width: 100%;
                 height: 768px;
                 display: flex;
@@ -50,7 +61,7 @@ const Members = () => (
                 display: grid;
                 grid-template-columns: repeat(5, 140px);
                 grid-template-rows: repeat(2, 202px);
-                gap: 70px 60px;
+                gap: 40px 60px;
             }
 
             .item {
