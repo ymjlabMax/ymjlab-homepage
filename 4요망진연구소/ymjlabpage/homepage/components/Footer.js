@@ -78,7 +78,6 @@ const Footer = () => (
             .left {
                 text-align: left;
             }
-
             .title {
                 font-weight: 700;
                 font-size: 14px;
@@ -97,7 +96,6 @@ const Footer = () => (
             .bold {
                 font-weight: 700;
             }
-
             .bottom {
                 display: flex;
                 font-style: normal;
@@ -105,26 +103,21 @@ const Footer = () => (
                 font-size: 14px;
                 line-height: 18px;
             }
-
             .sub-title {
                 margin-right: 20px;
                 color: #181818;
             }
-
             .right {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
             }
-
             .logo {
                 display: flex;
             }
-
             .logo-margin {
                 margin-right: 10px;
             }
-
             .content > p {
                 margin-bottom: 6px;
             }

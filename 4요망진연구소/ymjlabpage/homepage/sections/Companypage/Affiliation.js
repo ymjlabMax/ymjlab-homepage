@@ -22,9 +22,6 @@ const Affiliation = () => (
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-family: "Spoqa Han Sans Neo";
-                font-style: normal;
-                font-size: 16px;
             }
             .aff-box {
                 display: flex;

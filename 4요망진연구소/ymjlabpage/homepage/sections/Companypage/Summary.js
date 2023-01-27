@@ -42,6 +42,7 @@ const Summary = () => (
                 height: 100%;
             }
             .right-box {
+                height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;

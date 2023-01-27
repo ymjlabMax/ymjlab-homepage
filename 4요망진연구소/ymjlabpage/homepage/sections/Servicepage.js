@@ -53,7 +53,7 @@ const Servicepage = () => (
         <style jsx>{`
             section {
                 width: 100%;
-                height: 956px;
+                height: 1000px;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;

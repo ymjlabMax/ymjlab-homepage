@@ -20,13 +20,45 @@ export default function Locationpage() {
         script.addEventListener("load", () => {
             window.kakao.maps.load(() => {
                 const mapContainer = document.getElementById("map");
+
+                //요망진연구소 경도 위도 
+
                 const mapOptions = {
                     //지도를 생성할 때 필요한 기본 옵션
-                    center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-                    level: 3, //지도의 레벨(확대, 축소 정도)
+                    center: new kakao.maps.LatLng(33.50595489264287, 126.53438882083911), //지도의 중심좌표.
+                    level: 4, //지도의 레벨(확대, 축소 정도)
                 };
 
-                new window.kakao.maps.Map(mapContainer, mapOptions);
+                let map = new window.kakao.maps.Map(mapContainer, mapOptions);
+
+                let zoomControl = new kakao.maps.ZoomControl();
+                map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+                var marker = new kakao.maps.Marker({
+                    // 지도 중심좌표에 마커를 생성합니다
+                    position: map.getCenter(),
+                });
+
+                marker.setMap(map);
+
+                // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+                var content =
+                    '<div class="customoverlay">' +
+                    '  <a href="https://map.kakao.com/?map_type=TYPE_MAP&itemId=1479632325" target="_blank">' +
+                    '    <span class="title">(주)요망진연구소</span>' +
+                    "  </a>" +
+                    "</div>";
+
+                // 커스텀 오버레이가 표시될 위치입니다
+                let position = new kakao.maps.LatLng(33.50595489264287, 126.53438882083911);
+
+                // 커스텀 오버레이를 생성합니다
+                let customOverlay = new kakao.maps.CustomOverlay({
+                    map: map,
+                    position: position,
+                    content: content,
+                    yAnchor: 0,
+                });
             });
         });
     }, []);
@@ -57,14 +89,14 @@ export default function Locationpage() {
             <style jsx>{`
                 section {
                     width: 100%;
-                    height: 450px;
+                    height: 520px;
                     display: flex;
                     flex-direction: column;
-                    margin-bottom: var(--section-margin);
+                    margin-bottom: 100px;
                 }
                 .title {
-                    font-weight: 700;
-                    font-size: 32px;
+                    font-weight: var(--bold);
+                    font-size: var(--font_32);
                     line-height: 40px;
                     /* identical to box height */
                     letter-spacing: -0.015em;
@@ -74,27 +106,24 @@ export default function Locationpage() {
                     margin-bottom: var(--component-margin);
                 }
                 .left-box {
+                    width: 50%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    width: 60%;
+                    align-items: center;
                     height: 100%;
                     line-height: 20px;
-                    margin-left: 150px;
                 }
 
                 .right-box {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 40%;
+                    width: 50%;
                     height: 100%;
                 }
 
                 table {
                     width: 100%;
                     border-collapse: separate;
-                    border-spacing: 10px 20px;
+                    border-spacing: 8px 20px;
                 }
 
                 .title-td {
@@ -107,7 +136,6 @@ export default function Locationpage() {
                 }
 
                 .content-td {
-                    width: 500px;
                     color: var(--font_500);
                     font-size: var(--font_16);
                     font-weight: var(--regular);
@@ -119,6 +147,14 @@ export default function Locationpage() {
                 .map-box {
                     width: 600px;
                     height: 400px;
+                }
+
+                .customoverlay {
+                    width: 300px;
+                    height: 300px;
+                    background: #ffffff;
+                    font-size: 16px;
+                    font-weight: bold;
                 }
 
                 @media only screen and (max-width: 600px) {
