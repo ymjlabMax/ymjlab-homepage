@@ -15,17 +15,20 @@ export default function Locationpage() {
         const script = document.createElement("script");
         script.async = true;
         script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_API_KEY}&autoload=false`;
+        // script.src = "/kakaomap";
         document.head.appendChild(script);
 
         script.addEventListener("load", () => {
             window.kakao.maps.load(() => {
                 const mapContainer = document.getElementById("map");
 
-                //요망진연구소 경도 위도 
+                //요망진연구소 경도 위도
+                const lat = 33.50595489264287;
+                const lon = 126.53438882083911;
 
                 const mapOptions = {
                     //지도를 생성할 때 필요한 기본 옵션
-                    center: new kakao.maps.LatLng(33.50595489264287, 126.53438882083911), //지도의 중심좌표.
+                    center: new kakao.maps.LatLng(lat, lon), //지도의 중심좌표.
                     level: 4, //지도의 레벨(확대, 축소 정도)
                 };
 
@@ -50,7 +53,7 @@ export default function Locationpage() {
                     "</div>";
 
                 // 커스텀 오버레이가 표시될 위치입니다
-                let position = new kakao.maps.LatLng(33.50595489264287, 126.53438882083911);
+                let position = new kakao.maps.LatLng(lat, lon);
 
                 // 커스텀 오버레이를 생성합니다
                 let customOverlay = new kakao.maps.CustomOverlay({
