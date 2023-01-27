@@ -73,27 +73,22 @@ export default function Companypage() {
             </div>
             <style jsx>{`
                 section {
-                    margin-top: 80px;
                     width: 100%;
                     height: 768px;
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
-                    font-family: "Spoqa Han Sans Neo";
-                    font-style: normal;
                 }
                 .title {
                     font-weight: 700;
                     font-size: 32px;
                     line-height: 40px;
-                    /* identical to box height */
                     letter-spacing: -0.015em;
-                    /* f_500 */
                     color: #181818;
                     text-align: center;
+                    margin-bottom: var(--title-margin);
                 }
                 .content {
-                    margin-top: 32px;
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 20px;
@@ -101,11 +96,11 @@ export default function Companypage() {
                     /* letter-spacing: -0.015em; */
                     /* f_500 */
                     color: #181818;
+                    margin-bottom: var(--component-margin);
                 }
                 .btn_list {
                     display: flex;
                     justify-content: center;
-                    margin-top: 80px;
                 }
                 button {
                     width: 190px;
@@ -114,7 +109,7 @@ export default function Companypage() {
                     border: 1px solid #ff8f0b;
                     border-radius: 6px;
                     color: #ff8f0b;
-                    margin: 0 50px 30px 50px;
+                    margin: 0 40px 30px 50px;
                 }
 
                 button:hover {

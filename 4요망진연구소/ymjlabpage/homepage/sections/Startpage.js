@@ -27,7 +27,7 @@ const Startpage = () => (
                 </div>
             </div>
             <div className="right-box">
-                <Image src="/images/img_main.svg" alt="메인이미지" width={500} height={500} priority quality={100} />
+                <Image src="/images/img_main.svg" alt="메인이미지" width={600} height={500} priority quality={100} />
             </div>
             <style jsx>{`
                 section {

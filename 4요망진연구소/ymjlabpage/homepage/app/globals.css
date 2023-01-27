@@ -33,7 +33,7 @@
 
 :root {
     /* 폰트 사이즈 & 칼라  */
-    --font_36: 32px;
+    --font_36: 36px;
     --font_32: 32px;
     --font_24: 24px;
     --font_18: 18px;
@@ -67,6 +67,7 @@
     /* 섹션별 마진 */
     --section-margin: 200px;
     --component-margin: 80px;
+    --title-margin: 32px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -181,3 +182,16 @@ a {
         transform: rotate(0deg) translate(0, 0);
     }
 }
+
+/* .summary-table {
+    width: 100%;
+}
+
+.title-td {
+    width: 74px;
+    text-align: justify;
+    text-align-last: justify;
+    color: var(--font_500);
+    font-size: var(--font_16);
+    font-weight: 700;
+} */
