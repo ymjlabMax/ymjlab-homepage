@@ -201,3 +201,10 @@ export const SummaryInfo = [
     { no: 5, title: "설 립 일", content: "2020년 12월 23일" },
     { no: 6, title: "직 원 수", content: "10명 (2023.01 기준)" },
 ];
+
+export const LocationInfo = [
+    { no: 1, name: "주소", url: "/images/location/address.svg", content: "제주시 신산로 82, B102호(제주콘텐츠코리아랩 지하)" },
+    { no: 1, name: "팩스", url: "/images/location/fax.svg", content: "0303-3440-1223" },
+    { no: 1, name: "이메일", url: "/images/location/mail.svg", content: "admin@ymjlab.com" },
+    { no: 1, name: "전화번호", url: "/images/location/phone.svg", content: "010-8323-2294" },
+];

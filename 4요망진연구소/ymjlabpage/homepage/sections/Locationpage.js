@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
 
+import { LocationInfo } from "../constants";
+
 export default function Locationpage() {
     const KAKAO_API_KEY = process.env.NEXT_PUBLIC_KAKAO_API_KEY;
 
@@ -34,22 +36,18 @@ export default function Locationpage() {
             <div className="title">찾아오시는길</div>
             <div className="location-box">
                 <div className="left-box">
-                    <p>
-                        <span>주 소</span>
-                        &nbsp;&nbsp;&nbsp;제주시 신산로 82, B103호(제주콘텐츠코리아랩 지하)
-                    </p>
-                    <p>
-                        <span>팩 스</span>
-                        &nbsp;&nbsp;&nbsp;1111-2222
-                    </p>
-                    <p>
-                        <span>이메일</span>
-                        &nbsp;&nbsp;&nbsp;support@ymjlab.com
-                    </p>
-                    <p>
-                        <span>전화 번호</span>
-                        &nbsp;&nbsp;&nbsp;010-2222-2222
-                    </p>
+                    <table className="summary-table">
+                        <tbody>
+                            {LocationInfo.map((el, index) => (
+                                <tr key={index}>
+                                    <td className="title-td">
+                                        <img src={el.url} alt={el.name} />
+                                    </td>
+                                    <td className="content-td">{el.content}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
                 <div className="right-box">
                     <div className="map-box" id="map"></div>
@@ -58,15 +56,11 @@ export default function Locationpage() {
 
             <style jsx>{`
                 section {
-                    margin-bottom: 100px;
                     width: 100%;
                     height: 450px;
                     display: flex;
-                    /* justify-content: center; */
-                    /* align-items: center; */
                     flex-direction: column;
-                    font-family: "Spoqa Han Sans Neo";
-                    font-style: normal;
+                    margin-bottom: var(--section-margin);
                 }
                 .title {
                     font-weight: 700;
@@ -75,19 +69,19 @@ export default function Locationpage() {
                     /* identical to box height */
                     letter-spacing: -0.015em;
                     /* f_500 */
-                    color: #181818;
+                    color: var(--font_500);
                     text-align: center;
-                    margin-bottom: 70px;
+                    margin-bottom: var(--component-margin);
                 }
                 .left-box {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    width: 60%;
                     height: 100%;
                     line-height: 20px;
                     margin-left: 150px;
                 }
+
                 .right-box {
                     display: flex;
                     justify-content: center;
@@ -96,20 +90,33 @@ export default function Locationpage() {
                     height: 100%;
                 }
 
+                table {
+                    width: 100%;
+                    border-collapse: separate;
+                    border-spacing: 20px 20px;
+                }
+
+                .title-td {
+                    width: 5px;
+                    color: var(--font_500);
+                    width: var(--font_36);
+                }
+                tr {
+                    height: 20px;
+                }
+
+                .content-td {
+                    color: var(--font_500);
+                    font-size: var(--font_16);
+                    font-weight: var(--regular);
+                }
+
                 .location-box {
                     display: flex;
                 }
-
-                span {
-                    font-weight: 700;
-                }
-                p {
-                    margin: 12px 12px 12px 12px;
-                }
-
                 .map-box {
-                    width: 500px;
-                    height: 300px;
+                    width: 560px;
+                    height: 360px;
                 }
 
                 @media only screen and (max-width: 600px) {

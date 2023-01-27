@@ -46,6 +46,7 @@ const Members = () => (
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                margin-bottom: var(--section-margin);
             }
             .title {
                 font-weight: 700;
@@ -54,14 +55,14 @@ const Members = () => (
                 letter-spacing: -0.015em;
                 color: #181818;
                 text-align: center;
-                margin-bottom: 70px;
+                margin-bottom: var(--component-margin);
             }
             .container {
                 text-align: center;
                 display: grid;
                 grid-template-columns: repeat(5, 140px);
                 grid-template-rows: repeat(2, 202px);
-                gap: 40px 60px;
+                gap: 80px 80px;
             }
 
             .item {

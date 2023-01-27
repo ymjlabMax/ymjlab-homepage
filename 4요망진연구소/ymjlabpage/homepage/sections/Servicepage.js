@@ -22,7 +22,6 @@ const Servicepage = () => (
                         </div>
                     </div>
                 </motion.div>
-
                 <div className="right">
                     <motion.div variants={slideIn("right", "tween", 0.1, 1)}>
                         <h3>꿀트립 서비스</h3>
@@ -54,23 +53,23 @@ const Servicepage = () => (
         <style jsx>{`
             section {
                 width: 100%;
-                height: 1536px;
+                height: 956px;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                font-family: "Spoqa Han Sans Neo";
-                font-style: normal;
                 overflow: hidden;
+                margin-bottom: var(--section-margin);
             }
             .title {
-                font-weight: 700;
-                font-size: 32px;
+                font-weight: var(--bold);
+                font-size: var(--font_32);
                 line-height: 40px;
                 /* identical to box height */
                 letter-spacing: -0.015em;
                 /* f_500 */
-                color: #181818;
+                color: var(font_500);
                 text-align: center;
+                margin-bottom: var(--component-margin);
             }
             h3 {
                 font-weight: 700;
@@ -89,13 +88,12 @@ const Servicepage = () => (
             .first-box {
                 display: flex;
                 justify-content: center;
-                margin-top: 100px;
+                margin-bottom: var(--component-margin);
             }
 
             .second-box {
                 display: flex;
                 justify-content: center;
-                margin-top: 100px;
             }
 
             .right {
