@@ -32,7 +32,7 @@ export const MemberInfo = [
         No: 3,
         imgUrl: "/images/members/Elliott_img.svg",
         name: "Elliott",
-        position: "COO",
+        position: "사업운영총괄",
         email: "cj@ymjlab.com",
     },
     {
@@ -46,7 +46,7 @@ export const MemberInfo = [
         No: 5,
         imgUrl: "/images/members/Zest_img.svg",
         name: "Zest",
-        position: "개발책임",
+        position: "개발자",
         email: "zest@ymjlab.com",
     },
     {

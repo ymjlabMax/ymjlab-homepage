@@ -75,10 +75,3 @@ const Mainpage = () => {
 };
 
 export default Mainpage;
-
-{
-    /* <div className="title">
-                    <h1>메타버스 에이전시 서비스</h1>
-                    <h2>공공 및 기업을 위한 메타버스 마케팅 솔루션 </h2>
-                </div> */
-}

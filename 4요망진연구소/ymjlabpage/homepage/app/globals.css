@@ -31,28 +31,43 @@
         url("/fonts/SpoqaHanSans/SpoqaHanSansThin.woff") format("woff"), url("/fonts/SpoqaHanSans/SpoqaHanSansThin.ttf") format("truetype");
 }
 
-/* :root {
-    --max-width: 1100px;
-    --border-radius: 12px;
-    --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
-        "Droid Sans Mono", "Courier New", monospace;
+:root {
+    /* 폰트 사이즈 & 칼라  */
+    --font_36: 32px;
+    --font_32: 32px;
+    --font_24: 24px;
+    --font_18: 18px;
+    --font_16: 16px;
+    --font_15: 15px;
+    --font_14: 14px;
+    --font_12: 12px;
 
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+    --font_500: #181818;
+    --font_400: #404040;
+    --font_200: #6d6d6d;
+    --font_100: #767676;
 
-    --primary-glow: conic-gradient(from 180deg at 50% 50%, #16abff33 0deg, #0885ff33 55deg, #54d6ff33 120deg, #0071ff33 160deg, transparent 360deg);
-    --secondary-glow: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    --bold: 700;
+    --medium: 500;
+    --regular: 400;
 
-    --tile-start-rgb: 239, 245, 249;
-    --tile-end-rgb: 228, 232, 233;
-    --tile-border: conic-gradient(#00000080, #00000040, #00000030, #00000020, #00000010, #00000010, #00000080);
+    /* 칼라 변수 */
+    --main_orange_400: #ff641d;
+    --main_orange: #ff8f0b;
+    --main_yellow: #ffcb02;
+    --main_yellow_200: #ffe561;
 
-    --callout-rgb: 238, 240, 241;
-    --callout-border-rgb: 172, 175, 176;
-    --card-rgb: 180, 185, 188;
-    --card-border-rgb: 131, 134, 135;
-} */
+    --white: #ffffff;
+    --disable: #c9c9c9;
+    --gray_100: #f2f2f2;
+
+    /* 컴포넌트 크기 */
+    --page_height: 768px;
+
+    /* 섹션별 마진 */
+    --section-margin: 200px;
+    --component-margin: 80px;
+}
 
 /* @media (prefers-color-scheme: dark) {
     :root {
@@ -91,26 +106,11 @@ body {
     justify-content: center;
     overflow-x: hidden;
 }
-
-/* body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-} */
-
 a {
     color: inherit;
     text-decoration: none;
 }
 
-/* @media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-} */
-
-.main_color {
-    color: #ff8f0b;
-}
 .wrap {
     display: flex;
     flex-direction: column;
@@ -120,15 +120,15 @@ a {
     /* border: 1px solid #181818; */
 }
 .bg-container {
-    max-width: 1680px;
+    width: 50vw;
     position: relative;
     /* overflow: hidden; */
 }
 
-.bgwrap {
+.bg-wrap {
     position: absolute;
-    top: -550px;
-    right: calc(100% - 2000px);
+    top: -600px;
+    right: -800px;
     z-index: -3;
     /* visibility: hidden; */
 }
@@ -141,5 +141,43 @@ a {
 @keyframes rotate_image {
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.scroll-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scroll-img {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-animation: sdb 1.5s infinite;
+    animation: sdb 1.5s infinite;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+@-webkit-keyframes sdb {
+    0% {
+        -webkit-transform: rotate(0deg) translate(0, 0);
+    }
+    20% {
+        -webkit-transform: rotate(0deg) translate(0, -10px);
+    }
+    40% {
+        -webkit-transform: rotate(0deg) translate(0, 0);
+    }
+}
+@keyframes sdb {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    20% {
+        transform: rotate(0deg) translate(0, -10px);
+    }
+    40% {
+        transform: rotate(0deg) translate(0, 0);
     }
 }

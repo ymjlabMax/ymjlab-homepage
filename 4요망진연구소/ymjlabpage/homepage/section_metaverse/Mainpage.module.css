@@ -10,24 +10,6 @@
     background: linear-gradient(to bottom, rgb(101 100 100 / 34%), rgba(0, 0, 0, 0.87));
 }
 
-/* .text {
-    position: absolute;
-    text-align: center;
-    z-index: 1;
-    top: 100px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 320px;
-    color: #fff;
-}
-h1 {
-    font-size: 30px;
-}
-h2 {
-    margin: 30px 0;
-    font-size: 16px;
-    padding: 0 50px;
-} */
 
 .bgWrap {
     position: relative;
@@ -36,11 +18,3 @@ h2 {
     /* overflow: hidden; */
     z-index: -1;
 }
-/* 
-.bgText {
-    position: absolute;
-    margin: 0;
-    text-align: center;
-    padding-top: 40vh;
-    text-shadow: 1px 1px 1px #3c5c5e;
-} */

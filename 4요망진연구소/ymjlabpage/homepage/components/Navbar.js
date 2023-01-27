@@ -51,7 +51,7 @@ export default function Navbar() {
                 <li>
                     <Link href="/metaverse">메타버스 서비스</Link>
                 </li>
-                {pathname === "/" ? (
+                {/* {pathname === "/" ? (
                     <AnchorLink offset={() => 100} href="#location">
                         <li>위치</li>
                     </AnchorLink>
@@ -59,13 +59,13 @@ export default function Navbar() {
                     <Link href="/">
                         <li>위치</li>
                     </Link>
-                )}
+                )} */}
                 <li>Contact</li>
             </ul>
             <style jsx>{`
                 nav {
                     width: 100vw;
-                    padding: 10px 50px 10px 50px;
+                    padding: 12px 80px 12px 80px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -76,10 +76,9 @@ export default function Navbar() {
                     right: 0;
                     background: #ffffffc1;
                     z-index: 1;
-                    font-family: "Spoqa Han Sans Neo";
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 1rem;
+                    font-weight: var(--medium);
+                    font-size: var(--font_15);
+                    color: var(--font_500);
                     line-height: 19px;
                 }
                 li {
