@@ -9,7 +9,7 @@ import { MemberInfo } from "../constants";
 
 const Members = () => (
     <section>
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.25 }}>
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
             <motion.h1 variants={textVariant(0.5)}>
                 <div className="title">멤버 소개</div>
                 <div>

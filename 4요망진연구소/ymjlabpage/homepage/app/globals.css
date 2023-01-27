@@ -128,7 +128,7 @@ a {
 .bgwrap {
     position: absolute;
     top: -550px;
-    right: -2050px;
+    right: calc(100% - 2000px);
     z-index: -3;
     /* visibility: hidden; */
 }
@@ -143,5 +143,3 @@ a {
         transform: rotate(360deg);
     }
 }
-
-

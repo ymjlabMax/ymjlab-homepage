@@ -33,7 +33,7 @@ export default function Navbar() {
     return (
         <nav>
             <Link href="/">
-                <Image className="logo-img" src="/images/logo_ymj.svg" alt="logo" width={100} height={50} />
+                <Image className="logo-img" src="/images/logo_ymj.svg" alt="logo" width={80} height={80} />
             </Link>
             <ul>
                 {pathname === "/" ? (
