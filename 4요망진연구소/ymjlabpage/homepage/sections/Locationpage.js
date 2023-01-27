@@ -77,6 +77,7 @@ export default function Locationpage() {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    width: 60%;
                     height: 100%;
                     line-height: 20px;
                     margin-left: 150px;
@@ -93,7 +94,7 @@ export default function Locationpage() {
                 table {
                     width: 100%;
                     border-collapse: separate;
-                    border-spacing: 20px 20px;
+                    border-spacing: 10px 20px;
                 }
 
                 .title-td {
@@ -106,6 +107,7 @@ export default function Locationpage() {
                 }
 
                 .content-td {
+                    width: 500px;
                     color: var(--font_500);
                     font-size: var(--font_16);
                     font-weight: var(--regular);
@@ -115,8 +117,8 @@ export default function Locationpage() {
                     display: flex;
                 }
                 .map-box {
-                    width: 560px;
-                    height: 360px;
+                    width: 600px;
+                    height: 400px;
                 }
 
                 @media only screen and (max-width: 600px) {
