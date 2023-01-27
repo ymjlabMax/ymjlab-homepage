@@ -106,7 +106,7 @@ export default function Companypage() {
                 button {
                     width: 190px;
                     height: 56px;
-                    background: ##ffffff;
+                    background: #ffffff;
                     border: 1px solid #ff8f0b;
                     border-radius: 6px;
                     color: #ff8f0b;

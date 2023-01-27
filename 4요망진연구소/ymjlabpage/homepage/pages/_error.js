@@ -1,5 +1,15 @@
+"use client";
+import { useEffect, useState } from "react";
+import Errorpage from "./Errorpage";
+
 function Error({ statusCode }) {
-    return <p>{statusCode ? `An error ${statusCode} occurred on server` : "An error occurred on client"}</p>;
+    const [code, setCode] = useState("");
+
+    useEffect(() => {
+        setCode(statusCode);
+    }, [statusCode]);
+
+    return <>{statusCode ? <Errorpage statusCode={statusCode} /> : "An error occurred on client"}</>;
 }
 
 Error.getInitialProps = ({ res, err }) => {
