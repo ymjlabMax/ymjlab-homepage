@@ -7,11 +7,14 @@ import Image from "next/image";
 import { HistoryInfo_2022, HistoryInfo_2021, HistoryInfo_2020 } from "../../constants";
 
 export default function History() {
-    const { scrollYProgress } = useScroll();
-
     return (
         <section>
-            <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
+            <div className="scroll-box-history">
+                <div>
+                    <p className="scroll-text-history">Scroll</p>
+                </div>
+                <Image className="scroll-img-history" src="/images/scroll.svg" width={20} height={20} alt="이동 스크롤" />
+            </div>
             <div className="history-box">
                 <div className="md-width">
                     <h2>2022</h2>
@@ -66,21 +69,20 @@ export default function History() {
                     display: flex;
                     flex-direction: column;
                     padding: 40px 50px 10px 50px;
-                    align-items: center;
-                    font-size: 16px;
+                    font-size: var(--font_16);
                 }
                 h1 {
-                    font-weight: 700;
-                    font-size: 28px;
+                    font-weight: var(--bold);
+                    font-size: var(--font_28);
                     line-height: 40px;
                     letter-spacing: -0.015em;
-                    color: #181818;
+                    color: var(--font_500);
                     display: flex;
                     justify-content: flex-start;
                 }
 
                 .history-box {
-                    width: 1000px;
+                    width: 1030px;
                     height: 100%;
                     margin-top: 20px;
                     display: flex;
@@ -164,10 +166,10 @@ export default function History() {
                 }
 
                 .md-width {
-                    min-width: 600px;
+                    min-width: 1000px;
                 }
                 .ld-width {
-                    min-width: 1000px;
+                    min-width: 1250px;
                 }
                 .sd-width {
                     min-width: 300px;

@@ -35,6 +35,7 @@
     /* 폰트 사이즈 & 칼라  */
     --font_36: 36px;
     --font_32: 32px;
+    --font_28: 28px;
     --font_24: 24px;
     --font_18: 18px;
     --font_16: 16px;
@@ -160,6 +161,32 @@ a {
     cursor: pointer;
 }
 
+.scroll-box-history {
+    width: 100%;
+    display: flex;
+}
+.scroll-img-history {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-animation: sdb2 1.5s infinite;
+    animation: sdb2 1.5s infinite;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.scroll-text {
+    margin-top: 15px;
+    color: var(--disable);
+    font-size: var(--font_18);
+    font-weight: var(--regular);
+}
+.scroll-text-history {
+    margin-right: 10px;
+    color: var(--disable);
+    font-size: var(--font_18);
+    font-weight: var(--regular);
+}
+
 @-webkit-keyframes sdb {
     0% {
         -webkit-transform: rotate(0deg) translate(0, 0);
@@ -180,6 +207,29 @@ a {
     }
     40% {
         transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+@-webkit-keyframes sdb2 {
+    0% {
+        -webkit-transform: rotate(-90deg) translate(0, 0);
+    }
+    20% {
+        -webkit-transform: rotate(-90deg) translate(0, -10px);
+    }
+    40% {
+        -webkit-transform: rotate(-90deg) translate(0, 0);
+    }
+}
+@keyframes sdb2 {
+    0% {
+        transform: rotate(-90deg) translate(0, 0);
+    }
+    20% {
+        transform: rotate(-90deg) translate(0, -10px);
+    }
+    40% {
+        transform: rotate(-90deg) translate(0, 0);
     }
 }
 

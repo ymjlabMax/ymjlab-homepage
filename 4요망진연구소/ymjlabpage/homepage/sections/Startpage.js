@@ -119,14 +119,6 @@ const Startpage = () => (
             <div>
                 <p className="scroll-text">Scroll</p>
             </div>
-            <style jsx>{`
-                .scroll-text {
-                    margin-top: 15px;
-                    color: var(--disable);
-                    font-size: var(--font_18);
-                    font-weight: var(--regular);
-                }
-            `}</style>
         </div>
     </>
 );

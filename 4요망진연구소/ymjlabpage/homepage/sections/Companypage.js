@@ -78,7 +78,7 @@ export default function Companypage() {
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
-                    margin-top: var(--section-margin);
+                    margin-top: 50px;
                 }
                 .title {
                     font-weight: 700;

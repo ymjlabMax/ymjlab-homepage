@@ -104,8 +104,23 @@ export const MetaverseInfo = [
 export const HistoryInfo_2022 = [
     {
         no: 1,
+        title: "11월 | 제14차 람사르협약 당사국 총회(COP, 스위스) 동아시아 부스 참여 ",
+        content: "환경부, 동아시아 람사르 지역센터",
+    },
+    {
+        no: 2,
+        title: "10월 | 스마트 관광 서비스 꿀트립 앱스토어(iOS) 출시",
+        content: "",
+    },
+    {
+        no: 3,
         title: "05월 | 초기창업패키지 창업기업 선정",
         content: "중소벤처기업부, 창업진흥원",
+    },
+    {
+        no: 4,
+        title: "05월 | 메타버스 플랫폼 개발지원 사업 선정(메타버스 도시)",
+        content: "과학기술정보통신부, 한국전파진흥협회",
     },
     {
         no: 5,
@@ -113,27 +128,32 @@ export const HistoryInfo_2022 = [
         content: "제주영상문화산업진흥원",
     },
     {
-        no: 3,
+        no: 6,
         title: "04월 | IP나래 프로그램 지원기업 선정",
         content: "제주상공회의소, 제주지식재산센터",
     },
     {
-        no: 4,
+        no: 7,
         title: "01월 | 벤처기업 인증 ",
         content: "중소벤처기업부",
     },
     {
-        no: 2,
+        no: 8,
         title: "01월 | 창업기업 인증 ",
         content: "중소벤처기업부, 벤처기업협회",
     },
 ];
-
+//
 export const HistoryInfo_2021 = [
     {
         no: 1,
         title: "12월 | 기업부설연구소 설립 및 인정 ",
         content: "과학기술정보통신부, 한국사업기술진흥협회",
+    },
+    {
+        no: 1,
+        title: "11월 | 스마트 관광 서비스 꿀트립 플레이스토어(Google Play) 출시 ",
+        content: "",
     },
 
     {
