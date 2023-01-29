@@ -75,7 +75,7 @@ export default function Navbar() {
                     left: 0;
                     right: 0;
                     background: #ffffffc1;
-                    z-index: 1;
+                    z-index: 999;
                     font-weight: var(--medium);
                     font-size: var(--font_15);
                     color: var(--font_500);
