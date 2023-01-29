@@ -5,6 +5,7 @@ import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
+import Image from "next/image";
 
 import { LocationInfo } from "../constants";
 
@@ -76,7 +77,7 @@ export default function Locationpage() {
                             {LocationInfo.map((el, index) => (
                                 <tr key={index}>
                                     <td className="title-td">
-                                        <img src={el.url} alt={el.name} />
+                                        <Image src={el.url} alt={el.name} width={40} height={50} />
                                     </td>
                                     <td className="content-td">{el.content}</td>
                                 </tr>
@@ -150,7 +151,6 @@ export default function Locationpage() {
                 .map-box {
                     width: 600px;
                     height: 350px;
-                    z-index: -11;
                 }
 
                 .customoverlay {
