@@ -227,7 +227,14 @@ export const SummaryInfo = [
 
 export const LocationInfo = [
     { no: 1, name: "주소", url: "/images/location/address.svg", content: "제주시 신산로 82, B102호(제주콘텐츠코리아랩 지하)" },
-    { no: 1, name: "팩스", url: "/images/location/fax.svg", content: "0303-3440-1223" },
-    { no: 1, name: "이메일", url: "/images/location/mail.svg", content: "admin@ymjlab.com" },
-    { no: 1, name: "전화번호", url: "/images/location/phone.svg", content: "010-8323-2294" },
+    { no: 2, name: "팩스", url: "/images/location/fax.svg", content: "0303-3440-1223" },
+    { no: 3, name: "이메일", url: "/images/location/mail.svg", content: "admin@ymjlab.com" },
+    { no: 4, name: "전화번호", url: "/images/location/phone.svg", content: "010-8323-2294" },
+];
+
+export const KkultripSummaryInfo = [
+    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_1.svg", content: "여행 결제 연동" },
+    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_1.svg", content: "할인 혜택 확인" },
+    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_1.svg", content: "여행 가계부" },
+    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_1.svg", content: "SNS공유" },
 ];

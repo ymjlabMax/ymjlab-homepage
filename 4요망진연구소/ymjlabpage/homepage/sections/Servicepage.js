@@ -52,7 +52,7 @@ const Servicepage = () => (
         </motion.div>
         <style jsx>{`
             section {
-                width: 100%;
+                /* width: 100%; */
                 height: 1000px;
                 display: flex;
                 justify-content: center;

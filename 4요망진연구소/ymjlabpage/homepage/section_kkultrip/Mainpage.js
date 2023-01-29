@@ -5,7 +5,7 @@ import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Mainpage.module.css";
-import Metaverse from "../public/images/kkultrip/kkultrip_main.png";
+import Metaverse from "../public/images/kkultrip_img/kkultrip_main.png";
 
 const Mainpage = () => {
     return (

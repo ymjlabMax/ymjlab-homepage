@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
+import Image from "next/image";
+import { KkultripSummaryInfo } from "../constants";
 
 export default function Summary() {
     return (
@@ -10,71 +12,78 @@ export default function Summary() {
             <div className="left-box">
                 <h1>관광데이터 기반 사후 정산 솔루션</h1>
                 <p>꿀트립서비시는 정체되고 낙후된 관광지 할인 쿠폰 서비스를</p>
-                <p>관광객 편의 중심으로 혁신하고 실시간 관광객의 소비 데이터를 </p>
-                <p>수집/분석/활용하는 스마트관광 빅데이터 서비스 입니다.</p>
-                <div className="btn-container">
-                    <div className="btn-box">Asset</div>
-                    <div className="btn-box">world</div>
+                <p>
+                    <span>관광객 편의 중심</span>으로 혁신하고 실시간 관광객의 소비 데이터를{" "}
+                </p>
+                <p>
+                    수집/분석/활용하는 <span>스마트관광 빅데이터 서비스</span> 입니다.
+                </p>
+                <div className="summary-box">
+                    {KkultripSummaryInfo.map((el, index) => (
+                        <div className="item-box" key={index}>
+                            <Image src={el.url} width={40} height={40} alt={el.content} />
+                            <p className="item-content">{el.content}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="right-box">
-                <div className="map-box"></div>
+                <Image src="/images/kkultrip_img/kkultrip_phone.svg" alt="꿀트립 앱 이미지" width={200} height={200} />
             </div>
             <style jsx>{`
                 section {
-                    width: 100%;
                     height: var(--page_height);
                     display: flex;
                     justify-content: center;
+                    padding: 200px 0 100px 0;
+                    margin-bottom: 100px;
                 }
                 .left-box {
-                    width: 50%;
-                    height: 100%;
-                    line-height: 20px;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
                 }
                 .right-box {
+                    padding-left: 100px;
+                }
+                h1 {
+                    font-weight: var(--bold);
+                    font-size: var(--font_40);
+                    line-height: 50px;
                     display: flex;
-                    justify-content: center;
                     align-items: center;
-                    width: 50%;
-                    height: 100%;
+                    color: var(--font_500);
+                    margin-bottom: 18px;
+                }
+                p {
+                    font-weight: var(--regular);
+                    font-size: var(--font_18);
+                    line-height: 23px;
+                    color: var(--font_500);
                 }
 
                 span {
-                    font-weight: 700;
-                }
-                .map-box {
-                    width: 500px;
-                    height: 490px;
-                    background: #eeeeee;
+                    color: var(--main_orange);
                 }
 
-                h1 {
-                    font-weight: 700;
-                    font-size: 32px;
-                    line-height: 40px;
-                    letter-spacing: -0.015em;
-                    color: #181818;
-                    margin-bottom: 10px;
+                .summary-box {
+                    display: grid;
+                    grid-template-columns: repeat(2, 220px);
+                    grid-template-rows: repeat(2, 70px);
+                    margin-top: 100px;
                 }
 
-                .btn-container {
-                    display: flex;
-                    margin-top: 54px;
-                }
-
-                .btn-box {
+                .item-box {
                     display: flex;
                     align-items: center;
-                    justify-content: center;
-                    width: 200px;
-                    height: 105px;
-                    border: 1px solid #181818;
-                    margin-right: 10px;
+                    padding: 10px 10px 10px 10px;
+                }
+                .item-content {
+                    margin-left: 8px;
+                    font-style: normal;
+                    font-weight: var(--medium);
+                    font-size: var(--font_20);
+                    line-height: 25px;
+                    color: var(--font_400);
                 }
 
                 @media only screen and (max-width: 600px) {
