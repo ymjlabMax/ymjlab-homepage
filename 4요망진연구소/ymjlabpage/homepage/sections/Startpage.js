@@ -51,16 +51,16 @@ export default function Startpage() {
                 </div>
                 <style jsx>{`
                     section {
-                        width: 100vw;
+                        /* width: 100vw; */
                         height: var(--page_height);
                         display: flex;
                         justify-content: center;
                         z-index: 10;
-                        padding: 0 100px 0 100px;
+                        /* padding: 0 100px 0 100px; */
                     }
 
                     .left-box {
-                        width: 40%;
+                        width: 50%;
                         height: 100%;
                         display: flex;
                         justify-content: flex-end;

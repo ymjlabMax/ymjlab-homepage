@@ -29,7 +29,7 @@ export default function Business() {
                     <Image src="/images/kkultrip_img/kkultrip_strategy.png" alt="꿀트립 앱 이미지" width={600} height={700} />
                 </div>
                 <div className="right-box">
-                    <h1>사업 확장 전략</h1>
+                    <h1 className="pull-right">사업 확장 전략</h1>
                     <div className="content-box">
                         <p>
                             꿀트립 서비스의 할인혜택을 통한 관광 소비데이터 수집으로 보다 양질의 빅데이터 기반 분석을 통해 관광상품 개발/판매, 빅데이터 분석
@@ -79,6 +79,10 @@ export default function Business() {
                 .content-box {
                     width: 600px;
                     line-height: 23px;
+                }
+
+                .pull-right {
+                    text-align: right;
                 }
 
                 @media only screen and (max-width: 600px) {
