@@ -11,6 +11,13 @@ const nextConfig = {
         kakaoApiKey: API_KEY,
     },
 
+    exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
+        return {
+            "/": { page: "/" },
+            "/kkultrip": { page: "/kkultrip" },
+            "/metaverse": { page: "/metaverse" },
+        };
+    },
     // async redirects() {
     //     return [
     //         {

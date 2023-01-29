@@ -56,10 +56,11 @@ export default function Startpage() {
                         display: flex;
                         justify-content: center;
                         z-index: 10;
+                        padding: 0 100px 0 100px;
                     }
 
                     .left-box {
-                        width: 50%;
+                        width: 40%;
                         height: 100%;
                         display: flex;
                         justify-content: flex-end;
