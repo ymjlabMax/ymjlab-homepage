@@ -29,7 +29,7 @@ export default function Locationpage() {
                 const mapOptions = {
                     //지도를 생성할 때 필요한 기본 옵션
                     center: new kakao.maps.LatLng(lat, lon), //지도의 중심좌표.
-                    level: 4, //지도의 레벨(확대, 축소 정도)
+                    level: 6, //지도의 레벨(확대, 축소 정도)
                 };
 
                 let map = new window.kakao.maps.Map(mapContainer, mapOptions);
@@ -37,7 +37,7 @@ export default function Locationpage() {
                 let zoomControl = new kakao.maps.ZoomControl();
                 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-                var marker = new kakao.maps.Marker({
+                let marker = new kakao.maps.Marker({
                     // 지도 중심좌표에 마커를 생성합니다
                     position: map.getCenter(),
                 });
@@ -45,7 +45,7 @@ export default function Locationpage() {
                 marker.setMap(map);
 
                 // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-                var content =
+                let content =
                     '<div class="customoverlay">' +
                     '  <a href="https://map.kakao.com/?map_type=TYPE_MAP&itemId=1479632325" target="_blank">' +
                     '    <span class="title">(주)요망진연구소</span>' +
@@ -95,7 +95,7 @@ export default function Locationpage() {
                     height: 520px;
                     display: flex;
                     flex-direction: column;
-                    margin-bottom: 100px;
+                    margin-bottom: 50px;
                 }
                 .title {
                     font-weight: var(--bold);
@@ -149,7 +149,8 @@ export default function Locationpage() {
                 }
                 .map-box {
                     width: 600px;
-                    height: 400px;
+                    height: 350px;
+                    z-index: -11;
                 }
 
                 .customoverlay {

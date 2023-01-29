@@ -2,14 +2,17 @@ export const socials = [
     {
         name: "instagram",
         url: "/images/logo_instagram.svg",
+        link: "https://www.instagram.com/kkultrip/?hl=ko",
     },
     {
         name: "youtube",
         url: "/images/logo_youtube.svg",
+        link: "https://www.youtube.com/@kkultrip/videos",
     },
     {
         name: "facebook",
         url: "/images/logo_facebook.svg",
+        link: "https://www.facebook.com/people/Ymjlab/100088228987027/",
     },
 ];
 
@@ -91,8 +94,8 @@ export const PartnerInfo = [
     { no: 1, name: "넥스트스토리", url: "images/partner/logo_nextstory.svg" },
     { no: 2, name: "스토익", url: "images/Partner/logo_stoic.svg" },
     { no: 3, name: "sj테크놀로지", url: "images/Partner/logo_sj.svg" },
-    { no: 4, name: "맘모식스", url: "images/Partner/맘모식스.svg" },
-    { no: 4, name: "디캐릭", url: "images/Partner/dcarrick.svg" },
+    { no: 4, name: "맘모식스", url: "images/Partner/mammossix.svg" },
+    { no: 5, name: "디캐릭", url: "images/Partner/dcarrick.svg" },
 ];
 
 export const MetaverseInfo = [
@@ -209,7 +212,7 @@ export const HistoryInfo_2020 = [
     {
         no: 2,
         title: "(주)요망진연구소 법인 설립 ",
-        content: "2021년 12월 23일",
+        content: "2020년 12월 23일",
     },
 ];
 

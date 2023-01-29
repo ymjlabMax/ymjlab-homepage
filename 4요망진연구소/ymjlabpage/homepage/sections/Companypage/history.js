@@ -1,86 +1,62 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 
 import { HistoryInfo_2022, HistoryInfo_2021, HistoryInfo_2020 } from "../../constants";
 
-export default function History() {
+export function HistoryContent() {
     return (
-        <section>
-            <div className="scroll-box-history">
-                <div>
-                    <p className="scroll-text-history">Scroll</p>
+        <div className="history-box">
+            <div className="md-width">
+                <h2>2022</h2>
+                <div className="flex-container">
+                    <div className="flex-line-box">
+                        <div className="flex-line-box-content">
+                            {HistoryInfo_2022.map((el, index) => (
+                                <div key={index}>
+                                    <h3>{el.title}</h3>
+                                    <p>{el.content}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-                <Image className="scroll-img-history" src="/images/scroll.svg" width={20} height={20} alt="이동 스크롤" />
             </div>
-            <div className="history-box">
-                <div className="md-width">
-                    <h2>2022</h2>
-                    <div className="flex-container">
-                        <div className="flex-line-box">
-                            <div className="flex-line-box-content">
-                                {HistoryInfo_2022.map((el, index) => (
-                                    <div key={index}>
-                                        <h3>{el.title}</h3>
-                                        <p>{el.content}</p>
-                                    </div>
-                                ))}
-                            </div>
+            <div className="ld-width">
+                <h2>2021</h2>
+                <div className="flex-container">
+                    <div className="flex-line-box">
+                        <div className="flex-line-box-content">
+                            {HistoryInfo_2021.map((el, index) => (
+                                <div key={index}>
+                                    <h3>{el.title}</h3>
+                                    <p>{el.content}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
-                <div className="ld-width">
-                    <h2>2021</h2>
-                    <div className="flex-container">
-                        <div className="flex-line-box">
-                            <div className="flex-line-box-content">
-                                {HistoryInfo_2021.map((el, index) => (
-                                    <div key={index}>
-                                        <h3>{el.title}</h3>
-                                        <p>{el.content}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="sd-width">
-                    <h2>2020</h2>
-                    <div className="flex-container">
-                        <div className="flex-line-box">
-                            <div className="flex-line-box-content">
-                                {HistoryInfo_2020.map((el, index) => (
-                                    <div key={index}>
-                                        <h3>{el.title}</h3>
-                                        <p>{el.content}</p>
-                                    </div>
-                                ))}
-                            </div>
+            </div>
+            <div className="sd-width">
+                <h2>2020</h2>
+                <div className="flex-container">
+                    <div className="flex-line-box">
+                        <div className="flex-line-box-content">
+                            {HistoryInfo_2020.map((el, index) => (
+                                <div key={index}>
+                                    <h3>{el.title}</h3>
+                                    <p>{el.content}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
             <style jsx>{`
-                section {
-                    width: 100%;
-                    height: 360px;
-                    display: flex;
-                    flex-direction: column;
-                    padding: 40px 50px 10px 50px;
-                    font-size: var(--font_16);
-                }
-                h1 {
-                    font-weight: var(--bold);
-                    font-size: var(--font_28);
-                    line-height: 40px;
-                    letter-spacing: -0.015em;
-                    color: var(--font_500);
-                    display: flex;
-                    justify-content: flex-start;
-                }
-
                 .history-box {
                     width: 1030px;
                     height: 100%;
@@ -90,16 +66,6 @@ export default function History() {
                     white-space: nowrap;
                     overflow-x: scroll;
                     overflow-y: hidden;
-                }
-
-                .progress-bar {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    height: 10px;
-                    background: var(--red);
-                    transform-origin: 0%;
                 }
 
                 h2 {
@@ -133,21 +99,6 @@ export default function History() {
                     letter-spacing: -0.015em;
                     color: #767676;
                 }
-
-                .month-box {
-                    display: flex;
-                }
-                .line-box {
-                    padding: 0px 20px 20px 0px;
-                }
-
-                .grid-container {
-                    text-align: center;
-                    display: grid;
-                    grid-template-columns: repeat(2, 320px);
-                    grid-template-rows: repeat(6, 22px);
-                    gap: 20px;
-                }
                 .flex-container {
                     display: flex;
                     flex-direction: column;
@@ -174,8 +125,42 @@ export default function History() {
                 .sd-width {
                     min-width: 300px;
                 }
+            `}</style>
+        </div>
+    );
+}
 
-                .title {
+export default function History() {
+    // const [Dataitem, setDataItem] = useState(null);
+
+    // useEffect(() => {
+    //     setDataItem(<HistoryContent />);
+    // }, []);
+
+    return (
+        <section>
+            <div className="scroll-box-history">
+                <div>
+                    <p className="scroll-text-history">Scroll</p>
+                </div>
+                <Image className="scroll-img-history" src="/images/scroll.svg" width={20} height={20} alt="이동 스크롤" />
+            </div>
+            <HistoryContent />
+            <style jsx>{`
+                section {
+                    width: 100%;
+                    height: 360px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 40px 50px 10px 50px;
+                    font-size: var(--font_16);
+                }
+                h1 {
+                    font-weight: var(--bold);
+                    font-size: var(--font_28);
+                    line-height: 40px;
+                    letter-spacing: -0.015em;
+                    color: var(--font_500);
                     display: flex;
                     justify-content: flex-start;
                 }

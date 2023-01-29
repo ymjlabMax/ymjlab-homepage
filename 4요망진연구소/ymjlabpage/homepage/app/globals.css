@@ -64,6 +64,7 @@
 
     /* 컴포넌트 크기 */
     --page_height: 768px;
+    --page_width: 768px;
 
     /* 섹션별 마진 */
     --section-margin: 200px;
@@ -101,7 +102,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    width: 100%;
+    /* width: 100%; */
     font-family: "Spoqa Han Sans Neo";
     font-style: normal;
     display: flex;
@@ -111,6 +112,9 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+.active-nav {
+    color: var(--main_orange_400);
 }
 
 .wrap {
@@ -122,15 +126,15 @@ a {
     /* border: 1px solid #181818; */
 }
 .bg-container {
-    width: 50vw;
+    /* width: 100%; */
     position: relative;
     /* overflow: hidden; */
 }
 
 .bg-wrap {
     position: absolute;
-    top: -600px;
-    right: -800px;
+    top: -550px;
+    right: -450px;
     z-index: -3;
     /* visibility: hidden; */
 }

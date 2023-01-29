@@ -32,25 +32,25 @@ export default function Navbar() {
 
     return (
         <nav>
-            <Link href="/">
+            <Link href="/" scroll={false} shallow={true}>
                 <Image className="logo-img" src="/images/logo_ymj.svg" alt="logo" width={80} height={80} />
             </Link>
             <ul>
                 {pathname === "/" ? (
                     <AnchorLink offset={() => 100} href="#content">
-                        <li>회사소개</li>
+                        <li className="active-nav">회사소개</li>
                     </AnchorLink>
                 ) : (
-                    <Link href="/">
-                        <li>회사소개</li>
+                    <Link href="/" scroll={true} shallow={true}>
+                        {pathname === "/" ? <li className="acitve-nav">회사소개</li> : <li>회사소개</li>}
                     </Link>
                 )}
-                <li>
-                    <Link href="/kkultrip">꿀트립 서비스</Link>
-                </li>
-                <li>
-                    <Link href="/metaverse">메타버스 서비스</Link>
-                </li>
+                <Link href="/kkultrip" scroll={true} shallow={true}>
+                    {pathname === "/kkultrip" ? <li className="active-nav">꿀트립 서비스</li> : <li>꿀트립 서비스</li>}
+                </Link>
+                <Link href="/metaverse" scroll={true} shallow={true}>
+                    {pathname === "/metaverse" ? <li className="active-nav">메타버스 서비스</li> : <li>메타버스 서비스</li>}
+                </Link>
                 {/* {pathname === "/" ? (
                     <AnchorLink offset={() => 100} href="#location">
                         <li>위치</li>

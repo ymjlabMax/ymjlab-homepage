@@ -11,7 +11,11 @@ const Partner = () => (
         {PartnerInfo.map((el, index) => (
             <motion.div key={index} whileHover={{ scale: 1.4 }}>
                 <div className="aff-box">
-                    <Image src={el.url} alt={el.name} width={150} height={150} />
+                    {el.name === "맘모식스" ? (
+                        <Image src={el.url} alt={el.name} width={100} height={150} />
+                    ) : (
+                        <Image src={el.url} alt={el.name} width={150} height={150} />
+                    )}
                 </div>
             </motion.div>
         ))}
