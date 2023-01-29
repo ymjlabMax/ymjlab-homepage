@@ -109,28 +109,27 @@ export default function Locationpage() {
                     text-align: center;
                     margin-bottom: var(--component-margin);
                 }
-
-                .location-box {
-                    display: flex;
-                    justify-content: center;
-                }
                 .left-box {
-                    height: 100%;
+                    width: 50%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    height: 100%;
                     line-height: 20px;
                 }
 
                 .right-box {
+                    width: 50%;
                     height: 100%;
-                    padding-left: 100px;
                 }
+
                 table {
+                    width: 100%;
                     border-collapse: separate;
                     border-spacing: 8px 20px;
                 }
+
                 .title-td {
                     width: 5px;
                     color: var(--font_500);
@@ -146,9 +145,20 @@ export default function Locationpage() {
                     font-weight: var(--regular);
                 }
 
+                .location-box {
+                    display: flex;
+                }
                 .map-box {
                     width: 600px;
                     height: 350px;
+                }
+
+                .customoverlay {
+                    width: 300px;
+                    height: 300px;
+                    background: #ffffff;
+                    font-size: 16px;
+                    font-weight: bold;
                 }
 
                 @media only screen and (max-width: 600px) {

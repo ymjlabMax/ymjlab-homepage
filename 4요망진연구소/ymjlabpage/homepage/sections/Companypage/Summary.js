@@ -31,9 +31,9 @@ const Summary = () => (
                 width: 100%;
                 height: 360px;
                 display: flex;
-                justify-content: flex-start;
+                justify-content: center;
                 font-size: var(--font_16);
-                padding: 0 50px 0 150px;
+                /* padding: 0 50px 0 150px; */
             }
             .left-box {
                 display: flex;

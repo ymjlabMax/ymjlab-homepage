@@ -1,3 +1,13 @@
+import { Mainpage, Summary, Content, Servicepage } from "../../section_kkultrip";
 export default function Page() {
-    return <h1>꿀트립 페이지를 꾸며주세요.</h1>;
+    return (
+        <>
+            <Mainpage />
+            <div className="page-wrap">
+                <Summary />
+                <Content />
+                <Servicepage />
+            </div>
+        </>
+    );
 }

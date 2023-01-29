@@ -1,3 +1,5 @@
+config.autoAddCss = false;
+
 export default function DashboardLayout({ children }) {
-    return <section>{children}</section>;
+    return <div>{children}</div>;
 }
