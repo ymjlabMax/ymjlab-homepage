@@ -23,14 +23,13 @@ export default function Companypage() {
     return (
         <section id="content">
             <div className="title">요망진연구소 소개</div>
-            <content className="content">
+            <div className="content-box">
                 <p>
                     우리는 스마트관광 산업에 획기적인 변화를 이끌고, 새로운 가치를 창출하기 위해 관광 소비데이터를 활용한 AI Holistic benefit 서비스를
-                    제공하고자 합니다.
+                    제공하고자 합니다. 이를 위하여 정체되고 낙후된 관광지 할인 쿠폰 분야를 혁신하고, 실시간 관광객 소비데이터를 수집/분석/활용 할 수 있는
+                    시스템을 구축하여 관광객 편의 중심의 스마트관광 솔루션을 개발하고 있습니다.
                 </p>
-                <p>이를 위하여 정체되고 낙후된 관광지 할인 쿠폰 분야를 혁신하고, 실시간 관광객 소비데이터를 수집/분석/활용 할 수 있는 시스템을 구축하여</p>
-                <p> 관광객 편의 중심의 스마트관광 솔루션을 개발하고 있습니다.</p>
-            </content>
+            </div>
             <div className="btn_list">
                 <button
                     className={companyInfo === "Summary" && "active"}
@@ -73,12 +72,14 @@ export default function Companypage() {
             </div>
             <style jsx>{`
                 section {
-                    width: 100%;
+                    /* width: 100%; */
                     height: 768px;
                     display: flex;
                     justify-content: center;
+                    align-items: center;
                     flex-direction: column;
                     margin-top: 50px;
+                    margin-bottom: 150px;
                 }
                 .title {
                     font-weight: 700;
@@ -89,7 +90,8 @@ export default function Companypage() {
                     text-align: center;
                     margin-bottom: var(--title-margin);
                 }
-                .content {
+                .content-box {
+                    width: 40%;
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 20px;
@@ -129,8 +131,37 @@ export default function Companypage() {
                 .main_color {
                     color: #ff8f0b;
                 }
+                /* 테블릿 사이즈 */
+                @media only screen and (max-width: 1060px) {
+                    .content-box {
+                        width: auto;
+                        padding: 0 16px 0 16px;
+                        font-size: 14px;
+                        margin-bottom: 40px;
+                    }
 
+                    button {
+                        width: 100px;
+                        height: 46px;
+                        margin: 0 20px 30px 20px;
+                    }
+                }
+                /* 휴대폰 사이즈 */
                 @media only screen and (max-width: 600px) {
+                    .container {
+                        text-align: left;
+                    }
+
+                    .content-box {
+                        font-size: 14px;
+                        text-align: left;
+                    }
+
+                    button {
+                        width: 70px;
+                        height: 40px;
+                        margin: 0 10px 30px 10px;
+                    }
                 }
             `}</style>
         </section>

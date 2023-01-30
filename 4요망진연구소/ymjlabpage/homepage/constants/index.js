@@ -113,7 +113,7 @@ export const HistoryInfo_2022 = [
     {
         no: 2,
         title: "10월 | 스마트 관광 서비스 꿀트립 앱스토어(iOS) 출시",
-        content: "",
+        content: "Apple",
     },
     {
         no: 3,
@@ -156,7 +156,7 @@ export const HistoryInfo_2021 = [
     {
         no: 1,
         title: "11월 | 스마트 관광 서비스 꿀트립 플레이스토어(Google Play) 출시 ",
-        content: "",
+        content: "Andriod",
     },
 
     {
@@ -219,7 +219,7 @@ export const HistoryInfo_2020 = [
 export const SummaryInfo = [
     { no: 1, title: "회 사 명", content: "주식회사 요망진연구소" },
     { no: 2, title: "대 표 이 사", content: "최성기" },
-    { no: 3, title: "주요서비스", content: "관광 소비데이터 기반 사후정산 서비스 꿀트립, 에이전시 서비스UMH 등" },
+    { no: 3, title: "서 비 스 ", content: "관광 소비데이터 기반 사후정산 서비스 꿀트립, 에이전시 서비스UMH 등" },
     { no: 4, title: "주 요 사 업", content: "서비스(꿀트립, 메타버스 에이전시 마케팅)및 콘텐츠 개발" },
     { no: 5, title: "설 립 일", content: "2020년 12월 23일" },
     { no: 6, title: "직 원 수", content: "10명 (2023.01 기준)" },

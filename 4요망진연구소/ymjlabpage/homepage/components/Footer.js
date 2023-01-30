@@ -19,7 +19,7 @@ const Footer = () => (
                     <span className="bold">대표</span>&nbsp;&nbsp;최성기&nbsp;&nbsp;<span className="bold">사업자번호</span>&nbsp;&nbsp;183-81-02296
                 </p>
                 <p>
-                    <span className="bold">이메일</span>&nbsp;&nbsp;support@ymjlab.com
+                    <span className="bold">이메일</span>&nbsp;&nbsp;admin@ymjlab.com
                 </p>
             </div>
             <div className="bottom">
@@ -35,6 +35,9 @@ const Footer = () => (
                         </Link>
                     </div>
                 ))}
+            </div>
+            <div className="responsive-bottom">
+                <div className="sub-title">Copyright © YMJLAB Inc. 2023</div>
             </div>
         </div>
 
@@ -94,6 +97,38 @@ const Footer = () => (
             }
             .content > p {
                 margin-bottom: 6px;
+            }
+            .responsive-bottom {
+                display: none;
+            }
+
+            /* 테블릿 사이즈 */
+            @media only screen and (max-width: 1225px) {
+            }
+
+            /* 휴대폰 사이즈 */
+            @media only screen and (max-width: 600px) {
+                footer {
+                    flex-direction: column;
+                    height: auto;
+                    align-items: flex-start;
+                    text-align: center;
+                    padding: 20px 20px 20px 20px;
+                }
+
+                .logo-margin {
+                    width: 20%;
+                    margin: 0 10px 0 10px;
+                }
+                .bottom {
+                    display: none;
+                }
+                .responsive-bottom {
+                    display: block;
+                    color: #181818;
+                    font-size: 14px;
+                    margin-top: 16px;
+                }
             }
         `}</style>
     </footer>

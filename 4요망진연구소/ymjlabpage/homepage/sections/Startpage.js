@@ -124,13 +124,83 @@ export default function Startpage() {
                     }
                     .btn-12:hover div:nth-child(2) {
                         /* background: #e0e5ec;
-                color: #e0e5ec; */
+                        color: #e0e5ec; */
                         -webkit-transform: rotateX(-90deg);
                         -moz-transform: rotateX(-90deg);
                         transform: rotateX(-90deg);
                     }
 
+                    /* 테블릿 사이즈 */
+                    @media only screen and (max-width: 1225px) {
+                        section {
+                            width: 100vw;
+                        }
+
+                        .left-box {
+                            width: 50%;
+                            transition: all 0.3s;
+                        }
+
+                        .right-box {
+                            width: 40%;
+                            transition: all 0.3s;
+                        }
+                        h1 {
+                            font-size: var(--font_24);
+                        }
+                    }
+
+                    @media only screen and (max-width: 840px) {
+                        .left-box {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: -200px;
+                            transition: all 0.3s;
+                        }
+
+                        h1 {
+                            font-size: var(--font_18);
+                            transition: all 0.3s;
+                        }
+
+                        .right-box {
+                            position: relative;
+                            width: 90%;
+                            transition: all 0.3s;
+                        }
+
+                        .main-color {
+                            color: var(--font_500);
+                            transition: all 0.3s;
+                        }
+                    }
+
+                    /* 휴대폰 사이즈 */
                     @media only screen and (max-width: 600px) {
+                        .left-box {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: -200px;
+                            transition: all 0.3s;
+                        }
+
+                        h1 {
+                            font-size: var(--font_18);
+                            transition: all 0.3s;
+                        }
+
+                        .right-box {
+                            position: relative;
+                            width: 90%;
+                            transition: all 0.3s;
+                        }
+
+                        .main-color {
+                            color: var(--font_500);
+                            transition: all 0.3s;
+                        }
                     }
                 `}</style>
             </section>

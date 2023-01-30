@@ -93,13 +93,13 @@ export function HistoryContent() {
                         align-items: center;
                         letter-spacing: -0.015em;
                         color: #181818;
-                        margin-top: 10px;
+                        margin-top: 16px;
                     }
                     p {
                         font-family: "Spoqa Han Sans Neo";
                         font-style: normal;
-                        font-weight: 500;
-                        font-size: 13px;
+                        font-weight: 400;
+                        font-size: 14px;
                         line-height: 16px;
                         display: flex;
                         align-items: center;
@@ -118,19 +118,65 @@ export function HistoryContent() {
                     .flex-line-box-content {
                         display: flex;
                         margin-right: 10px;
-                        height: 150px;
+                        height: 220px;
                         flex-direction: column;
                         flex-wrap: wrap;
                     }
 
                     .md-width {
-                        min-width: 1000px;
+                        min-width: 800px;
                     }
                     .ld-width {
-                        min-width: 1250px;
+                        min-width: 1000px;
                     }
                     .sd-width {
                         min-width: 300px;
+                    }
+                    /* 테블릿 사이즈 */
+                    @media only screen and (max-width: 1300px) {
+                        .history-box {
+                            width: 800px;
+                        }
+                        .md-width {
+                            min-width: 700px;
+                        }
+                        .ld-width {
+                            min-width: 1000px;
+                        }
+                        .sd-width {
+                            min-width: 300px;
+                        }
+                    }
+                    /* 테블릿 사이즈 */
+                    @media only screen and (max-width: 1060px) {
+                        .history-box {
+                            width: 600px;
+                        }
+                        .md-width {
+                            min-width: 800px;
+                        }
+                        .ld-width {
+                            min-width: 1100px;
+                        }
+                        .sd-width {
+                            min-width: 300px;
+                        }
+                    }
+                    /* 휴대폰 사이즈 */
+                    @media only screen and (max-width: 600px) {
+                        .history-box {
+                            width: 300px;
+                        }
+
+                        .md-width {
+                            min-width: 800px;
+                        }
+                        .ld-width {
+                            min-width: 1200px;
+                        }
+                        .sd-width {
+                            min-width: 300px;
+                        }
                     }
                 `}</style>
             </div>

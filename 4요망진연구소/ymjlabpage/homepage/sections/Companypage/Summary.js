@@ -72,6 +72,51 @@ const Summary = () => (
                 font-weight: var(--regular);
             }
 
+            /* 테블릿 사이즈 */
+            @media only screen and (max-width: 1060px) {
+                section {
+                    width: auto;
+                }
+            }
+
+            @media only screen and (max-width: 760px) {
+                section {
+                    flex-direction: column-reverse;
+                    margin-top: 40px;
+                }
+
+                .left-box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: separate;
+                    border-spacing: 20px 20px;
+                }
+
+                .title-td {
+                    width: 120px;
+                    text-align: justify;
+                    text-align-last: justify;
+                    color: var(--font_500);
+                    font-size: var(--font_14);
+                    font-weight: var(--bold);
+                }
+                tr {
+                    height: 24px;
+                }
+
+                .content-td {
+                    color: var(--font_500);
+                    font-size: var(--font_14);
+                    font-weight: var(--regular);
+                }
+            }
+
+            /* 휴대폰 사이즈 */
             @media only screen and (max-width: 600px) {
             }
         `}</style>

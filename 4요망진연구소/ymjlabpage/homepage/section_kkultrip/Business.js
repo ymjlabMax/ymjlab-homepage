@@ -82,7 +82,7 @@ export default function Business() {
                 }
 
                 .pull-right {
-                    text-align: right;
+                    justify-content: flex-end;
                 }
 
                 @media only screen and (max-width: 600px) {

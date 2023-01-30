@@ -26,9 +26,7 @@ const Partner = () => (
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-family: "Spoqa Han Sans Neo";
-                font-style: normal;
-                font-size: 16px;
+                flex-wrap: wrap;
             }
             .aff-box {
                 display: flex;

@@ -36,6 +36,7 @@
     --font_40: 40px;
     --font_36: 36px;
     --font_32: 32px;
+    --font_30: 30px;
     --font_28: 28px;
     --font_24: 24px;
     --font_18: 18px;
@@ -282,4 +283,20 @@ a {
     width: 22px;
     height: 12px;
     background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
+}
+@media only screen and (max-width: 1300px) {
+    .scroll-box-history {
+        width: 800px;
+    }
+}
+@media only screen and (max-width: 1060px) {
+    .scroll-box-history {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .scroll-box-history {
+        width: 300px;
+    }
 }

@@ -55,7 +55,7 @@ const Servicepage = () => (
                 /* width: 100%; */
                 height: 1000px;
                 display: flex;
-                justify-content: center;
+                /* justify-content: center; */
                 flex-direction: column;
                 overflow: hidden;
                 margin-bottom: var(--section-margin);
@@ -147,7 +147,43 @@ const Servicepage = () => (
                 justify-content: flex-end;
             }
 
+            /* 테블릿 사이즈 */
+            @media only screen and (max-width: 1225px) {
+                section {
+                    width: auto;
+                    height: auto;
+                }
+            }
+            /* 휴대폰 사이즈 */
             @media only screen and (max-width: 600px) {
+                .first-box {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .side-img {
+                    display: none;
+                }
+                .second-box {
+                    flex-direction: column-reverse;
+                    align-items: center;
+                }
+                .right {
+                    margin-top: 20px;
+                }
+
+                button {
+                    width: 180px;
+                }
+
+                .meta-left {
+                    text-align: center;
+                    margin-left: 0;
+                }
+
+                .kkultrip-bottom {
+                    text-align: center;
+                    margin-left: 0;
+                }
             }
         `}</style>
     </section>

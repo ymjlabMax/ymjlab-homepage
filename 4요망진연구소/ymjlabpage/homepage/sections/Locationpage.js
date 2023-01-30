@@ -92,7 +92,7 @@ export default function Locationpage() {
 
             <style jsx>{`
                 section {
-                    width: 100%;
+                    /* width: 100%; */
                     height: 520px;
                     display: flex;
                     flex-direction: column;
@@ -151,7 +151,40 @@ export default function Locationpage() {
                     height: 350px;
                 }
 
+                /* 테블릿 사이즈 */
+                @media only screen and (max-width: 1060px) {
+                    section {
+                        width: auto;
+                        height: auto;
+                    }
+
+                    .location-box {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                    }
+
+                    .right-box {
+                        height: 100%;
+                        padding-left: 0;
+                    }
+                }
+                /* 휴대폰 사이즈 */
                 @media only screen and (max-width: 600px) {
+                    .location-box {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                    }
+
+                    .right-box {
+                        height: 100%;
+                        padding-left: 0;
+                    }
+
+                    .map-box {
+                        width: 350px;
+                    }
                 }
             `}</style>
         </section>
