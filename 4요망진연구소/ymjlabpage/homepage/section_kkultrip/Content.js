@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Content() {
     return (
@@ -20,7 +21,7 @@ export default function Content() {
                     <h3>③실시간 수집/분석/활용 시스템</h3>
                     {/* <p>실시간 관광객 소비데이터 수집/분석/활용 시스템 부재 </p> */}
                 </div>
-                <div className="content-box gray-background">
+                <div className="content-box  gray-background ">
                     <h2>Why</h2>
                     <h3 className="danger-color">① 단순 부정 사용 방지 수준의 데이터 수집/활용</h3>
                     <p>&nbsp;</p>
@@ -29,6 +30,9 @@ export default function Content() {
                     <h3 className="danger-color">③ 실시간 관광객 소비데이터 수집/분석/활용 시스템 부재</h3>
                 </div>
                 <div className="final-box">
+                    <Link href="https://kkultrip.com" target="_blank">
+                        <Image src="/images/kkultrip_img/kkultrip_app_img.svg" width={170} height={100} alt="꿀트립 앱 이미지" />
+                    </Link>
                     <p>관광소비 빅데이터 기반 상호 연계성을 활용한 </p>
                     <h3>Holistic BeneFIT 관광 서비스</h3>
                 </div>
@@ -75,6 +79,7 @@ export default function Content() {
                     box-sizing: border-box;
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     padding: 32px 8px 16px 16px;
                     gap: 8px;
                     width: 300px;
@@ -120,6 +125,11 @@ export default function Content() {
 
                 .gray-background {
                     background: #fafafa;
+                }
+
+                .final-box > h3 {
+                    margin-top: 4px;
+                    font-size: 16px;
                 }
 
                 @media only screen and (max-width: 600px) {

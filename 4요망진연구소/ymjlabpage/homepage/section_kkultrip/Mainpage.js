@@ -26,7 +26,6 @@ const Mainpage = () => {
             <div className="title">
                 <h1>내가 신경쓰지 않아도</h1>
                 <h2>할인 받는 꿀 같은 여행 앱</h2>
-                <p>관광데이터 기반 사후정산 솔류션 꿀트립</p>
             </div>
 
             <style jsx>{`
@@ -64,6 +63,7 @@ const Mainpage = () => {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    color: #ffffff;
                 }
 
                 @media only screen and (max-width: 600px) {

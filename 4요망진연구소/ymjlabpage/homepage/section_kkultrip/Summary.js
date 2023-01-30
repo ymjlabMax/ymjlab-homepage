@@ -43,7 +43,7 @@ export default function Summary() {
                     flex-direction: column;
                 }
                 .right-box {
-                    padding-left: 100px;
+                    padding-left: 176px;
                 }
                 h1 {
                     font-weight: var(--bold);

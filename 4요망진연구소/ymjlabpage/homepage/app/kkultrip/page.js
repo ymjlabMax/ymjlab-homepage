@@ -1,4 +1,4 @@
-import { Mainpage, Summary, Content, Business } from "../../section_kkultrip";
+import { Mainpage, Summary, Content, Business, Social } from "../../section_kkultrip";
 export default function Page() {
     return (
         <>
@@ -6,6 +6,7 @@ export default function Page() {
             <Summary />
             <Content />
             <Business />
+            <Social />
         </>
     );
 }

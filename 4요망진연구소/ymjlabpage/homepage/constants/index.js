@@ -16,6 +16,19 @@ export const socials = [
     },
 ];
 
+export const kkultrip_socials = [
+    {
+        name: "instagram",
+        url: "/images/kkultrip_img/img_logo_instagram.svg",
+        link: "https://www.instagram.com/kkultrip/?hl=ko",
+    },
+    {
+        name: "youtube",
+        url: "/images/kkultrip_img/img_logo_youtube.svg",
+        link: "https://www.youtube.com/@kkultrip/videos",
+    },
+];
+
 export const MemberInfo = [
     {
         No: 1,
@@ -234,9 +247,9 @@ export const LocationInfo = [
 
 export const KkultripSummaryInfo = [
     { no: 1, url: "/images/kkultrip_img/kkultrip_summary_1.svg", content: "여행 결제 연동" },
-    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_1.svg", content: "할인 혜택 확인" },
-    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_1.svg", content: "여행 가계부" },
-    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_1.svg", content: "SNS공유" },
+    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_3.svg", content: "할인 혜택 확인" },
+    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_2.svg", content: "여행 가계부" },
+    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_4.svg", content: "SNS공유" },
 ];
 
 export const MetaverseContentInfo = [
@@ -261,4 +274,31 @@ export const MetaverseContentInfo = [
         subtitle: "메타버스 광고, 캐릭터, 이벤트 등",
         content: "다양한 소비자 접점을 통한 PoC 확보 & 타겟 마케팅을 제공합니다.",
     },
+];
+
+export const MetaverseDetail_1 = [
+    { no: 1, content: "맞춤형 메타버스 공간·Asset 구축/운영" },
+    { no: 2, content: "개발도구를 활용한 오프라인 공간 메타버스화" },
+    { no: 3, content: "맞춤형 타운, 코스, 커뮤니티 개발 " },
+    { no: 4, content: "P 활용한 맞춤형 콜라보 공간, 아이템 제작 " },
+    { no: 5, content: "맞춤형 유료 가상 아이템 제작/판매" },
+    { no: 6, content: "미션투어 등 이벤트 생성 및 운영" },
+];
+
+export const MetaverseDetail_2 = [
+    { no: 1, content: "규격화된 메타버스 공간·Asset 렌탈" },
+    { no: 2, content: "플랫폼별 모드툴(API), 애드온 등 규격화 개발" },
+    { no: 3, content: "규격화된 타운, 코스, 커뮤니티 등 사전개발  " },
+    { no: 4, content: "규격화된 브랜딩, 마케팅 서비스 제공" },
+    { no: 5, content: "규격화된 유료 가상 아이템 제작/판매" },
+    { no: 6, content: "규격화된 미니 게임, 투어미션 등 이벤트 제공" },
+];
+
+export const MetaverseDetail_3 = [
+    { no: 1, content: "In-App형태의 네이티브 광고를 통해 PPL 판매 " },
+    { no: 2, content: "플랫폼별 모드툴(API), 애드온 등 규격화 개발" },
+    { no: 3, content: "규격화된 타운, 코스, 커뮤니티 등 사전개발" },
+    { no: 4, content: "규격화된 브랜딩, 마케팅 서비스 제공" },
+    { no: 5, content: "규격화된 유료 가상 아이템 제작/판매" },
+    { no: 6, content: "규격화된 미니 게임, 투어미션 등 이벤트 제공 " },
 ];

@@ -91,7 +91,7 @@ export default function Companypage() {
                     margin-bottom: var(--title-margin);
                 }
                 .content-box {
-                    width: 40%;
+                    width: 60%;
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 20px;
@@ -144,6 +144,7 @@ export default function Companypage() {
                         width: 100px;
                         height: 46px;
                         margin: 0 20px 30px 20px;
+                        font-size: 14px;
                     }
                 }
                 /* 휴대폰 사이즈 */

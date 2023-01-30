@@ -111,7 +111,7 @@ const Footer = () => (
                 footer {
                     flex-direction: column;
                     height: auto;
-                    align-items: flex-start;
+                    align-items: center;
                     text-align: center;
                     padding: 20px 20px 20px 20px;
                 }
@@ -128,6 +128,12 @@ const Footer = () => (
                     color: #181818;
                     font-size: 14px;
                     margin-top: 16px;
+                }
+                .content {
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
                 }
             }
         `}</style>
