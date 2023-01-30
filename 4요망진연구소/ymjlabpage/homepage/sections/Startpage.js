@@ -175,11 +175,6 @@ export default function Startpage() {
                             width: 90%;
                             transition: all 0.3s;
                         }
-
-                        /* .main-color {
-                            color: var(--font_500);
-                            transition: all 0.3s;
-                        } */
                     }
 
                     /* 휴대폰 사이즈 */
