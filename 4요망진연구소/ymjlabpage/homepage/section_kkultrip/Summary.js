@@ -28,7 +28,7 @@ export default function Summary() {
                 </div>
             </div>
             <div className="right-box">
-                <Image src="/images/kkultrip_img/kkultrip_phone.svg" alt="꿀트립 앱 이미지" width={200} height={200} />
+                <Image src="/images/kkultrip_img/kkultrip_phone.svg" alt="메타버스 이미지" width={200} height={200} />
             </div>
             <style jsx>{`
                 section {

@@ -247,9 +247,15 @@ export const LocationInfo = [
 
 export const KkultripSummaryInfo = [
     { no: 1, url: "/images/kkultrip_img/kkultrip_summary_1.svg", content: "여행 결제 연동" },
-    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_3.svg", content: "할인 혜택 확인" },
-    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_2.svg", content: "여행 가계부" },
-    { no: 1, url: "/images/kkultrip_img/kkultrip_summary_4.svg", content: "SNS공유" },
+    { no: 2, url: "/images/kkultrip_img/kkultrip_summary_3.svg", content: "할인 혜택 확인" },
+    { no: 3, url: "/images/kkultrip_img/kkultrip_summary_2.svg", content: "여행 가계부" },
+    { no: 4, url: "/images/kkultrip_img/kkultrip_summary_4.svg", content: "SNS공유" },
+];
+
+export const MetaverseSummaryInfo = [
+    { no: 1, url: "/images/metaverse_img/metaverse_content_1.png", content: "메타버스 플랫폼기반 디지털 마케팅 신시장 개척" },
+    { no: 2, url: "/images/metaverse_img/metaverse_content_2.png", content: "메타버스 대여 공간 개발" },
+    { no: 3, url: "/images/metaverse_img/metaverse_content_3.jpg", content: "경쟁력 확보 및 차별화를 위한 Asset 재사용 솔루션 개발" },
 ];
 
 export const MetaverseContentInfo = [

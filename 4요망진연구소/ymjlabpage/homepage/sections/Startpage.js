@@ -60,8 +60,8 @@ export default function Startpage() {
                     }
 
                     .left-box {
-                        width: 50%;
-                        height: 100%;
+                        width: 35%;
+                        /* height: 100%; */
                         display: flex;
                         justify-content: flex-end;
                         position: relative;
@@ -83,7 +83,7 @@ export default function Startpage() {
                     }
 
                     .btn-12 {
-                        width: 100%;
+                        /* width: 100%; */
                         cursor: pointer;
                         z-index: 999;
                     }
