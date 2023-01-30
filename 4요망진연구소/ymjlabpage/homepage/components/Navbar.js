@@ -15,6 +15,10 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
 
+    const navBarHandler = () => {
+        setIsOpen(true);
+    };
+
     return (
         <nav>
             <Link href="/" scroll={false} shallow={true}>
@@ -40,19 +44,21 @@ export default function Navbar() {
             </ul>
 
             <ul className="reponsive-nav-bar">
-                <div>이미지</div>
+                <div onClick={() => setIsOpen(!isOpen)}>
+                    <Image src="/images/toggle.svg" width={30} height={30} alt="토글버튼" />
+                </div>
                 {isOpen ? (
                     <div className="reponsive-nav-bar-box">
                         <Link href="/">
-                            <li>회사소개</li>
+                            <div className="reponsive-nav-bar-box-div">회사소개</div>
                         </Link>
                         <Link href="/kkultrip" scroll={true} shallow={true}>
-                            <li>꿀트립 서비스</li>
+                            <div className="reponsive-nav-bar-box-div">꿀트립 서비스</div>
                         </Link>
                         <Link href="/metaverse" scroll={true} shallow={true}>
-                            <li>메타버스 서비스</li>
+                            <div className="reponsive-nav-bar-box-div">메타버스 서비스</div>
                         </Link>
-                        <li>Contact</li>{" "}
+                        <div className="reponsive-nav-bar-box-div">Contact</div>{" "}
                     </div>
                 ) : (
                     <></>
@@ -93,6 +99,7 @@ export default function Navbar() {
                 @media only screen and (max-width: 600px) {
                     nav {
                         padding: 12px 40px 12px 40px;
+                        box-shadow: 0px;
                     }
 
                     .nav-bar {
@@ -103,6 +110,20 @@ export default function Navbar() {
                         display: block;
                     }
                     .reponsive-nav-bar-box {
+                        position: absolute;
+                        width: 100%;
+                        top: 66px;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background: #ffffff;
+                        box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
+                        z-index: 999;
+                    }
+                    .reponsive-nav-bar-box-div {
+                        padding: 16px 16px 16px 16px;
                     }
                 }
             `}</style>

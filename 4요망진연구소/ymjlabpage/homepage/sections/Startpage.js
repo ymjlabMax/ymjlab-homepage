@@ -201,6 +201,10 @@ export default function Startpage() {
                             color: var(--font_500);
                             transition: all 0.3s;
                         }
+
+                        .btn-12 {
+                            z-index: 998;
+                        }
                     }
                 `}</style>
             </section>
