@@ -5,7 +5,6 @@ import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Mainpage.module.css";
-import Metaverse from "../public/images/metaverse_bg.jpg";
 
 const Mainpage = () => {
     return (
@@ -13,8 +12,8 @@ const Mainpage = () => {
             <div className={styles.bgWrap}>
                 <Image
                     alt="Mountains"
-                    src={Metaverse}
-                    placeholder="blur"
+                    src="/images/metaverse_img/metaverse_main_img.jpg"
+                    // placeholder="blur"
                     quality={100}
                     fill
                     sizes="100%"
@@ -30,7 +29,7 @@ const Mainpage = () => {
 
             <style jsx>{`
                 section {
-                    width: 100%;
+                    width: 100vw;
                     height: 768px;
                     display: flex;
                     justify-content: center;

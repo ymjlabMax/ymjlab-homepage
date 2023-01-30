@@ -30,7 +30,7 @@ const Mainpage = () => {
 
             <style jsx>{`
                 section {
-                    width: 100%;
+                    width: 100vw;
                     height: var(--page_height);
                     display: flex;
                     justify-content: center;
