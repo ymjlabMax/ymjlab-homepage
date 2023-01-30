@@ -20,7 +20,7 @@ export default function Content() {
                     <h3>③실시간 수집/분석/활용 시스템</h3>
                     {/* <p>실시간 관광객 소비데이터 수집/분석/활용 시스템 부재 </p> */}
                 </div>
-                <div className="content-box">
+                <div className="content-box gray-background">
                     <h2>Why</h2>
                     <h3 className="danger-color">① 단순 부정 사용 방지 수준의 데이터 수집/활용</h3>
                     <p>&nbsp;</p>
@@ -116,6 +116,10 @@ export default function Content() {
 
                 .danger-color {
                     color: #f92417;
+                }
+
+                .gray-background {
+                    background: #fafafa;
                 }
 
                 @media only screen and (max-width: 600px) {
