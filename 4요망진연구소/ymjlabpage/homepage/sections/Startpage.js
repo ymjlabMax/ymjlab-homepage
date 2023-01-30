@@ -131,13 +131,13 @@ export default function Startpage() {
                     }
 
                     /* 테블릿 사이즈 */
-                    @media only screen and (max-width: 1225px) {
+                    @media only screen and (max-width: 1520px) {
                         section {
                             width: 100vw;
                         }
 
                         .left-box {
-                            width: 50%;
+                            width: 40%;
                             transition: all 0.3s;
                         }
 
@@ -145,8 +145,19 @@ export default function Startpage() {
                             width: 40%;
                             transition: all 0.3s;
                         }
-                        h1 {
-                            font-size: var(--font_24);
+                    }
+
+                    @media only screen and (max-width: 1322px) {
+                        .left-box {
+                            width: 50%;
+                            transition: all 0.3s;
+                        }
+                    }
+
+                    @media only screen and (max-width: 1062px) {
+                        .left-box {
+                            width: 60%;
+                            transition: all 0.3s;
                         }
                     }
 
@@ -155,12 +166,7 @@ export default function Startpage() {
                             position: absolute;
                             width: 100%;
                             height: 100%;
-                            top: -200px;
-                            transition: all 0.3s;
-                        }
-
-                        h1 {
-                            font-size: var(--font_18);
+                            top: 200px;
                             transition: all 0.3s;
                         }
 
@@ -170,10 +176,10 @@ export default function Startpage() {
                             transition: all 0.3s;
                         }
 
-                        .main-color {
+                        /* .main-color {
                             color: var(--font_500);
                             transition: all 0.3s;
-                        }
+                        } */
                     }
 
                     /* 휴대폰 사이즈 */
@@ -182,23 +188,18 @@ export default function Startpage() {
                             position: absolute;
                             width: 100%;
                             height: 100%;
-                            top: -200px;
+                            top: 200px;
                             transition: all 0.3s;
                         }
 
                         h1 {
-                            font-size: var(--font_18);
+                            font-size: var(--font_22);
                             transition: all 0.3s;
                         }
 
                         .right-box {
                             position: relative;
-                            width: 90%;
-                            transition: all 0.3s;
-                        }
-
-                        .main-color {
-                            color: var(--font_500);
+                            width: 100%;
                             transition: all 0.3s;
                         }
 
