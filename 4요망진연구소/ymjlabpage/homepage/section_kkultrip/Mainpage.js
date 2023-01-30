@@ -27,7 +27,6 @@ const Mainpage = () => {
                 <h1>내가 신경쓰지 않아도</h1>
                 <h2>할인 받는 꿀 같은 여행 앱</h2>
             </div> */}
-
             <div className="title">
                 <h1>내가 신경쓰지 않아도 할인 받는</h1>
                 <h1>

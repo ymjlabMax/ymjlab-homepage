@@ -5,6 +5,7 @@ import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Mainpage.module.css";
+import metaverse_main from "../public/images/metaverse_img/metaverse_main_img.png";
 
 const Mainpage = () => {
     return (
@@ -12,8 +13,8 @@ const Mainpage = () => {
             <div className={styles.bgWrap}>
                 <Image
                     alt="Mountains"
-                    src="/images/metaverse_img/metaverse_main_img.jpg"
-                    // placeholder="blur"
+                    src={metaverse_main}
+                    placeholder="blur"
                     quality={100}
                     fill
                     sizes="100%"
@@ -29,7 +30,7 @@ const Mainpage = () => {
 
             <style jsx>{`
                 section {
-                    width: 100vw;
+                    /* width: 100vw; */
                     height: 768px;
                     display: flex;
                     justify-content: center;
@@ -39,11 +40,15 @@ const Mainpage = () => {
                 }
 
                 h1 {
+                    font-family: "Spoqa Han Sans Neo";
+                    font-style: normal;
                     font-weight: 700;
-                    font-size: 32px;
-                    line-height: 40px;
+                    font-size: 72px;
+                    line-height: 90px;
                     letter-spacing: -0.015em;
                     color: #ffffff;
+                    /* border: 0.5px solid #ffffff; */
+                    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
                 }
                 h2 {
                     font-size: 32px;

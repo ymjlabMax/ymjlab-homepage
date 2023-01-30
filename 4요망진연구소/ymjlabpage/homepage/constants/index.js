@@ -253,29 +253,29 @@ export const KkultripSummaryInfo = [
 ];
 
 export const MetaverseSummaryInfo = [
-    { no: 1, url: "/images/metaverse_img/metaverse_content_1.png", content: "메타버스 플랫폼기반 디지털 마케팅 신시장 개척" },
-    { no: 2, url: "/images/metaverse_img/metaverse_content_2.png", content: "메타버스 대여 공간 개발" },
-    { no: 3, url: "/images/metaverse_img/metaverse_content_3.jpg", content: "경쟁력 확보 및 차별화를 위한 Asset 재사용 솔루션 개발" },
+    { no: 1, url: "/images/metaverse_img/img_asset1_meta.svg", content: "메타버스 플랫폼기반 디지털 마케팅 신시장 개척" },
+    { no: 2, url: "/images/metaverse_img/img_asset2_meta.svg", content: "메타버스 대여 공간 개발" },
+    { no: 3, url: "/images/metaverse_img/img_asset3_meta.svg", content: "경쟁력 확보 및 차별화를 위한 Asset 재사용 솔루션 개발" },
 ];
 
 export const MetaverseContentInfo = [
     {
         no: 1,
-        url: "",
+        url: "/images/metaverse_img/metaverse_content_1.png",
         title: "맞춤형",
-        subtitle: "메타버스 공간·개발 운영",
+        subtitle: "맞춤형 메타버스 공간·개발 운영",
         content: "대상 유형별 맞춤형 기획을 통해 차별화된 메타버스 공간 & Asset 제작하여 운영합니다.",
     },
     {
         no: 2,
-        url: "",
+        url: "/images/metaverse_img/metaverse_content_2.png",
         title: "규격형",
         subtitle: "메타버스 공간·에셋 렌탈",
         content: "성과가 검증된 공간 & Asset 등을 사전에 규격화된 형태로 제작하여 렌탈방식으로 제공합니다.",
     },
     {
         no: 3,
-        url: "",
+        url: "/images/metaverse_img/metaverse_content_3.jpg",
         title: "네이티브 마케팅",
         subtitle: "메타버스 광고, 캐릭터, 이벤트 등",
         content: "다양한 소비자 접점을 통한 PoC 확보 & 타겟 마케팅을 제공합니다.",

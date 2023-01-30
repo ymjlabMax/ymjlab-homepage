@@ -4,84 +4,76 @@ import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
+import { MetaverseContentInfo } from "../constants";
 
 export default function Content() {
     return (
         <section>
-            <div className="meta-content-bg">
-                <div className="meta-content-box">
+            {MetaverseContentInfo.map((el, index) => (
+                <div key={index} className="meta-content-box">
                     <div className="meta-content-box-title">
-                        <h1>맞춤형</h1>
-                        <p>메타버스 공간,에셋 개발 운영</p>
+                        <h1>{el.title}</h1>
+                        <h2>{el.subtitle}</h2>
                     </div>
                     <div className="meta-content-box-img">
-                        <Image src="/images/metaverse_img/metaverse_content_1.png" width={200} height={200} alt="맞춤형" />
+                        <Image src={el.url} width={270} height={280} alt="맞춤형" />
                     </div>
-                    <div className="meta-content-box-content">
-                        <div className="meta-content-box-content-box"></div>
-                    </div>
+                    <div className="meta-content-box-content">{el.content}</div>
                 </div>
-                <div className="meta-content-box"></div>
-                <div className="meta-content-box"></div>
-            </div>
+            ))}
             <style jsx>{`
                 section {
                     width: 100%;
-                    height: 768px;
+                    height: 562px;
                     background: #4d3e59;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
 
-                .meta-content-bg {
-                    width: 70%;
-                    display: flex;
-                    justify-content: center;
-                    background-color: var(--gray_100);
-                    padding: 16px 16px 16px 16px;
-                    border: 1px solid var(--white);
-                    border-radius: 12px;
-                }
-
                 .meta-content-box {
                     box-sizing: border-box;
                     display: flex;
                     flex-direction: column;
-                    gap: 8px;
-                    width: 300px;
-                    height: 600px;
-                    background: var(--white);
-                    border: 1px solid var(--gray_100);
+                    width: 360px;
+                    height: 360px;
+                    background: #ffffff;
+                    border: 1px solid #f2f2f2;
                     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
-                    border-radius: 12px;
-                    margin: 0 24px 0 24px;
+                    border-radius: 24px;
+                    padding: 16px 24px 16px 24px;
+                    margin: 0 8px 0 8px;
                     overflow: hidden;
                 }
-
-                .meta-content-box-title {
-                    width: 100%;
-                    height: 25%;
-                    background-color: #1400ff;
-                    padding: 30px 20px 20px 20px;
-                    color: var(--white);
-                }
                 .meta-content-box-title > h1 {
-                    font-size: 32px;
-                    font-weight: bold;
-                    margin-bottom: 32px;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: #181818;
+                    margin-bottom: 4px;
+                }
+                .meta-content-box-title > h2 {
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #181818;
+                    margin-bottom: 8px;
                 }
 
                 .meta-content-box-img {
                     display: flex;
-                    height: 50%;
                     justify-content: center;
-                    align-items: center;
+                    margin-bottom: 8px;
                 }
 
                 .meta-content-box-content {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
                     display: flex;
-                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    color: #181818;
                 }
 
                 .meta-content-box-content-box {
