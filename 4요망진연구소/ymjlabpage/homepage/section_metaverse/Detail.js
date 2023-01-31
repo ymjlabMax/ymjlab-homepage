@@ -113,7 +113,7 @@ export default function Detail() {
                 .detail-content-box {
                     text-align: center;
                     display: grid;
-                    grid-template-columns: repeat(2, 300px);
+                    grid-template-columns: repeat(2, 320px);
                     grid-template-rows: repeat(3, 24px);
                     gap: 20px 160px;
                 }

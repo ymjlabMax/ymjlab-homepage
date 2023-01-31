@@ -38,7 +38,7 @@ export default function Navbar() {
                     {pathname === "/kkultrip" ? <li className="active-nav">꿀트립 서비스</li> : <li>꿀트립 서비스</li>}
                 </Link>
                 <Link href="/metaverse" scroll={true} shallow={true}>
-                    {pathname === "/metaverse" ? <li className="active-nav">메타버스 서비스</li> : <li>메타버스 서비스</li>}
+                    {pathname === "/metaverse" ? <li className="active-nav">메타버스 에이전시</li> : <li>메타버스 에이전시</li>}
                 </Link>
                 <li>Contact</li>
             </ul>
@@ -56,9 +56,9 @@ export default function Navbar() {
                             <div className="reponsive-nav-bar-box-div">꿀트립 서비스</div>
                         </Link>
                         <Link href="/metaverse" scroll={true} shallow={true}>
-                            <div className="reponsive-nav-bar-box-div">메타버스 서비스</div>
+                            <div className="reponsive-nav-bar-box-div">메타버스 에이전시</div>
                         </Link>
-                        <div className="reponsive-nav-bar-box-div">Contact</div>{" "}
+                        <div className="reponsive-nav-bar-box-div">Contact</div>
                     </div>
                 ) : (
                     <></>
