@@ -15,10 +15,6 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
 
-    const navBarHandler = () => {
-        setIsOpen(true);
-    };
-
     return (
         <nav>
             <Link href="/" scroll={false} shallow={true}>
