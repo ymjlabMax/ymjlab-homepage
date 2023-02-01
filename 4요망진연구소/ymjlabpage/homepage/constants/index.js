@@ -308,3 +308,29 @@ export const MetaverseDetail_3 = [
     { no: 5, content: "규격화된 유료 가상 아이템 제작/판매" },
     { no: 6, content: "규격화된 미니 게임, 투어미션 등 이벤트 제공 " },
 ];
+
+export const Metaverse_project_01 = [
+    { no: 1, title: "콘텐츠명", content: "리얼제주오름(Real Jeju Oreum)" },
+    { no: 2, title: "개발기업", content: "요망진연구소(YMJLAB Inc.)" },
+    { no: 3, title: "제공언어", content: "국문(Kor), 영문(Eng)" },
+    { no: 4, title: "지원기업", content: "2022 제주 지역특화콘텐츠개발지원(제주영상·문화산업진흥원)" },
+];
+
+export const Metaverse_project_img_01 = [
+    { no: 1, name: "리얼오름_1", url: "/images/metaverse_img/img_screen1_meta.svg" },
+    { no: 2, name: "리얼오름_2", url: "/images/metaverse_img/img_screen2_meta.svg" },
+    { no: 3, name: "리얼오름_3", url: "/images/metaverse_img/img_screen3_meta.svg" },
+    { no: 4, name: "리얼오름_4", url: "/images/metaverse_img/img_screen4_meta.svg" },
+];
+
+export const Metaverse_project_icon_01 = [
+    { no: 1, name: "교육콘텐츠", url: "/images/metaverse_img/img_func1_meta.svg" },
+    { no: 2, name: "도슨트 서비스", url: "/images/metaverse_img/img_func2_meta.svg" },
+    { no: 3, name: "e커머스 서비스", url: "/images/metaverse_img/img_func3_meta.svg" },
+];
+
+export const Metaverse_project_icon_02 = [
+    { no: 4, name: "부스트", url: "/images/metaverse_img/img_func4_meta.svg" },
+    { no: 5, name: "실사 360° 이미지 ", url: "/images/metaverse_img/img_func5_meta.svg" },
+    { no: 6, name: "히든 미션", url: "/images/metaverse_img/img_func6_meta.svg" },
+];

@@ -9,19 +9,6 @@ import { MetaverseDetail_1, MetaverseDetail_2, MetaverseDetail_3 } from "../cons
 export default function Detail() {
     return (
         <section>
-            {/* {MetaverseContentInfo.map((el, index) => (
-                <div key={index} className="meta-content-box">
-                    <div className="meta-content-box-title">
-                        <h1>{el.title}</h1>
-                        <h2>{el.subtitle}</h2>
-                    </div>
-                    <div className="meta-content-box-img">
-                        <Image src={el.url} width={270} height={280} alt="맞춤형" />
-                    </div>
-                    <div className="meta-content-box-content">{el.content}</div>
-                </div>
-            ))} */}
-
             <div className="detail-box">
                 <div className="detail-title">
                     <h1>맞춤형</h1>

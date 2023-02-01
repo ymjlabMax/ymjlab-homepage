@@ -12,9 +12,6 @@ export default function Summary() {
             <div className="left-box">
                 <h1>Unified Metaverse Hub One Source</h1>
                 <div className="content-box">
-                    {/* <p>메타버스 시대에 공공 및 기업이 메타버스를 활용한 </p>
-                    <p>새로운 비즈니스 영역으로 효과적으로 진입할 수 있도록</p>
-                    <p>UMH 기반 메타버스 마케팅 솔루션을 제공합니다.</p> */}
                     <p>메타버스 시대에 공공 및 기업이 메타버스를 활용한 새로운 비즈니스 영역으로 </p>
                     <p>효과적으로 진입할 수 있도록 UMH 기반 메타버스 마케팅 솔루션을 제공합니다.</p>
                 </div>
@@ -28,7 +25,7 @@ export default function Summary() {
                 </div>
             </div>
             <div className="right-box">
-                <Image src="/images/metaverse_img/metaverse_summary_1.png" alt="꿀트립 앱 이미지" width={500} height={200} />
+                <Image src="/images/metaverse_img/big_building_meta.svg" alt="꿀트립 앱 이미지" width={500} height={200} />
             </div>
             <style jsx>{`
                 section {
