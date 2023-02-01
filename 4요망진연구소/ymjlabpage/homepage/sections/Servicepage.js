@@ -18,7 +18,7 @@ const Servicepage = () => (
                             <Image src="/images/img_mountain.svg" width={300} height={300} alt="꿀트립 사이드 이미지" />
                         </div>
                         <div>
-                            <Image src="/images/mockup_trip_bg.gif" width={200} height={200} alt="꿀트립 이미지" />
+                            <Image src="/images/gif_phone_kt.gif" width={200} height={200} alt="꿀트립 이미지" />
                         </div>
                     </div>
                 </motion.div>
@@ -42,7 +42,6 @@ const Servicepage = () => (
                         </Link>
                     </motion.div>
                 </div>
-
                 <div className="right">
                     <motion.div variants={slideIn("right", "tween", 0.1, 1)}>
                         <Image src="/images/metaverse_img.svg" width={500} height={700} alt="메타버스 이미지" />
