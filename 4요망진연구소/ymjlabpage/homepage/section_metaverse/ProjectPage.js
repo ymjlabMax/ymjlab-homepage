@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
+import YouTube, { YouTubeProps } from "react-youtube";
 
 import { Metaverse_project_01, Metaverse_project_img_01, Metaverse_project_icon_01, Metaverse_project_icon_02 } from "../constants";
 
@@ -158,6 +159,19 @@ export const SummaryBox = () => {
 };
 
 export default function ProjectPage() {
+    const onPlayerReady = (event) => {
+        // access to player in all event handlers via event.target
+        event.target.pauseVideo();
+    };
+
+    const opts = {
+        height: "330",
+        width: "600",
+        playerVars: {
+            autoplay: 1,
+        },
+    };
+
     return (
         <section>
             <div className="title">
@@ -171,7 +185,8 @@ export default function ProjectPage() {
                             <h2>제주오름 메타버스 콘텐츠 개발</h2>
                         </div>
                         <div className="project-box-image">
-                            <Image src="/images/metaverse_img/project_1.png" alt="프로젝트1" width={620} height={400} />
+                            {/* <Image src="/images/metaverse_img/project_1.png" alt="프로젝트1" width={620} height={400} /> */}
+                            <YouTube videoId="jYzaUheUxPY" opts={opts} onReady={onPlayerReady} />
                         </div>
                     </div>
                     <div className="right-box">
@@ -267,7 +282,7 @@ export default function ProjectPage() {
                 .left-box {
                     display: flex;
                     flex-direction: column;
-                    margin: 0 32px 0 32px;
+                    margin: 0 16px 0 32px;
                 }
                 .project-box-title {
                     display: flex;
@@ -344,7 +359,7 @@ export default function ProjectPage() {
                     background: #ffffff;
                     border: 1px solid #f2f2f2;
                     border-radius: 12px;
-                    min-width: 1070px;
+                    min-width: 1040px;
                 }
 
                 @media only screen and (max-width: 600px) {
