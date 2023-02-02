@@ -30,7 +30,7 @@ export default function Companypage() {
                     시스템을 구축하여 관광객 편의 중심의 스마트관광 솔루션을 개발하고 있습니다.
                 </p>
             </div>
-            <div className="btn_list">
+            <div className="btn-list">
                 <button
                     className={companyInfo === "Summary" && "active"}
                     onClick={() => {
@@ -101,7 +101,7 @@ export default function Companypage() {
                     color: #181818;
                     margin-bottom: var(--component-margin);
                 }
-                .btn_list {
+                .btn-list {
                     display: flex;
                     justify-content: center;
                 }
