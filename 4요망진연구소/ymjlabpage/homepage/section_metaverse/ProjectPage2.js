@@ -10,26 +10,26 @@ import { Metaverse_project_02, Metaverse_project_img_02 } from "../constants";
 
 export const Gallery = () => {
     return (
-        <div className="Garrery-box">
+        <div className="grid-box">
             {Metaverse_project_img_02.map((el, index) => (
                 <div className="margin-box" key={index}>
-                    <Image src={el.url} width={295} height={200} alt={el.name} />
+                    <Image src={el.url} width={280} height={200} alt={el.name} />
                 </div>
             ))}
             <style jsx>{`
-                /* .grid-box {
+                .grid-box {
                     display: grid;
                     grid-template-columns: repeat(2, 50%);
-                    grid-template-rows: repeat(2, 160px);
-                    gap: 4px 4px;
+                    grid-template-rows: repeat(2, 170px);
+                    gap: 16px 4px;
                     place-items: center;
-                } */
-                .Garrery-box {
+                }
+                /* .Garrery-box {
                     display: flex;
                 }
                 .margin-box {
                     margin-left: 8px;
-                }
+                } */
             `}</style>
         </div>
     );
@@ -45,19 +45,8 @@ export const Waybox = () => {
             </ul>
             <style jsx>{`
                 .way-box {
-                    box-sizing: border-box;
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
-                    padding: 40px 0px 16px 24px;
-                    gap: 32px;
-                    width: 410px;
-                    background: #ffffff;
-                    border: 1px solid #f2f2f2;
-                    border-radius: 12px;
-                    flex: none;
-                    order: 0;
-                    flex-grow: 0;
                 }
 
                 h2 {
@@ -69,10 +58,76 @@ export const Waybox = () => {
                     color: #181818;
                     align-self: stretch;
                     flex-grow: 0;
+                    margin-bottom: 40px;
                 }
-
                 li {
                     margin: 16px 0 16px 0;
+                }
+            `}</style>
+        </div>
+    );
+};
+
+export const SummaryBox2 = () => {
+    return (
+        <div className="box">
+            <div className="left-box">
+                <Waybox />
+            </div>
+            <div className="right-box">
+                <Gallery />
+            </div>
+            <style jsx>{`
+                .box {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .left-box {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 16px 0 16px;
+                }
+                .right-box {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 16px 0 16px;
+                    align-items: flex-start;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: #181818;
+                }
+                .right-box > h3 {
+                    margin-bottom: 32px;
+                }
+                .img-box {
+                    margin-top: 40px;
+                }
+
+                .fun-box {
+                    display: flex;
+                }
+                .fun-box-bottom {
+                    margin-top: 24px;
+                    display: flex;
+                }
+
+                .icon-box {
+                    margin-right: 68px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .icon-box > p {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 19px;
+                    color: #404040;
+                    margin-top: 8px;
                 }
             `}</style>
         </div>
@@ -131,12 +186,17 @@ export default function ProjectPage() {
                         </div>
                     </div>
                 </div>
-                <div className="project-wrap">
+                {/* <div className="project-wrap">
                     <div className="left-box">
                         <Waybox />
                     </div>
                     <div className="img-right-box">
                         <Gallery />
+                    </div>
+                </div> */}
+                <div className="summary-wrap">
+                    <div className="summary-box">
+                        <SummaryBox2 />
                     </div>
                 </div>
             </div>
@@ -239,17 +299,13 @@ export default function ProjectPage() {
 
                 .summary-box {
                     box-sizing: border-box;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
                     padding: 32px;
-                    gap: 48px;
                     background: #ffffff;
                     border: 1px solid #f2f2f2;
                     border-radius: 12px;
-                    min-width: 1040px;
+                    width: 1000px;
                 }
+
                 .img-right-box {
                     display: flex;
                     align-items: center;

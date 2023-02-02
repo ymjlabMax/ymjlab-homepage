@@ -345,4 +345,6 @@ export const Metaverse_project_02 = [
 export const Metaverse_project_img_02 = [
     { no: 1, name: "DMZ-1", url: "/images/metaverse_img/dmz_screenshot1_meta.svg" },
     { no: 2, name: "DMZ_2", url: "/images/metaverse_img/dmz_screenshot2_meta.svg" },
+    { no: 2, name: "DMZ_3", url: "/images/metaverse_img/dmz_screenshot3_meta.svg" },
+    { no: 2, name: "DMZ_4", url: "/images/metaverse_img/dmz_screenshot4_meta.svg" },
 ];

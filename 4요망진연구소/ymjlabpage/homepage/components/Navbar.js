@@ -36,7 +36,9 @@ export default function Navbar() {
                 <Link href="/metaverse" scroll={true} shallow={true}>
                     {pathname === "/metaverse" ? <li className="active-nav">메타버스 에이전시</li> : <li>메타버스 에이전시</li>}
                 </Link>
-                <li>Contact</li>
+                <Link href="/contact" scroll={true} shallow={true}>
+                    {pathname === "/contact" ? <li className="active-nav">Contact</li> : <li>Contact</li>}
+                </Link>
             </ul>
 
             <ul className="reponsive-nav-bar">
@@ -82,6 +84,9 @@ export default function Navbar() {
                 li {
                     float: left;
                     margin-left: 20px;
+                }
+                li:hover {
+                    color: var(main_orange_400);
                 }
                 .logo-img {
                     margin-left: 30px;
