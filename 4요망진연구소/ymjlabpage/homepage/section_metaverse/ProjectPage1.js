@@ -17,9 +17,9 @@ export const Gallery = () => {
             <style jsx>{`
                 .grid-box {
                     display: grid;
-                    grid-template-columns: repeat(2, 50%);
+                    grid-template-columns: repeat(2, 52%);
                     grid-template-rows: repeat(2, 145px);
-                    gap: 4px 4px;
+                    gap: 0px 4px;
                     place-items: center;
                 }
             `}</style>
@@ -186,10 +186,12 @@ export const SummaryBox1 = () => {
 
                 .fun-box {
                     display: flex;
+                    align-items: center;
                 }
                 .fun-box-bottom {
                     margin-top: 24px;
                     display: flex;
+                    align-items: center;
                 }
 
                 .icon-box {
@@ -197,6 +199,7 @@ export const SummaryBox1 = () => {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-content: center;
                 }
 
                 .icon-box > p {
@@ -428,7 +431,7 @@ export default function ProjectPage() {
                     background: #ffffff;
                     border: 1px solid #f2f2f2;
                     border-radius: 12px;
-                    width: 1070px;
+                    width: 1000px;
                 }
 
                 .project-second-box {
