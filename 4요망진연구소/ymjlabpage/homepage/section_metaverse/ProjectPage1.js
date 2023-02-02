@@ -18,7 +18,7 @@ export const Gallery = () => {
                 .grid-box {
                     display: grid;
                     grid-template-columns: repeat(2, 50%);
-                    grid-template-rows: repeat(2, 160px);
+                    grid-template-rows: repeat(2, 145px);
                     gap: 4px 4px;
                     place-items: center;
                 }
@@ -38,20 +38,11 @@ export const Waybox = () => {
             </ul>
             <style jsx>{`
                 .way-box {
-                    box-sizing: border-box;
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
-                    padding: 40px 0px 16px 24px;
-                    gap: 32px;
-                    width: 450px;
-                    height: 324px;
-                    background: #ffffff;
-                    border: 1px solid #f2f2f2;
-                    border-radius: 12px;
-                    flex: none;
-                    order: 0;
-                    flex-grow: 0;
+                }
+                ul {
+                    margin-top: 40px;
                 }
 
                 h2 {
@@ -63,8 +54,8 @@ export const Waybox = () => {
                     color: #181818;
                     align-self: stretch;
                     flex-grow: 0;
+                    margin-bottom: 40px;
                 }
-
                 li {
                     margin: 16px 0 16px 0;
                 }
@@ -73,7 +64,7 @@ export const Waybox = () => {
     );
 };
 
-export const SummaryBox = () => {
+export const SummaryBox2 = () => {
     return (
         <div className="box">
             <div className="left-box">
@@ -84,23 +75,7 @@ export const SummaryBox = () => {
                 </div>
             </div>
             <div className="right-box">
-                <h3>주요기능</h3>
-                <div className="fun-box">
-                    {Metaverse_project_icon_01.map((el, index) => (
-                        <div className="icon-box" key={el.index}>
-                            <Image alt={el.name} src={el.url} width={70} height={50} />
-                            <p>{el.name}</p>
-                        </div>
-                    ))}
-                </div>
-                <div className="fun-box-bottom">
-                    {Metaverse_project_icon_02.map((el, index) => (
-                        <div className="icon-box" key={el.index}>
-                            <Image alt={el.name} src={el.url} width={70} height={50} />
-                            <p>{el.name}</p>
-                        </div>
-                    ))}
-                </div>
+                <Gallery />
             </div>
             <style jsx>{`
                 .box {
@@ -158,6 +133,107 @@ export const SummaryBox = () => {
     );
 };
 
+export const SummaryBox1 = () => {
+    return (
+        <div className="box">
+            <div className="left-box">
+                <h2>이용방법</h2>
+                <ul>
+                    <li>① 제페토 설치</li>
+                    <li>② 제페토에서 “리얼제주오름＂검색 </li>
+                    <li>③ “리얼제주오름”이용을 통해 이수증 획득</li>
+                </ul>
+            </div>
+            <div className="right-box">
+                <h3>주요기능</h3>
+                <div className="fun-box">
+                    {Metaverse_project_icon_01.map((el, index) => (
+                        <div className="icon-box" key={el.index}>
+                            <Image alt={el.name} src={el.url} width={70} height={50} />
+                            <p>{el.name}</p>
+                        </div>
+                    ))}
+                </div>
+                <div className="fun-box-bottom">
+                    {Metaverse_project_icon_02.map((el, index) => (
+                        <div className="icon-box" key={el.index}>
+                            <Image alt={el.name} src={el.url} width={70} height={50} />
+                            <p>{el.name}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <style jsx>{`
+                .box {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0 16px 0 16px;
+                    justify-content: space-between;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: #181818;
+                }
+                .right-box > h3 {
+                    margin-bottom: 32px;
+                }
+                .img-box {
+                    margin-top: 40px;
+                }
+
+                .fun-box {
+                    display: flex;
+                }
+                .fun-box-bottom {
+                    margin-top: 24px;
+                    display: flex;
+                }
+
+                .icon-box {
+                    margin-right: 68px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .icon-box > p {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 19px;
+                    color: #404040;
+                    margin-top: 8px;
+                }
+                .way-box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                h2 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 30px;
+                    display: flex;
+                    align-items: center;
+                    color: #181818;
+                    align-self: stretch;
+                    flex-grow: 0;
+                }
+                ul {
+                    margin-top: 40px;
+                }
+
+                li {
+                    margin: 32px 0 32px 0;
+                }
+            `}</style>
+        </div>
+    );
+};
+
 export default function ProjectPage() {
     const onPlayerReady = (event) => {
         // access to player in all event handlers via event.target
@@ -185,7 +261,6 @@ export default function ProjectPage() {
                             <h2>제주오름 메타버스 콘텐츠 개발</h2>
                         </div>
                         <div className="project-box-image">
-                            {/* <Image src="/images/metaverse_img/project_1.png" alt="프로젝트1" width={620} height={400} /> */}
                             <YouTube videoId="jYzaUheUxPY" opts={opts} onReady={onPlayerReady} />
                         </div>
                     </div>
@@ -234,17 +309,14 @@ export default function ProjectPage() {
                         </div>
                     </div>
                 </div>
-                <div className="project-wrap">
-                    <div className="left-box">
-                        <Waybox />
-                    </div>
-                    <div className="right-box">
-                        <Gallery />
+                <div className="summary-wrap">
+                    <div className="summary-box">
+                        <SummaryBox1 />
                     </div>
                 </div>
                 <div className="summary-wrap">
                     <div className="summary-box">
-                        <SummaryBox />
+                        <SummaryBox2 />
                     </div>
                 </div>
             </div>
@@ -352,16 +424,22 @@ export default function ProjectPage() {
 
                 .summary-box {
                     box-sizing: border-box;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
                     padding: 32px;
-                    gap: 48px;
                     background: #ffffff;
                     border: 1px solid #f2f2f2;
                     border-radius: 12px;
-                    min-width: 1040px;
+                    width: 1070px;
+                }
+
+                .project-second-box {
+                    display: flex;
+                    justify-content: center;
+                    background: #ffffff;
+                    border-radius: 12px;
+                    width: 1070px;
+                    height: 350px;
+                    margin-top: 80px;
+                    border: 1px solid #f2f2f2;
                 }
 
                 @media only screen and (max-width: 600px) {
