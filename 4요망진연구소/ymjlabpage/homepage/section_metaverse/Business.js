@@ -13,27 +13,24 @@ export default function Business() {
                 <div className="left-box">
                     <h1>비지니스 모델</h1>
                     <div className="content-box">
-                        <p>여행객에게 관광지정보와 할인혜택을 제공하여 자연스럽게 얻어진 관광 소비정보 데이터를 지자체 또는 관광기업에게 제공합니다. </p>
-                        <p>
-                            관광 소비정보 데이터로 검증된 소비효과를 통해 지자체 및 관광기업이 지속적인 관광홍보 예산 및 보조금을 제공, 할인 혜택을 지속
-                            제공합니다.
-                        </p>
+                        <p>메타버스 플랫폼 컨설팅 및 메타버스 공간 구현, 규격화 된 메타버스 Asset</p>
+                        <p>렌탈, 메타버스 공간 운영 및 홍보 등 토탈 서비스 제공</p>
                     </div>
                 </div>
                 <div className="right-box">
-                    <Image src="/images/kkultrip_img/img_business_kt.svg" alt="꿀트립 앱 이미지" width={600} height={700} />
+                    <Image src="/images/metaverse_img/img_business_meta.svg" alt="메타버스 비지니스 모델" width={600} height={700} />
                 </div>
             </div>
             <div className="business-wrap">
                 <div className="left-box">
-                    <Image src="/images/kkultrip_img/img_strategy_kt.svg" alt="꿀트립 앱 이미지" width={600} height={700} />
+                    <Image src="/images/metaverse_img/img_strategy_meta.svg" alt="메타버스 사업 확장 전략" width={600} height={700} />
                 </div>
                 <div className="right-box">
                     <h1 className="pull-right">사업 확장 전략</h1>
                     <div className="content-box">
                         <p>
-                            꿀트립 서비스의 할인혜택을 통한 관광 소비데이터 수집으로 보다 양질의 빅데이터 기반 분석을 통해 관광상품 개발/판매, 빅데이터 분석
-                            리포트, AI 서비스 등을 수익모델로 확대 마련하여 스마트관광 서비스로서의 데이터, 기술 기반 서비스로 확대해 나아가고자 합니다.
+                            공공 및 기업을 위한 맞춤형 메타버스 개발과 중소 영세사업자를 위한 규격형메타버스 렌탈을 통해 유형별 다양한 메타버스 서비스를 제공할
+                            수 있는 에이전시 서비스로 자리매김
                         </p>
                     </div>
                 </div>

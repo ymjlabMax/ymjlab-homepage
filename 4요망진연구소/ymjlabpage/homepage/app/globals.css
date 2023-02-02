@@ -31,6 +31,8 @@
         url("/fonts/SpoqaHanSans/SpoqaHanSansThin.woff") format("woff"), url("/fonts/SpoqaHanSans/SpoqaHanSansThin.ttf") format("truetype");
 }
 
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 :root {
     /* 폰트 사이즈 & 칼라  */
     --font_40: 40px;

@@ -174,10 +174,10 @@ export default function ProjectPage() {
 
     return (
         <section>
-            <div className="title">
-                <h1>프로젝트</h1>
-            </div>
             <div className="project-bg">
+                <div className="title">
+                    <h1>프로젝트</h1>
+                </div>
                 <div className="project-wrap">
                     <div className="left-box">
                         <div className="project-box-title">
@@ -254,10 +254,12 @@ export default function ProjectPage() {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    padding: 0 0 100px 0;
+                    justify-content: center;
                 }
                 .title {
-                    margin-bottom: 80px;
+                    margin: 80px 0 0 0;
+                    display: flex;
+                    justify-content: center;
                 }
                 h1 {
                     font-weight: var(--bold);
@@ -270,7 +272,7 @@ export default function ProjectPage() {
                     width: 100%;
                     height: auto;
                     background: var(--gray_100);
-                    padding: 0 0 80px 0;
+                    padding: 0 0 100px 0;
                     display: flex;
                     flex-direction: column;
                 }

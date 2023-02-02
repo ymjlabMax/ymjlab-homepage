@@ -29,6 +29,7 @@ export default function Content() {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    margin-bottom: 200px;
                 }
 
                 .meta-content-box {

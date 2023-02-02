@@ -1,4 +1,4 @@
-import { Mainpage, Summary, Content, Detail, ProjectPage } from "../../section_metaverse";
+import { Mainpage, Summary, Content, Detail, ProjectPage1, ProjectPage2, ServiceBg, Business } from "../../section_metaverse";
 
 export default function Page() {
     return (
@@ -6,8 +6,11 @@ export default function Page() {
             <Mainpage />
             <Summary />
             <Content />
-            <Detail />
-            <ProjectPage />
+            <ServiceBg />
+            {/* <Detail /> */}
+            <Business />
+            <ProjectPage1 />
+            <ProjectPage2 />
         </>
     );
 }

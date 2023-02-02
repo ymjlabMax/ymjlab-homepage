@@ -261,21 +261,21 @@ export const MetaverseSummaryInfo = [
 export const MetaverseContentInfo = [
     {
         no: 1,
-        url: "/images/metaverse_img/metaverse_content_1.png",
+        url: "/images/metaverse_img/img_service_type1_meta.svg",
         title: "맞춤형",
         subtitle: "맞춤형 메타버스 공간·개발 운영",
         content: "대상 유형별 맞춤형 기획을 통해 차별화된 메타버스 공간 & Asset 제작하여 운영합니다.",
     },
     {
         no: 2,
-        url: "/images/metaverse_img/metaverse_content_2.png",
+        url: "/images/metaverse_img/img_service_type2_meta.svg",
         title: "규격형",
         subtitle: "메타버스 공간·에셋 렌탈",
         content: "성과가 검증된 공간 & Asset 등을 사전에 규격화된 형태로 제작하여 렌탈방식으로 제공합니다.",
     },
     {
         no: 3,
-        url: "/images/metaverse_img/metaverse_content_3.jpg",
+        url: "/images/metaverse_img/img_service_type3_meta.svg",
         title: "네이티브 마케팅",
         subtitle: "메타버스 광고, 캐릭터, 이벤트 등",
         content: "다양한 소비자 접점을 통한 PoC 확보 & 타겟 마케팅을 제공합니다.",
@@ -333,4 +333,16 @@ export const Metaverse_project_icon_02 = [
     { no: 4, name: "부스트", url: "/images/metaverse_img/img_func4_meta.svg" },
     { no: 5, name: "실사 360° 이미지 ", url: "/images/metaverse_img/img_func5_meta.svg" },
     { no: 6, name: "히든 미션", url: "/images/metaverse_img/img_func6_meta.svg" },
+];
+
+export const Metaverse_project_02 = [
+    { no: 1, title: "콘텐츠명", content: "DMZ 평화의 길" },
+    { no: 2, title: "개발기업", content: "요망진연구소(YMJLAB Inc.)" },
+    { no: 3, title: "개발대상", content: "연천 평화역사공원, 철원 노동당사" },
+    { no: 4, title: "지원기관", content: "강원통일교육센턴" },
+];
+
+export const Metaverse_project_img_02 = [
+    { no: 1, name: "DMZ-1", url: "/images/metaverse_img/dmz_screenshot1_meta.svg" },
+    { no: 2, name: "DMZ_2", url: "/images/metaverse_img/dmz_screenshot2_meta.svg" },
 ];
