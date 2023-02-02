@@ -3,7 +3,7 @@
 
 import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { navVariants } from "../utils/motion";
+import { slideIn, staggerContainer, textVariant } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -69,27 +69,32 @@ export default function Locationpage() {
 
     return (
         <section id="location">
-            <div className="title">찾아오시는길</div>
-            <div className="location-box">
-                <div className="left-box">
-                    <table className="summary-table">
-                        <tbody>
-                            {LocationInfo.map((el, index) => (
-                                <tr key={index}>
-                                    <td className="title-td">
-                                        <Image src={el.url} alt={el.name} width={40} height={50} />
-                                    </td>
-                                    <td className="content-td">{el.content}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-                <div className="right-box">
-                    <div className="map-box" id="map"></div>
-                </div>
-            </div>
-
+            <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
+                <motion.h1 variants={textVariant(0.5)}>
+                    <div className="title">찾아오시는길</div>
+                </motion.h1>
+                <motion.div variants={slideIn("up", "tween", 0.1, 0.5)}>
+                    <div className="location-box">
+                        <div className="left-box">
+                            <table className="summary-table">
+                                <tbody>
+                                    {LocationInfo.map((el, index) => (
+                                        <tr key={index}>
+                                            <td className="title-td">
+                                                <Image src={el.url} alt={el.name} width={40} height={50} />
+                                            </td>
+                                            <td className="content-td">{el.content}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="right-box">
+                            <div className="map-box" id="map"></div>
+                        </div>
+                    </div>
+                </motion.div>
+            </motion.div>
             <style jsx>{`
                 section {
                     /* width: 100%; */

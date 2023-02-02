@@ -10,29 +10,14 @@ import kkultrip_main from "../public/images/kkultrip_img/kkultrip_main.svg";
 const Mainpage = () => {
     return (
         <section>
-            {/* <div className={styles.bgWrap}>
-                <Image
-                    alt="Mountains"
-                    src={Metaverse}
-                    placeholder="blur"
-                    quality={100}
-                    fill
-                    sizes="100%"
-                    style={{
-                        objectFit: "cover",
-                    }}
-                />
-            </div>
-            <div className="title">
-                <h1>내가 신경쓰지 않아도</h1>
-                <h2>할인 받는 꿀 같은 여행 앱</h2>
-            </div> */}
-            <div className="title">
-                <h1>내가 신경쓰지 않아도 할인 받는</h1>
-                <h1>
-                    <span className="yellow-color">꿀 같은</span> 여행 앱
-                </h1>
-            </div>
+            <motion.div variants={navVariants} initial="hidden" whileInView="show">
+                <div className="title">
+                    <h1>내가 신경쓰지 않아도 할인 받는</h1>
+                    <h1>
+                        <span className="yellow-color">꿀 같은</span> 여행 앱
+                    </h1>
+                </div>
+            </motion.div>
             <div className="main-img-box">
                 <Image src={kkultrip_main} alt="꿀트립 메인이미지" width={1000} height={1000} />
             </div>
@@ -43,7 +28,7 @@ const Mainpage = () => {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    padding-top: 136px;
+                    padding-top: 230px;
                 }
 
                 h1 {

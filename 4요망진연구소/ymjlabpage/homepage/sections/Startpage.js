@@ -60,7 +60,7 @@ export default function Startpage() {
                     }
 
                     .left-box {
-                        width: 35%;
+                        width: 50%;
                         /* height: 100%; */
                         display: flex;
                         justify-content: flex-end;

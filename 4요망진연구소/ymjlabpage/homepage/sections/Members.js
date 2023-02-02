@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { navVariants, textVariant, staggerContainer } from "../utils/motion";
+import { slideIn, textVariant, staggerContainer } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,6 +12,8 @@ const Members = () => (
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
             <motion.h1 variants={textVariant(0.5)}>
                 <div className="title">팀원 소개</div>
+            </motion.h1>
+            <motion.div variants={slideIn("up", "tween", 0.1, 0.5)}>
                 <div className="member-wrap">
                     <div className="container">
                         {MemberInfo.map((el, index) => (
@@ -35,7 +37,7 @@ const Members = () => (
                         ))}
                     </div>
                 </div>
-            </motion.h1>
+            </motion.div>
         </motion.div>
 
         <style jsx>{`

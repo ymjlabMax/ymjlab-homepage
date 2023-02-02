@@ -30,9 +30,11 @@ const Footer = () => (
             <div className="logo">
                 {socials.map((social, index) => (
                     <div key={index} className="logo-margin">
-                        <Link href={social.link} target="_blank">
-                            <Image src={social.url} alt={social.name} width={50} height={50} />
-                        </Link>
+                        <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                            <Link href={social.link} target="_blank">
+                                <Image src={social.url} alt={social.name} width={50} height={50} />
+                            </Link>
+                        </motion.div>
                     </div>
                 ))}
             </div>

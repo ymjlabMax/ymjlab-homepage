@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { navVariants } from "../utils/motion";
+import { slideIn } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import { KkultripSummaryInfo } from "../constants";
@@ -9,7 +9,7 @@ import { KkultripSummaryInfo } from "../constants";
 export default function Summary() {
     return (
         <section>
-            <div className="left-box">
+            <motion.div className="left-box" variants={slideIn("up", "tween", 0.1, 0.5)}>
                 <h1>관광데이터 기반 사후 정산 솔루션</h1>
                 <p>꿀트립서비시는 정체되고 낙후된 관광지 할인 쿠폰 서비스를</p>
                 <p>
@@ -26,7 +26,7 @@ export default function Summary() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
             <div className="right-box">
                 <Image src="/images/kkultrip_img/kkultrip_phone.svg" alt="메타버스 이미지" width={200} height={200} />
             </div>
@@ -37,6 +37,7 @@ export default function Summary() {
                     justify-content: center;
                     padding: 200px 0 100px 0;
                     margin-bottom: 100px;
+                    margin-top: 100px;
                 }
                 .left-box {
                     display: flex;
