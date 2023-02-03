@@ -5,21 +5,19 @@ import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Mainpage.module.css";
-import kkultrip_main from "../public/images/kkultrip_img/kkultrip_main.svg";
+import kkultrip_main from "../public/images/kkultrip_img/img_b_bg_kt.svg";
 
 const Mainpage = () => {
     return (
         <section>
-            <motion.div variants={navVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
-                <div className="title">
-                    <h1>내가 신경쓰지 않아도 할인 받는</h1>
-                    <h1>
-                        <span className="yellow-color">꿀 같은</span> 여행 앱
-                    </h1>
-                </div>
-            </motion.div>
             <div className="main-img-box">
-                <Image src={kkultrip_main} alt="꿀트립 메인이미지" width={1000} height={1000} />
+                <Image src={kkultrip_main} alt="꿀트립 메인이미지" width={800} height={1000} />
+            </div>
+            <div className="title">
+                <h1>꿀 같은 여행</h1>
+                <h1>더 달콤하게 누리세요!</h1>
+                <p>신경쓰지 않아도 할인받은 꿀같은 여행앱</p>
+                <div className="width-div">&nbsp;</div>
             </div>
             <style jsx>{`
                 section {
@@ -28,32 +26,43 @@ const Mainpage = () => {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    padding-top: 190px;
+                    background: #fff8dd;
+                }
+                .main-img-box {
+                    position: relative;
+                    margin-top: 200px;
+                }
+                .title {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 100px;
+                    z-index: 10;
+                }
+                .width-div {
+                    width: 900px;
                 }
 
                 h1 {
-                    font-weight: var(--bold);
-                    font-size: 48px;
+                    font-family: "Gmarket Sans";
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 60px;
                     line-height: 40px;
                     letter-spacing: -0.015em;
                     color: var(--font_500);
                     margin-bottom: 16px;
+                    font-stretch: expanded;
                 }
-                h2 {
-                    font-size: 32px;
-                    line-height: 40px;
-                    color: #ffffff;
-                }
-
-                .title {
+                p {
+                    font-family: "Gmarket Sans";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 19px;
+                    line-height: 19px;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: center;
                     align-items: center;
-                }
-
-                .yellow-color {
-                    color: #ffb800;
+                    color: #181818;
                 }
 
                 @media only screen and (max-width: 600px) {

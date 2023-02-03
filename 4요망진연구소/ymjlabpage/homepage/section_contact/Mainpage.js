@@ -4,17 +4,31 @@ import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
+import axios from "axios";
 
-const Mainpage = () => {
+export default function ContactPage({ children }) {
+    const sendEmailHandler = () => {
+        axios.get("/api/email").then((res) => {
+            console.log(res.data);
+        });
+    };
+
     return (
         <section>
             <div className="title">
                 <h1>Contact</h1>
             </div>
-            <form className="pc-form"></form>
+            <form className="pc-form">
+                <div>
+                    <label>문의</label>
+                    <input />
+                    <label>이름</label>
+                    <input />
+                </div>
+            </form>
             <div className="btn-list">
                 <button>취소</button>
-                <button>확인</button>
+                <button onClick={() => sendEmailHandler()}>확인</button>
             </div>
             <style jsx>{`
                 section {
@@ -43,7 +57,7 @@ const Mainpage = () => {
                     box-sizing: border-box;
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
+                    align-items: center;
                     width: 1000px;
                     height: 498px;
                     background: #fafafa;
@@ -51,6 +65,7 @@ const Mainpage = () => {
                     border-style: solid;
                     border-color: #dddddd;
                     margin-bottom: 32px;
+                    padding: 20px 0 20px 0;
                 }
                 .btn-list {
                     display: flex;
@@ -78,6 +93,4 @@ const Mainpage = () => {
             `}</style>
         </section>
     );
-};
-
-export default Mainpage;
+}
