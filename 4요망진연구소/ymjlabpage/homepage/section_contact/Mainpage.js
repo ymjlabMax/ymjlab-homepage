@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
@@ -7,10 +7,26 @@ import Image from "next/image";
 import axios from "axios";
 
 export default function ContactPage({ children }) {
+    // 연락정보 상태 관리
+    const [contactInfo, setContactInfo] = useState({
+        type: "꿀트립",
+        name: "서외구",
+        email: "sud665@naver.com",
+        phoneNum: "010-3020-2020",
+        title: "꿀트립 제휴점 관련",
+        content: "꿀트립 제휴점 맺고 싶어요",
+    });
+
     const sendEmailHandler = () => {
-        axios.get("/api/email").then((res) => {
-            console.log(res.data);
-        });
+        axios
+            .post("/api/email", contactInfo, {
+                headers: {
+                    "Content-type": "application/json",
+                },
+            })
+            .then((res) => {
+                console.log(res.data.message);
+            });
     };
 
     return (
@@ -69,7 +85,10 @@ export default function ContactPage({ children }) {
                     padding-top: 146px;
                 }
                 .left-box {
-                    margin-right: 32px;
+                    width: 50%;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 50%;
                 }
                 .contact-wrap {
                     display: flex;
@@ -114,6 +133,7 @@ export default function ContactPage({ children }) {
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
+                    width: 50%;
                 }
 
                 textarea {

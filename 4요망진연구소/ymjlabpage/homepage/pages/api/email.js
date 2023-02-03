@@ -3,8 +3,34 @@
 export default function handler(req, res) {
     // sendEmail("sud665@ymjlab.com", "test", "<p>22</p><br><h1>2222</h1>");
 
-    res.status(200).json({ name: "John Doe" });
+    if (req.method === "POST") {
+        const contactInfo = {
+            type: req.body.type,
+            name: req.body.name,
+            email: req.body.email,
+            phoneNum: req.body.phoneNum,
+            title: req.body.title,
+            content: req.body.content,
+        };
+        const qnaTemplate = dataInfo(contactInfo);
+        sendEmail("sud665@ymjlab.com", contactInfo.title, qnaTemplate);
+    } else {
+        res.status(404).send({ message: "fail" });
+    }
+
+    return res.status(200).send({ message: "ok" });
 }
+
+let dataInfo = (data) => {
+    return `<body>
+                <h1>문의유형 : ${data.type}</h1>
+                <h2>이름 : ${data.name}</h2>
+                <h2>전화번호 : ${data.phoneNum}</h2>
+                <h2>이메일 : ${data.email}</h2>
+                <h2>제목 : ${data.title}</h2>
+                <p>내용 : ${data.content}</p>
+            </body>`;
+};
 
 let nodemailer = require("nodemailer");
 
