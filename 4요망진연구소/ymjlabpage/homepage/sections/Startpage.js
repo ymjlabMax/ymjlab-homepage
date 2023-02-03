@@ -55,7 +55,7 @@ export default function Startpage() {
                         height: var(--page_height);
                         display: flex;
                         justify-content: center;
-                        z-index: 10;
+                        z-index: -1;
                         /* padding: 0 100px 0 100px; */
                     }
 

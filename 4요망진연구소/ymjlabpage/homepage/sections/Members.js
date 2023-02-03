@@ -1,19 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { slideIn, textVariant, staggerContainer } from "../utils/motion";
-import Link from "next/link";
+import { slideIn, textVariant, staggerContainer, fadeIn } from "../utils/motion";
 import Image from "next/image";
+import { TypingText } from "../components";
 
 import { MemberInfo } from "../constants";
 
 const Members = () => (
     <section>
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
-            <motion.h1 variants={textVariant(0.5)}>
-                <div className="title">팀원 소개</div>
-            </motion.h1>
-            <motion.div variants={slideIn("up", "tween", 0.1, 0.5)}>
+            <div className="title">
+                <TypingText title="팀원 소개" />
+            </div>
+            <motion.div variants={fadeIn("up", "tween", 0.1, 0.5)}>
                 <div className="member-wrap">
                     <div className="container">
                         {MemberInfo.map((el, index) => (

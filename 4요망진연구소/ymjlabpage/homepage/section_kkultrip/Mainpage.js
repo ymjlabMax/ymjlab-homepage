@@ -10,7 +10,7 @@ import kkultrip_main from "../public/images/kkultrip_img/kkultrip_main.svg";
 const Mainpage = () => {
     return (
         <section>
-            <motion.div variants={navVariants} initial="hidden" whileInView="show">
+            <motion.div variants={navVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
                 <div className="title">
                     <h1>내가 신경쓰지 않아도 할인 받는</h1>
                     <h1>
@@ -28,7 +28,7 @@ const Mainpage = () => {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    padding-top: 230px;
+                    padding-top: 190px;
                 }
 
                 h1 {

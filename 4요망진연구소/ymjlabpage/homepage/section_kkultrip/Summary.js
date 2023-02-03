@@ -1,44 +1,52 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { slideIn } from "../utils/motion";
-import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { staggerContainer, fadeIn } from "../utils/motion";
+import { TypingText } from "../components";
+
 import { KkultripSummaryInfo } from "../constants";
 
 export default function Summary() {
     return (
         <section>
-            <motion.div className="left-box" variants={slideIn("up", "tween", 0.1, 0.5)}>
-                <h1>관광데이터 기반 사후 정산 솔루션</h1>
-                <p>꿀트립서비시는 정체되고 낙후된 관광지 할인 쿠폰 서비스를</p>
-                <p>
-                    <span>관광객 편의 중심</span>으로 혁신하고 실시간 관광객의 소비 데이터를{" "}
-                </p>
-                <p>
-                    수집/분석/활용하는 <span>스마트관광 빅데이터 서비스</span> 입니다.
-                </p>
-                <div className="summary-box">
-                    {KkultripSummaryInfo.map((el, index) => (
-                        <div className="item-box" key={index}>
-                            <Image src={el.url} width={40} height={40} alt={el.content} />
-                            <p className="item-content">{el.content}</p>
+            <motion.div className="section-box" variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
+                <motion.div variants={fadeIn("right", "tween", 0.1, 0.5)}>
+                    <div className="left-box">
+                        <h1>
+                            <TypingText title="관광데이터 기반 사후 정산 솔루션" />
+                        </h1>
+                        <p>꿀트립서비시는 정체되고 낙후된 관광지 할인 쿠폰 서비스를</p>
+                        <p>
+                            <span>관광객 편의 중심</span>으로 혁신하고 실시간 관광객의 소비 데이터를{" "}
+                        </p>
+                        <p>
+                            수집/분석/활용하는 <span>스마트관광 빅데이터 서비스</span> 입니다.
+                        </p>
+                        <div className="summary-box">
+                            {KkultripSummaryInfo.map((el, index) => (
+                                <div className="item-box" key={index}>
+                                    <Image src={el.url} width={40} height={40} alt={el.content} />
+                                    <p className="item-content">{el.content}</p>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                </motion.div>
+                <motion.div variants={fadeIn("left", "tween", 0.1, 0.5)}>
+                    <div className="right-box">
+                        <Image src="/images/kkultrip_img/kkultrip_phone.svg" alt="메타버스 이미지" width={200} height={200} />
+                    </div>
+                </motion.div>
             </motion.div>
-            <div className="right-box">
-                <Image src="/images/kkultrip_img/kkultrip_phone.svg" alt="메타버스 이미지" width={200} height={200} />
-            </div>
             <style jsx>{`
                 section {
                     height: var(--page_height);
-                    display: flex;
-                    justify-content: center;
                     padding: 200px 0 100px 0;
                     margin-bottom: 100px;
                     margin-top: 100px;
                 }
+
                 .left-box {
                     display: flex;
                     flex-direction: column;

@@ -1,16 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { slideIn, staggerContainer, textVariant } from "../utils/motion";
+import { slideIn, staggerContainer, textVariant, fadeIn } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
+
+import { TitleText, TypingText } from "../components";
 
 const Servicepage = () => (
     <section>
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
-            <motion.h1 variants={textVariant(0.5)}>
-                <div className="title">요망진연구소 서비스</div>
-            </motion.h1>
+            <div className="title">
+                <TypingText title="요망진연구소 서비스" />
+            </div>
             <div className="first-box">
                 <motion.div variants={slideIn("left", "tween", 0.1, 0.5)}>
                     <div className="kkultrip-left">
@@ -23,7 +25,7 @@ const Servicepage = () => (
                     </div>
                 </motion.div>
                 <div className="right">
-                    <motion.div variants={slideIn("right", "tween", 0.1, 1)}>
+                    <motion.div variants={fadeIn("left", "tween", 0.1, 1)}>
                         <h3>꿀트립 서비스</h3>
                         <p>관광데이터 기반 사후정산 솔루션</p>
                         <Link href="/kkultrip">
@@ -34,7 +36,7 @@ const Servicepage = () => (
             </div>
             <div className="second-box">
                 <div className="meta-left">
-                    <motion.div variants={slideIn("left", "tween", 0.1, 1)}>
+                    <motion.div variants={fadeIn("right", "tween", 0.1, 1)}>
                         <h3>메타버스 에이전시 서비스</h3>
                         <p>공공 및 기업을 위한 메타버스 마케팅 솔루션</p>
                         <Link href="/metaverse">

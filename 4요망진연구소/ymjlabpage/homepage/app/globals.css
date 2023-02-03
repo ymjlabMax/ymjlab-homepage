@@ -116,6 +116,7 @@ body {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 a {
     color: inherit;
@@ -291,6 +292,16 @@ a {
     background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
 }
 
+.section-box {
+    display: flex;
+    justify-content: center;
+}
+.section-box-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 @media only screen and (max-width: 1300px) {
     .scroll-box-history {

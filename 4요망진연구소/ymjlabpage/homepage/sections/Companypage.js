@@ -2,16 +2,13 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { slideIn, staggerContainer, textVariant } from "../utils/motion";
-import Link from "next/link";
-import Image from "next/image";
+import { staggerContainer, fadeIn } from "../utils/motion";
+import { TypingText } from "../components";
 
 import Summary from "./Companypage/summary";
 import Affiliation from "./Companypage/Affiliation";
 import Partner from "./Companypage/Partner";
 import History from "./Companypage/History.js";
-
-// import { Summary, Affiliation, Partner, History } from "./Companypage";
 
 export default function Companypage() {
     const [companyInfo, setCompanyInfo] = useState("Summary");
@@ -23,10 +20,10 @@ export default function Companypage() {
     return (
         <section id="content">
             <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
-                <motion.h1 variants={textVariant(0.5)}>
-                    <div className="title">요망진연구소 소개</div>
-                </motion.h1>
-                <motion.div variants={slideIn("up", "tween", 0.1, 0.5)}>
+                <div className="title">
+                    <TypingText title="요망진연구소 소개" />
+                </div>
+                <motion.div variants={fadeIn("up", "tween", 0.1, 0.5)}>
                     <div className="content-box">
                         <p>
                             우리는 스마트관광 산업에 획기적인 변화를 이끌고, 새로운 가치를 창출하기 위해 관광 소비데이터를 활용한 AI Holistic benefit 서비스를

@@ -3,9 +3,10 @@
 
 import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { slideIn, staggerContainer, textVariant } from "../utils/motion";
+import { slideIn, staggerContainer, textVariant, fadeIn } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
+import { TypingText } from "../components";
 
 import { LocationInfo } from "../constants";
 
@@ -70,10 +71,10 @@ export default function Locationpage() {
     return (
         <section id="location">
             <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
-                <motion.h1 variants={textVariant(0.5)}>
-                    <div className="title">찾아오시는길</div>
-                </motion.h1>
-                <motion.div variants={slideIn("up", "tween", 0.1, 0.5)}>
+                <div className="title">
+                    <TypingText title="찾아오시는길" />
+                </div>
+                <motion.div variants={fadeIn("up", "tween", 0.1, 0.5)}>
                     <div className="location-box">
                         <div className="left-box">
                             <table className="summary-table">

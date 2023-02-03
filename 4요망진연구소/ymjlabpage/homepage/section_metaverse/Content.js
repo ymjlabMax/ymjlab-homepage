@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { navVariants } from "../utils/motion";
+import { navVariants, fadeIn, staggerContainer } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import { MetaverseContentInfo } from "../constants";
@@ -9,18 +9,22 @@ import { MetaverseContentInfo } from "../constants";
 export default function Content() {
     return (
         <section>
-            {MetaverseContentInfo.map((el, index) => (
-                <div key={index} className="meta-content-box">
-                    <div className="meta-content-box-title">
-                        <h1>{el.title}</h1>
-                        <h2>{el.subtitle}</h2>
-                    </div>
-                    <div className="meta-content-box-img">
-                        <Image src={el.url} width={270} height={280} alt="맞춤형" />
-                    </div>
-                    <div className="meta-content-box-content">{el.content}</div>
-                </div>
-            ))}
+            <motion.div className="section-box" variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
+                {MetaverseContentInfo.map((el, index) => (
+                    <motion.div key={index} variants={fadeIn("right", "tween", index * 0.5, 0.5)}>
+                        <div className="meta-content-box">
+                            <div className="meta-content-box-title">
+                                <h1>{el.title}</h1>
+                                <h2>{el.subtitle}</h2>
+                            </div>
+                            <div className="meta-content-box-img">
+                                <Image src={el.url} width={270} height={280} alt="맞춤형" />
+                            </div>
+                            <div className="meta-content-box-content">{el.content}</div>
+                        </div>
+                    </motion.div>
+                ))}
+            </motion.div>
             <style jsx>{`
                 section {
                     width: 100%;
