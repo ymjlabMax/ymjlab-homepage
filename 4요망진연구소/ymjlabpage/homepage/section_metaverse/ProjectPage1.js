@@ -148,7 +148,7 @@ export const SummaryBox1 = () => {
                 <h3>주요기능</h3>
                 <div className="fun-box">
                     {Metaverse_project_icon_01.map((el, index) => (
-                        <div className="icon-box" key={el.index}>
+                        <div className="icon-box" key={index}>
                             <Image alt={el.name} src={el.url} width={70} height={50} />
                             <p>{el.name}</p>
                         </div>
@@ -156,7 +156,7 @@ export const SummaryBox1 = () => {
                 </div>
                 <div className="fun-box-bottom">
                     {Metaverse_project_icon_02.map((el, index) => (
-                        <div className="icon-box" key={el.index}>
+                        <div className="icon-box" key={index}>
                             <Image alt={el.name} src={el.url} width={70} height={50} />
                             <p>{el.name}</p>
                         </div>

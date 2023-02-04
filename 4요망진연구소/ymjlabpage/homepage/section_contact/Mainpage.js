@@ -1,32 +1,126 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import Select from "react-select";
+import CreatableSelect from "react-select/creatable";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
 
+const options = [
+    { value: "꿀트립서비스", label: "꿀트립서비스" },
+    { value: "메타버스에이전시", label: "메타버스에이전시" },
+    { value: "기타", label: "기타" },
+];
+
+const mailOptions = [
+    {
+        value: "",
+        label: "직접입력",
+    },
+    {
+        value: "naver.com",
+        label: "naver.com",
+    },
+    {
+        value: "daum.net",
+        label: "daum.net",
+    },
+    {
+        value: "hanmail.net",
+        label: "hanmail.net",
+    },
+    {
+        value: "gmail.com",
+        label: "gmail.com",
+    },
+    {
+        value: "hotmail.com",
+        label: "hotmail.com",
+    },
+    {
+        value: "nate.com",
+        label: "nate.com",
+    },
+];
+
 export default function ContactPage({ children }) {
+    const router = useRouter();
     // 연락정보 상태 관리
     const [contactInfo, setContactInfo] = useState({
-        type: "꿀트립",
-        name: "서외구",
-        email: "sud665@naver.com",
-        phoneNum: "010-3020-2020",
-        title: "꿀트립 제휴점 관련",
-        content: "꿀트립 제휴점 맺고 싶어요",
+        type: "",
+        name: "",
+        email: "",
+        title: "",
+        content: "",
+        agree: "",
     });
+    //전화번호 상태 관리
+    const [phoneNum, setPhoneNum] = useState({ num1: "", num2: "", num3: "" });
+    // 문의유형 관리
+    const [type, setType] = useState("");
+    // 이메일 도메인 관리
+    const [server2, setServer2] = useState("");
 
+    //동의하기 모달창 관리
+    const [isModal, setIsModal] = useState(false);
+
+    /** 입력된 텍스트 관리 */
+    const handleInputValue = (key) => (e) => {
+        setContactInfo({ ...contactInfo, [key]: e.target.value });
+    };
+    /** 입력된 전화번호 관리 */
+    const handleInputValueNum = (key) => (e) => {
+        setPhoneNum({ ...phoneNum, [key]: e.target.value });
+    };
+
+    // const handleEmailServer = (e) => {
+    //     console.log("실행되나요?", contactInfo.emailServer.length);
+    //     if (contactInfo.emailServer.length > 0) {
+    //         setContactInfo({ ...contactInfo, emailServer: "" });
+    //         console.log("실행되나요?33333333", contactInfo.emailServer.length);
+    //         // setServer2(e.value);
+    //     } else {
+    //         console.log("실행되나요?2222", e);
+    //         setServer2(e.value);
+    //     }
+    // };
+
+    /** smtp 실행 */
     const sendEmailHandler = () => {
-        axios
-            .post("/api/email", contactInfo, {
-                headers: {
-                    "Content-type": "application/json",
-                },
-            })
-            .then((res) => {
-                console.log(res.data.message);
-            });
+        let sendInfo = {};
+
+        if (contactInfo.agree === "on") {
+            sendInfo = {
+                type: type.value,
+                name: contactInfo.name,
+                phone: phoneNum.num1 + "-" + phoneNum.num2 + "-" + phoneNum.num3,
+                email: contactInfo.email + server2.value,
+                title: contactInfo.title,
+                content: contactInfo.content,
+            };
+
+            // smpt 서비스 실시
+            axios
+                .post("/api/email", sendInfo, {
+                    headers: {
+                        "Content-type": "application/json",
+                    },
+                })
+                .then((res) => {
+                    if (res.data.message === "ok") {
+                        confirm("문의하신 내용이 접수 되었습니다.");
+                        router.reload();
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        } else {
+            confirm("개인정보 수집 및 이용에 동의해주시기 바랍니다.");
+        }
     };
 
     return (
@@ -42,37 +136,72 @@ export default function ContactPage({ children }) {
                     <Image src="/images/img_mail_cont.svg" width={300} height={300} alt="contact-이미지" />
                 </div>
                 <div className="right-box">
-                    <label>문의</label>
-                    <select>
-                        <option value="">문의유형을 선택해주세요.</option>
-                        <option value="꿀트립 서비스">꿀트립 서비스</option>
-                        <option value="메타버스 에이전시">메타버스 에이전시</option>
-                        <option value="기타">기타</option>
-                    </select>
+                    <div className="select-box">
+                        <label>문의</label>
+                        <CreatableSelect
+                            instanceId="select-box"
+                            options={options}
+                            placeholder="문의유형을 선택해주세요."
+                            theme={(theme) => ({
+                                ...theme,
+                                borderRadius: 5,
+                                colors: {
+                                    ...theme.colors,
+                                    primary25: "#ffe561",
+                                    primary: "#ff8f0b",
+                                },
+                            })}
+                            onChange={setType}
+                        />
+                    </div>
                     <label>이름</label>
-                    <input />
+                    <input onChange={handleInputValue("name")} />
                     <label>이메일</label>
                     <div className="email-box">
-                        <input /> @ <input />
+                        {/* <input onChange={handleInputValue("email")} /> @ <input defaultValue={server2} onChange={handleInputValue("emailServer")} />{" "} */}
+                        <input onChange={handleInputValue("email")} /> @
+                        <div className="server-box">
+                            <CreatableSelect
+                                instanceId="select-box"
+                                defaultValue={mailOptions[0]}
+                                isClearable
+                                options={mailOptions}
+                                theme={(theme) => ({
+                                    ...theme,
+                                    borderRadius: 5,
+                                    colors: {
+                                        ...theme.colors,
+                                        primary25: "#ffe561",
+                                        primary: "#ff8f0b",
+                                    },
+                                })}
+                                onChange={setServer2}
+                            />
+                        </div>
                     </div>
                     <label>연락처</label>
                     <div className="phone-box">
-                        <input /> - <input /> - <input />
+                        <input onChange={handleInputValueNum("num1")} /> - <input onChange={handleInputValueNum("num2")} /> -{" "}
+                        <input onChange={handleInputValueNum("num3")} />
                     </div>
                     <label>제목 </label>
-                    <input />
+                    <input onChange={handleInputValue("title")} />
                     <label>문의내용</label>
-                    <textarea />
+                    <textarea onChange={handleInputValue("content")} />
                 </div>
             </div>
             <div className="check-wrap">
                 <div className="check-box">
-                    <input type="checkbox" />
-                    개인정보 수집,이용 동의 <span>내용보기</span>
+                    <input type="checkbox" onChange={handleInputValue("agree")} />
+                    개인정보 수집,이용동의&nbsp;&nbsp;&nbsp;<span className="bold-span">내용보기</span>
                 </div>
                 <div className="btn-list">
-                    <button>취소</button>
-                    <button onClick={() => sendEmailHandler()}>확인</button>
+                    <Link href="/">
+                        <button>취소</button>
+                    </Link>
+                    <button className="active-btn" onClick={() => sendEmailHandler()}>
+                        확인
+                    </button>
                 </div>
             </div>
 
@@ -85,10 +214,9 @@ export default function ContactPage({ children }) {
                     padding-top: 146px;
                 }
                 .left-box {
-                    width: 50%;
                     flex-direction: column;
                     justify-content: flex-start;
-                    width: 50%;
+                    margin-right: 32px;
                 }
                 .contact-wrap {
                     display: flex;
@@ -107,13 +235,8 @@ export default function ContactPage({ children }) {
                     display: flex;
                     color: var(--font_400);
                 }
-                select {
-                    padding: 8px;
+                .select-box {
                     width: 328px;
-                    height: 42px;
-                    background: #ffffff;
-                    border: 1px solid #dddddd;
-                    color: var(--font_100);
                 }
                 h4 {
                     font-weight: 500;
@@ -127,7 +250,7 @@ export default function ContactPage({ children }) {
                 }
                 .sub-title {
                     width: 350px;
-                    margin-bottom: 260px;
+                    margin-bottom: 210px;
                 }
                 .right-box {
                     display: flex;
@@ -143,8 +266,8 @@ export default function ContactPage({ children }) {
                     align-items: flex-start;
                     padding: 8px;
                     gap: 10px;
-                    width: 588px;
-                    height: 116px;
+                    width: 550px;
+                    height: 150px;
                     background: #ffffff;
                     border: 1px solid #dddddd;
                     flex: none;
@@ -158,15 +281,17 @@ export default function ContactPage({ children }) {
                     color: #404040;
                     margin: 14px 0 4px 0;
                 }
-                option {
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 20px;
+                .email-box {
                     display: flex;
-                    color: #767676;
+                    align-items: center;
                 }
+                .server-box {
+                    margin-left: 8px;
+                    width: 280px;
+                }
+
                 .email-box > input {
-                    width: 200px;
+                    width: 180px;
                 }
                 .phone-box > input {
                     width: 100px;
@@ -184,11 +309,15 @@ export default function ContactPage({ children }) {
                 }
                 input {
                     box-sizing: border-box;
-                    padding: 8px;
+                    padding: 7px;
                     background: #ffffff;
                     border: 1px solid #dddddd;
                     width: 328px;
                     border-radius: 5px;
+                }
+
+                input:focus {
+                    border: 1px solid var(--main_orange);
                 }
 
                 button {
@@ -205,6 +334,16 @@ export default function ContactPage({ children }) {
                     border: 1px solid #ff8f0b;
                     color: #ffffff;
                     transition: all 0.3s;
+                }
+                .bold-span {
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #404040;
+                }
+
+                .active-btn {
+                    background: var(--main_orange);
+                    color: var(--white);
                 }
 
                 @media only screen and (max-width: 600px) {
