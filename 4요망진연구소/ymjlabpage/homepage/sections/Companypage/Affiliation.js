@@ -17,7 +17,7 @@ const Affiliation = () => (
         ))}
         <style jsx>{`
             section {
-                width: 100%;
+                max-width: 1200px;
                 height: 360px;
                 display: flex;
                 justify-content: center;

@@ -99,8 +99,10 @@ export const MemberInfo = [
 export const AffInfo = [
     { no: 1, name: "제주스타트업협회", url: "images/aff/Jeju_startup.svg" },
     { no: 2, name: "관광벤처기업", url: "images/aff/ventur.svg" },
-    { no: 3, name: "한국스마트관광협회", url: "images/aff/한국스마트관광협회 1.svg" },
+    { no: 3, name: "한국스마트관광협회", url: "images/aff/logo_kosta.svg" },
     { no: 4, name: "메타버스얼라이언스", url: "images/aff/logo_metaverse_alliance.svg" },
+    { no: 5, name: "벤처확인기업", url: "images/aff/logo_venture.svg" },
+    { no: 6, name: "산업융합촉진 옴부즈만", url: "images/aff/logo_ombudsman.svg" },
 ];
 
 export const PartnerInfo = [

@@ -66,7 +66,6 @@ export default function Companypage() {
                             파트너
                         </button>
                     </div>
-
                     <div>
                         {companyInfo === "Summary" && <Summary />}
                         {companyInfo === "History" && <History />}
