@@ -370,7 +370,43 @@ export default function ContactPage() {
                     color: var(--white);
                 }
 
+                /* 테블릿 사이즈 */
+                @media only screen and (max-width: 1100px) {
+                    .contact-wrap {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .sub-title {
+                        width: 350px;
+                        margin-bottom: 50px;
+                    }
+                    .left-box {
+                        margin: 0 0 32px 0;
+                    }
+                    .right-box {
+                        width: auto;
+                    }
+                }
+                /* 휴대폰 사이즈 */
                 @media only screen and (max-width: 600px) {
+                    .right-box {
+                        width: auto;
+                    }
+                    textarea {
+                        width: auto;
+                    }
+                    .server-box {
+                        width: auto;
+                    }
+                    button {
+                        width: 80px;
+                        height: 50px;
+                        background: #ffffff;
+                        border: 1px solid #ff8f0b;
+                        border-radius: 6px;
+                        color: #ff8f0b;
+                        margin: 0 10px 60px 10px;
+                    }
                 }
             `}</style>
         </section>

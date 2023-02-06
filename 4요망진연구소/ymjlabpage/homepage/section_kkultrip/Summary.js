@@ -113,6 +113,7 @@ export default function Summary() {
                     }
                 }
 
+                /* 휴대폰 사이즈 */
                 @media only screen and (max-width: 600px) {
                     section {
                         height: auto;

@@ -19,6 +19,11 @@ export default function ServiceBg() {
                         <Image src="images/metaverse_img/img_servicebg_meta.svg" alt="메타버스 서비스 배경" width={1000} height={500} />
                     </div>
                 </motion.div>
+                <motion.div variants={fadeIn("up", "tween", 0.1, 0.5)}>
+                    <div className="content-wrap-mob">
+                        <Image src="images/metaverse_img/img_servicebg_meta_mob.svg" alt="메타버스 서비스 배경" width={300} height={500} />
+                    </div>
+                </motion.div>
                 <style jsx>{`
                     section {
                         height: var(--page_height);
@@ -42,8 +47,38 @@ export default function ServiceBg() {
                         display: flex;
                         justify-content: center;
                     }
+                    .content-wrap-mob {
+                        display: none;
+                    }
 
+                    /* 테블릿 사이즈 */
+                    @media only screen and (max-width: 1300px) {
+                        section {
+                            height: auto;
+                            padding: 0 0 200px 0;
+                        }
+
+                        .content-wrap {
+                            display: none;
+                        }
+                        .meta-content-box {
+                            margin-bottom: 32px;
+                        }
+                        .content-wrap-mob {
+                            display: block;
+                        }
+                    }
+                    /* 휴대폰 사이즈 */
                     @media only screen and (max-width: 600px) {
+                        .content-wrap {
+                            flex-direction: column;
+                            height: 1000px;
+                        }
+                        .meta-content-box {
+                            margin-bottom: 32px;
+                            width: 300px;
+                            height: 330px;
+                        }
                     }
                 `}</style>
             </section>

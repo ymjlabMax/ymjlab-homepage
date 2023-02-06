@@ -35,6 +35,11 @@ export default function Summary() {
                         <Image src="/images/metaverse_img/big_building_meta.svg" alt="꿀트립 앱 이미지" width={500} height={200} />
                     </motion.div>
                 </div>
+                <div className="right-box-mobile">
+                    <motion.div variants={planetVariants("right")}>
+                        <Image src="/images/metaverse_img/big_building_meta.svg" alt="꿀트립 앱 이미지" width={300} height={200} />
+                    </motion.div>
+                </div>
                 <style jsx>{`
                     section {
                         height: var(--page_height);
@@ -76,10 +81,6 @@ export default function Summary() {
                     .summary-box {
                         width: 180px;
                         height: 180px;
-                        /* background: var(--white);
-                    border: 1px solid var(--gray_100);
-                    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
-                    border-radius: 24px; */
                         margin: 96px 16px 0 16px;
                         display: flex;
                         flex-direction: column;
@@ -95,8 +96,74 @@ export default function Summary() {
                         color: #181818;
                         margin-top: 24px;
                     }
+                    .right-box-mobile {
+                        display: none;
+                    }
 
+                    /* 테블릿 사이즈 */
+                    @media only screen and (max-width: 1240px) {
+                        section {
+                            height: auto;
+                            flex-direction: column;
+                        }
+                        .left-box {
+                            margin-bottom: 32px;
+                            display: flex;
+                            align-items: center;
+                        }
+                        .right-box {
+                            margin-bottom: 32px;
+                            display: flex;
+                            justify-content: center;
+                            padding-left: 0;
+                        }
+                        .content-box {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                    }
+
+                    /* 휴대폰 사이즈 */
                     @media only screen and (max-width: 600px) {
+                        section {
+                            height: auto;
+                            margin-top: 0;
+                        }
+
+                        .left-box {
+                            width: auto;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .summary-wrap {
+                            width: 380px;
+                            justify-content: center;
+                        }
+                        .summary-box {
+                            margin-top: 50px;
+                        }
+                        .right-box {
+                            display: none;
+                        }
+                        .right-box-mobile {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        h1 {
+                            font-weight: var(--bold);
+                            font-size: var(--font_22);
+                            margin-bottom: 18px;
+                        }
+
+                        p {
+                            font-weight: var(--regular);
+                            font-size: var(--font_12);
+                            line-height: 24px;
+                            color: var(--font_500);
+                        }
                     }
                 `}</style>
             </section>

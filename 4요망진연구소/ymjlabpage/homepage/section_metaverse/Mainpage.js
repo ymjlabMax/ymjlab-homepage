@@ -11,7 +11,7 @@ const Mainpage = () => {
     return (
         <section>
             <div className={styles.bgWrap}>
-                <div className="img-box">
+                <div className="img-box-pc">
                     <Image
                         alt="메타버스메인이미지"
                         src={metaverse_main}
@@ -22,6 +22,19 @@ const Mainpage = () => {
                         // style={{
                         //     objectFit: "cover",
                         // }}
+                    />
+                </div>
+                <div className="img-box-mol">
+                    <Image
+                        alt="메타버스메인이미지"
+                        src={metaverse_main}
+                        // placeholder="blur"
+                        quality={100}
+                        fill
+                        sizes="100%"
+                        style={{
+                            objectFit: "cover",
+                        }}
                     />
                 </div>
             </div>
@@ -40,11 +53,6 @@ const Mainpage = () => {
                     font-family: "Spoqa Han Sans Neo";
                     font-style: normal;
                 }
-                /* .img-box {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                } */
 
                 h1 {
                     font-weight: 700;
@@ -52,7 +60,6 @@ const Mainpage = () => {
                     line-height: 90px;
                     letter-spacing: -0.015em;
                     color: #ffffff;
-                    /* border: 0.5px solid #ffffff; */
                     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
                 }
                 h2 {
@@ -76,8 +83,42 @@ const Mainpage = () => {
                     justify-content: flex-start;
                     align-items: center;
                 }
+                .img-box-mol {
+                    display: none;
+                }
+
+                @media only screen and (max-width: 1300px) {
+                    h1 {
+                        font-size: 72px;
+                    }
+                    .img-box-pc {
+                        display: none;
+                    }
+
+                    .img-box-mol {
+                        display: block;
+                    }
+                }
 
                 @media only screen and (max-width: 600px) {
+                    .title {
+                        width: auto;
+                    }
+
+                    h1 {
+                        font-weight: 700;
+                        font-size: 32px;
+                        line-height: 90px;
+                        letter-spacing: -0.015em;
+                        color: #ffffff;
+                        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                    }
+                    h2 {
+                        font-size: 18px;
+                        line-height: 40px;
+                        color: #ffffff;
+                        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                    }
                 }
             `}</style>
         </section>

@@ -445,7 +445,52 @@ export default function ProjectPage() {
                     border: 1px solid #f2f2f2;
                 }
 
+                /* 테블릿 사이즈 */
+                @media only screen and (max-width: 1030px) {
+                    .business-wrap {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .business-wrap2 {
+                        flex-direction: column-reverse;
+                        align-items: center;
+                    }
+                    .left-box {
+                        margin-bottom: 32px;
+                    }
+                    .right-box {
+                        margin-bottom: 32px;
+                    }
+                }
+                /* 휴대폰 사이즈 */
                 @media only screen and (max-width: 600px) {
+                    h1 {
+                        font-weight: var(--bold);
+                        font-size: var(--font_32);
+                    }
+                    .left-box {
+                        display: flex;
+                        align-items: center;
+                    }
+                    .right-box {
+                        padding: 0 16px 0 16px;
+                    }
+
+                    .content-box {
+                        width: auto;
+                        padding: 0 16px 0 16px;
+                    }
+
+                    .pull-right {
+                        justify-content: center;
+                    }
+
+                    p {
+                        font-weight: var(--regular);
+                        font-size: var(--font_16);
+                        line-height: 32px;
+                        color: var(--font_500);
+                    }
                 }
             `}</style>
         </section>

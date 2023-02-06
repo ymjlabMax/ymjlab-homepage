@@ -97,7 +97,7 @@ export default function Navbar() {
                 }
 
                 /* 휴대폰 사이즈 */
-                @media only screen and (max-width: 600px) {
+                @media only screen and (max-width: 610px) {
                     nav {
                         padding: 12px 40px 12px 40px;
                         box-shadow: 0px;

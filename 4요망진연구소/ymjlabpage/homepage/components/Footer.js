@@ -135,7 +135,7 @@ const Footer = () => (
                     text-align: center;
                 }
                 p {
-                    text-align: center;
+                    text-align: left;
                 }
             }
         `}</style>

@@ -108,6 +108,7 @@ export default function Business() {
                 .pull-right {
                     justify-content: flex-end;
                 }
+                /* 테블릿 사이즈 */
                 @media only screen and (max-width: 1030px) {
                     .business-wrap {
                         flex-direction: column;
@@ -124,7 +125,7 @@ export default function Business() {
                         margin-bottom: 32px;
                     }
                 }
-
+                /* 휴대폰 사이즈 */
                 @media only screen and (max-width: 600px) {
                     h1 {
                         font-weight: var(--bold);

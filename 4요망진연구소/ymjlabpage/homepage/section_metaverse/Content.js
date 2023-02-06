@@ -84,7 +84,31 @@ export default function Content() {
                 .meta-content-box-content-box {
                     width: 100%;
                 }
+                /* 테블릿 사이즈 */
+                @media only screen and (max-width: 1300px) {
+                    section {
+                        height: auto;
+                        padding: 80px 0 80px 0;
+                    }
+
+                    .content-wrap {
+                        flex-direction: column;
+                    }
+                    .meta-content-box {
+                        margin-bottom: 32px;
+                    }
+                }
+                /* 휴대폰 사이즈 */
                 @media only screen and (max-width: 600px) {
+                    .content-wrap {
+                        flex-direction: column;
+                        height: 1000px;
+                    }
+                    .meta-content-box {
+                        margin-bottom: 32px;
+                        width: 300px;
+                        height: 330px;
+                    }
                 }
             `}</style>
         </section>
