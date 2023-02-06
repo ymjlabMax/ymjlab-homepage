@@ -10,8 +10,8 @@ import { TypingText } from "../components";
 
 export default function Business() {
     return (
-        <section>
-            <motion.div className="section-box-col" variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
+            <section>
                 <div className="business-wrap">
                     <motion.div variants={fadeIn("right", "tween", 0.1, 0.5)}>
                         <div className="left-box">
@@ -56,106 +56,107 @@ export default function Business() {
                         </div>
                     </motion.div>
                 </div>
-            </motion.div>
-            <style jsx>{`
-                section {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
 
-                .business-wrap {
-                    display: flex;
-                    justify-content: center;
-                    margin: 0 0 200px 0;
-                }
-                .business-wrap2 {
-                    display: flex;
-                    justify-content: center;
-                    margin: 0 0 200px 0;
-                }
-
-                .left-box {
-                    display: flex;
-                    flex-direction: column;
-                }
-                .right-box {
-                    padding-left: 100px;
-                }
-                h1 {
-                    font-weight: var(--bold);
-                    font-size: var(--font_32);
-                    line-height: 50px;
-                    display: flex;
-                    align-items: center;
-                    color: var(--font_500);
-                    margin-bottom: 18px;
-                }
-                p {
-                    font-weight: var(--regular);
-                    font-size: var(--font_18);
-                    line-height: 32px;
-                    color: var(--font_500);
-                }
-                span {
-                    color: var(--main_orange);
-                }
-                .content-box {
-                    width: 600px;
-                    line-height: 23px;
-                }
-
-                .pull-right {
-                    justify-content: flex-end;
-                }
-                /* 테블릿 사이즈 */
-                @media only screen and (max-width: 1030px) {
-                    .business-wrap {
+                <style jsx>{`
+                    section {
+                        display: flex;
                         flex-direction: column;
                         align-items: center;
                     }
-                    .business-wrap2 {
-                        flex-direction: column-reverse;
-                        align-items: center;
+
+                    .business-wrap {
+                        display: flex;
+                        justify-content: center;
+                        margin: 0 0 200px 0;
                     }
+                    .business-wrap2 {
+                        display: flex;
+                        justify-content: center;
+                        margin: 0 0 200px 0;
+                    }
+
                     .left-box {
-                        margin-bottom: 32px;
+                        display: flex;
+                        flex-direction: column;
                     }
                     .right-box {
-                        margin-bottom: 32px;
+                        padding-left: 100px;
                     }
-                }
-                /* 휴대폰 사이즈 */
-                @media only screen and (max-width: 600px) {
                     h1 {
                         font-weight: var(--bold);
                         font-size: var(--font_32);
-                    }
-                    .left-box {
+                        line-height: 50px;
                         display: flex;
                         align-items: center;
+                        color: var(--font_500);
+                        margin-bottom: 18px;
                     }
-                    .right-box {
-                        padding: 0 16px 0 16px;
-                    }
-
-                    .content-box {
-                        width: auto;
-                        padding: 0 16px 0 16px;
-                    }
-
-                    .pull-right {
-                        justify-content: center;
-                    }
-
                     p {
                         font-weight: var(--regular);
-                        font-size: var(--font_16);
+                        font-size: var(--font_18);
                         line-height: 32px;
                         color: var(--font_500);
                     }
-                }
-            `}</style>
-        </section>
+                    span {
+                        color: var(--main_orange);
+                    }
+                    .content-box {
+                        width: 600px;
+                        line-height: 23px;
+                    }
+
+                    .pull-right {
+                        justify-content: flex-end;
+                    }
+                    /* 테블릿 사이즈 */
+                    @media only screen and (max-width: 1030px) {
+                        .business-wrap {
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        .business-wrap2 {
+                            flex-direction: column-reverse;
+                            align-items: center;
+                        }
+                        .left-box {
+                            margin-bottom: 32px;
+                        }
+                        .right-box {
+                            margin-bottom: 32px;
+                        }
+                    }
+                    /* 휴대폰 사이즈 */
+                    @media only screen and (max-width: 600px) {
+                        h1 {
+                            font-weight: var(--bold);
+                            font-size: var(--font_32);
+                        }
+                        .left-box {
+                            display: flex;
+                            align-items: center;
+                        }
+                        .right-box {
+                            padding: 0 16px 0 16px;
+                        }
+
+                        .content-box {
+                            width: auto;
+                            padding: 0 16px 0 16px;
+                        }
+
+                        .pull-right {
+                            justify-content: center;
+                        }
+
+                        p {
+                            font-weight: var(--regular);
+                            font-size: var(--font_16);
+                            line-height: 32px;
+                            color: var(--font_500);
+                        }
+                    }
+                `}</style>
+            </section>
+        </motion.div>
     );
 }

@@ -129,6 +129,23 @@ export const SummaryBox2 = () => {
                     color: #404040;
                     margin-top: 8px;
                 }
+                @media only screen and (max-width: 1300px) {
+                    .box {
+                        flex-direction: column;
+                    }
+
+                    .left-box {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 32px;
+                    }
+
+                    .img-box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
             `}</style>
         </div>
     );
@@ -311,6 +328,17 @@ export default function ProjectPage() {
                     align-items: center;
                 }
 
+                /* 테블릿 사이즈 */
+                @media only screen and (max-width: 1300px) {
+                    .project-wrap {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .summary-box {
+                        width: auto;
+                    }
+                }
+                /* 휴대폰 사이즈 */
                 @media only screen and (max-width: 600px) {
                 }
             `}</style>

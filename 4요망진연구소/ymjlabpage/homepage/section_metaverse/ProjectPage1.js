@@ -22,6 +22,12 @@ export const Gallery = () => {
                     gap: 0px 4px;
                     place-items: center;
                 }
+                @media only screen and (max-width: 1300px) {
+                    .grid-box {
+                        grid-template-columns: repeat(2, 52%);
+                        grid-template-rows: repeat(2, 165px);
+                    }
+                }
             `}</style>
         </div>
     );
@@ -128,6 +134,23 @@ export const SummaryBox2 = () => {
                     color: #404040;
                     margin-top: 8px;
                 }
+                @media only screen and (max-width: 1300px) {
+                    .box {
+                        flex-direction: column;
+                    }
+
+                    .left-box {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 32px;
+                    }
+
+                    .img-box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
             `}</style>
         </div>
     );
@@ -231,6 +254,20 @@ export const SummaryBox1 = () => {
 
                 li {
                     margin: 32px 0 32px 0;
+                }
+                @media only screen and (max-width: 1300px) {
+                    .box {
+                        flex-direction: column;
+                    }
+
+                    .left-box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    ul {
+                        margin-top: 0;
+                    }
                 }
             `}</style>
         </div>
@@ -446,51 +483,17 @@ export default function ProjectPage() {
                 }
 
                 /* 테블릿 사이즈 */
-                @media only screen and (max-width: 1030px) {
-                    .business-wrap {
+                @media only screen and (max-width: 1300px) {
+                    .project-wrap {
                         flex-direction: column;
                         align-items: center;
                     }
-                    .business-wrap2 {
-                        flex-direction: column-reverse;
-                        align-items: center;
-                    }
-                    .left-box {
-                        margin-bottom: 32px;
-                    }
-                    .right-box {
-                        margin-bottom: 32px;
+                    .summary-box {
+                        width: auto;
                     }
                 }
                 /* 휴대폰 사이즈 */
                 @media only screen and (max-width: 600px) {
-                    h1 {
-                        font-weight: var(--bold);
-                        font-size: var(--font_32);
-                    }
-                    .left-box {
-                        display: flex;
-                        align-items: center;
-                    }
-                    .right-box {
-                        padding: 0 16px 0 16px;
-                    }
-
-                    .content-box {
-                        width: auto;
-                        padding: 0 16px 0 16px;
-                    }
-
-                    .pull-right {
-                        justify-content: center;
-                    }
-
-                    p {
-                        font-weight: var(--regular);
-                        font-size: var(--font_16);
-                        line-height: 32px;
-                        color: var(--font_500);
-                    }
                 }
             `}</style>
         </section>
