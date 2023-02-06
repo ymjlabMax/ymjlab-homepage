@@ -28,17 +28,17 @@ const Mainpage = () => {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        /* background: #fff8dd; */
+                        background: #fff8dd;
                     }
                     .main-img-box {
                         position: relative;
-                        margin-top: 200px;
+                        margin-top: 230px;
                     }
                     .title {
                         display: flex;
                         flex-direction: column;
                         position: absolute;
-                        top: 100px;
+                        top: 120px;
                         z-index: 10;
                     }
                     .width-div {
@@ -66,7 +66,7 @@ const Mainpage = () => {
                         align-items: center;
                         color: #181818;
                     }
-
+                    
                     @media only screen and (max-width: 600px) {
                     }
                 `}</style>

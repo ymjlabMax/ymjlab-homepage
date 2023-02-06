@@ -21,21 +21,23 @@ const Partner = () => (
         ))}
         <style jsx>{`
             section {
-                max-width: 1200px;
-                max-height: 600px;
+                max-width: 1120px;
                 display: flex;
                 justify-content: center;
+                align-items: center;
                 flex-wrap: wrap;
+                padding-top: 40px;
             }
             .aff-box {
                 display: flex;
                 justify-content: center;
-                margin-right: 30px;
-                margin-left: 30px;
-                margin-top: 40px;
+                width: 150px;
+                height: 80px;
+                margin: 0 32px 16px 32px;
             }
 
             @media only screen and (max-width: 600px) {
+                height: 800px;
             }
         `}</style>
     </section>

@@ -35,7 +35,7 @@ export default function Business() {
                         </div>
                     </motion.div>
                 </div>
-                <div className="business-wrap">
+                <div className="business-wrap2">
                     <motion.div variants={fadeIn("right", "tween", 0.1, 0.5)}>
                         <div className="left-box">
                             <Image src="/images/kkultrip_img/img_strategy_kt.svg" alt="꿀트립 앱 이미지" width={600} height={700} />
@@ -69,6 +69,11 @@ export default function Business() {
                     justify-content: center;
                     margin: 0 0 200px 0;
                 }
+                .business-wrap2 {
+                    display: flex;
+                    justify-content: center;
+                    margin: 0 0 200px 0;
+                }
 
                 .left-box {
                     display: flex;
@@ -79,7 +84,7 @@ export default function Business() {
                 }
                 h1 {
                     font-weight: var(--bold);
-                    font-size: var(--font_40);
+                    font-size: var(--font_32);
                     line-height: 50px;
                     display: flex;
                     align-items: center;
@@ -103,8 +108,38 @@ export default function Business() {
                 .pull-right {
                     justify-content: flex-end;
                 }
+                @media only screen and (max-width: 1030px) {
+                    .business-wrap {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .business-wrap2 {
+                        flex-direction: column-reverse;
+                        align-items: center;
+                    }
+                    .left-box {
+                        margin-bottom: 32px;
+                    }
+                    .right-box {
+                        margin-bottom: 32px;
+                    }
+                }
 
                 @media only screen and (max-width: 600px) {
+                    .business-wrap {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .business-wrap2 {
+                        flex-direction: column-reverse;
+                        align-items: center;
+                    }
+                    .left-box {
+                        margin-bottom: 32px;
+                    }
+                    .right-box {
+                        margin-bottom: 32px;
+                    }
                 }
             `}</style>
         </section>

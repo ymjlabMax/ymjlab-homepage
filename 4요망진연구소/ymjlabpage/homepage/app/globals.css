@@ -352,6 +352,10 @@ a {
     .scroll-box-history {
         width: 600px;
     }
+    .section-box {
+        flex-direction: column;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 600px) {

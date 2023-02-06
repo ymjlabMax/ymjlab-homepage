@@ -77,22 +77,41 @@ export default function ContactPage() {
         setPhoneNum({ ...phoneNum, [key]: e.target.value });
     };
 
-    // const handleEmailServer = (e) => {
-    //     console.log("실행되나요?", contactInfo.emailServer.length);
-    //     if (contactInfo.emailServer.length > 0) {
-    //         setContactInfo({ ...contactInfo, emailServer: "" });
-    //         console.log("실행되나요?33333333", contactInfo.emailServer.length);
-    //         // setServer2(e.value);
-    //     } else {
-    //         console.log("실행되나요?2222", e);
-    //         setServer2(e.value);
-    //     }
-    // };
-
     /** smtp 실행 */
     const sendEmailHandler = () => {
         let sendInfo = {};
 
+        if (!type.value) {
+            confirm("문의유형을 선택해주시기 바랍니다.");
+            return;
+        }
+
+        if (!contactInfo.name) {
+            confirm("이름을 입력해주시기 바랍니다.");
+            return;
+        }
+
+        if (!contactInfo.email) {
+            confirm("이메일을 입력해주시기 바랍니다.");
+            return;
+        }
+
+        if (!phoneNum.num1 || !phoneNum.num2 || !phoneNum.num3) {
+            confirm("전화번호를 입력해주시기 바랍니다.");
+            return;
+        }
+
+        if (!contactInfo.title) {
+            confirm("제목을 입력해주시기 바랍니다.");
+            return;
+        }
+
+        if (!contactInfo.content) {
+            confirm("내용을 입력해주시기 바랍니다.");
+            return;
+        }
+
+        //개인동의 완료시 접수 전송
         if (contactInfo.agree === "on") {
             sendInfo = {
                 type: type.value,
@@ -113,7 +132,7 @@ export default function ContactPage() {
                 .then((res) => {
                     if (res.data.message === "ok") {
                         confirm("문의하신 내용이 접수 되었습니다.");
-                        router.reload();
+                        router.push("/");
                     }
                 })
                 .catch((err) => {

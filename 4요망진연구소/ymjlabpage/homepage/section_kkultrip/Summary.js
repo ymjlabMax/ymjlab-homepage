@@ -45,6 +45,8 @@ export default function Summary() {
                     padding: 200px 0 100px 0;
                     margin-bottom: 100px;
                     margin-top: 100px;
+                    display: flex;
+                    justify-content: center;
                 }
 
                 .left-box {
@@ -56,7 +58,7 @@ export default function Summary() {
                 }
                 h1 {
                     font-weight: var(--bold);
-                    font-size: var(--font_40);
+                    font-size: var(--font_32);
                     line-height: 50px;
                     display: flex;
                     align-items: center;
@@ -93,6 +95,22 @@ export default function Summary() {
                     font-size: var(--font_20);
                     line-height: 25px;
                     color: var(--font_400);
+                }
+
+                /* 테블릿 사이즈 */
+                @media only screen and (max-width: 1060px) {
+                    section {
+                        height: auto;
+                    }
+                    .left-box {
+                        margin-bottom: 32px;
+                    }
+                    .right-box {
+                        margin-bottom: 32px;
+                        display: flex;
+                        justify-content: center;
+                        padding-left: 0;
+                    }
                 }
 
                 @media only screen and (max-width: 600px) {

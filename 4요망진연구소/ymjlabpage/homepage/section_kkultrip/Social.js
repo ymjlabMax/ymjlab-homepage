@@ -44,7 +44,7 @@ export default function Social() {
                 }
                 h1 {
                     font-weight: 700;
-                    font-size: 40px;
+                    font-size: 32px;
                     line-height: 40px;
                     display: flex;
                     align-items: center;

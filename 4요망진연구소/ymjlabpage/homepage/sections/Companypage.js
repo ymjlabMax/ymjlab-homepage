@@ -77,7 +77,7 @@ export default function Companypage() {
             <style jsx>{`
                 section {
                     /* width: 100%; */
-                    height: 768px;
+                    /* height: 768px; */
                     display: flex;
                     flex-direction: column;
                     align-items: center;

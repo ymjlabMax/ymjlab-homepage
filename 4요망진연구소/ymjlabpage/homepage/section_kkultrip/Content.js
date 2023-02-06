@@ -61,7 +61,7 @@ export default function Content() {
                 }
                 h1 {
                     font-weight: var(--bold);
-                    font-size: var(--font_40);
+                    font-size: var(--font_32);
                     line-height: 40px;
                     display: flex;
                     color: var(--font_400);
@@ -142,7 +142,17 @@ export default function Content() {
                     margin-top: 4px;
                     font-size: 16px;
                 }
+                /* 테블릿 사이즈 */
+                @media only screen and (max-width: 1020px) {
+                    section {
+                        height: auto;
+                    }
 
+                    .content-wrap {
+                        flex-direction: column;
+                        height: 1000px;
+                    }
+                }
                 @media only screen and (max-width: 600px) {
                 }
             `}</style>
