@@ -111,6 +111,17 @@ export const PartnerInfo = [
     { no: 3, name: "sj테크놀로지", url: "images/Partner/logo_sj.svg" },
     { no: 4, name: "맘모식스", url: "images/Partner/mammossix.svg" },
     { no: 5, name: "디캐릭", url: "images/Partner/dcarrick.svg" },
+    { no: 6, name: "넥스트 챌린지", url: "images/Partner/logo_nextchallenge.svg" },
+    { no: 7, name: "한국스마트관광협회", url: "images/Partner/logo_kosta.svg" },
+    { no: 8, name: "제주한라대학교", url: "images/Partner/logo_hallauniv.svg" },
+    { no: 9, name: "브릿지스퀘어", url: "images/Partner/logo_bridgesquare.svg" },
+    { no: 10, name: "아프리카TV", url: "images/Partner/logo_afreecatv.svg" },
+    { no: 11, name: "dazayo", url: "images/Partner/logo_dazayo.svg" },
+    { no: 12, name: "박스트리", url: "images/Partner/logo_boxtree.svg" },
+    { no: 13, name: "프레쉬제주", url: "images/Partner/logo_freshjeju.svg" },
+    { no: 14, name: "fakeeyes", url: "images/Partner/logo_fakeeyes.svg" },
+    { no: 15, name: "더제주스토리", url: "images/Partner/logo_thejejustory.svg" },
+    { no: 16, name: "제주생태관광협회", url: "images/Partner/logo_jeju_ass_ecotour.svg" },
 ];
 
 export const MetaverseInfo = [

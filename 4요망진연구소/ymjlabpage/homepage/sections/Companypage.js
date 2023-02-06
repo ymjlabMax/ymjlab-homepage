@@ -79,9 +79,8 @@ export default function Companypage() {
                     /* width: 100%; */
                     height: 768px;
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
                     flex-direction: column;
+                    align-items: center;
                     margin-top: 50px;
                     margin-bottom: 150px;
                 }
