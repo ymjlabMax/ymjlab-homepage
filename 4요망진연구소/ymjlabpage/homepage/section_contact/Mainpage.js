@@ -8,6 +8,7 @@ import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
+import ModalPage from "./ModalPage.js";
 
 const options = [
     { value: "꿀트립서비스", label: "꿀트립서비스" },
@@ -46,7 +47,7 @@ const mailOptions = [
     },
 ];
 
-export default function ContactPage({ children }) {
+export default function ContactPage() {
     const router = useRouter();
     // 연락정보 상태 관리
     const [contactInfo, setContactInfo] = useState({
@@ -65,7 +66,7 @@ export default function ContactPage({ children }) {
     const [server2, setServer2] = useState("");
 
     //동의하기 모달창 관리
-    const [isModal, setIsModal] = useState(false);
+    const [isOpenModal, setIsOpenModal] = useState(false);
 
     /** 입력된 텍스트 관리 */
     const handleInputValue = (key) => (e) => {
@@ -193,7 +194,10 @@ export default function ContactPage({ children }) {
             <div className="check-wrap">
                 <div className="check-box">
                     <input type="checkbox" onChange={handleInputValue("agree")} />
-                    개인정보 수집,이용동의&nbsp;&nbsp;&nbsp;<span className="bold-span">내용보기</span>
+                    개인정보 수집,이용동의&nbsp;&nbsp;&nbsp;
+                    <span className="bold-span" onClick={() => setIsOpenModal(!isOpenModal)}>
+                        내용보기{isOpenModal ? <ModalPage setIsOpenModal={setIsOpenModal} /> : null}
+                    </span>
                 </div>
                 <div className="btn-list">
                     <Link href="/">
@@ -336,9 +340,10 @@ export default function ContactPage({ children }) {
                     transition: all 0.3s;
                 }
                 .bold-span {
-                    font-weight: 500;
+                    font-weight: 700;
                     font-size: 16px;
                     color: #404040;
+                    cursor: pointer;
                 }
 
                 .active-btn {

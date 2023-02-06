@@ -35,7 +35,7 @@ export default function Summary() {
                 </motion.div>
                 <motion.div variants={fadeIn("left", "tween", 0.1, 0.5)}>
                     <div className="right-box">
-                        <Image src="/images/kkultrip_img/kkultrip_phone.svg" alt="메타버스 이미지" width={200} height={200} />
+                        <Image src="/images/kkultrip_img/gif_slide_kt.gif" alt="메타버스 이미지" width={200} height={200} />
                     </div>
                 </motion.div>
             </motion.div>

@@ -188,8 +188,9 @@ export default function Startpage() {
                         }
 
                         h1 {
-                            font-size: var(--font_22);
+                            font-size: var(--font_26);
                             transition: all 0.3s;
+                            line-height: 34px;
                         }
 
                         .right-box {

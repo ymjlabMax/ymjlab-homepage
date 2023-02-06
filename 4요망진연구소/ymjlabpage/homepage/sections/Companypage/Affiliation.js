@@ -11,7 +11,7 @@ const Affiliation = () => (
         {AffInfo.map((el, index) => (
             <motion.div key={index} whileHover={{ scale: 1.4 }}>
                 <div className="aff-box">
-                    <Image src={el.url} alt={el.name} width={200} height={200} />
+                    <Image src={el.url} alt={el.name} width={180} height={200} />
                 </div>
             </motion.div>
         ))}

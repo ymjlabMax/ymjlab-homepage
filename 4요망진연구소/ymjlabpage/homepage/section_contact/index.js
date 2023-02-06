@@ -1,3 +1,4 @@
 import Mainpage from "./Mainpage";
+import ModalPage from "./ModalPage";
 
-export { Mainpage };
+export { Mainpage, ModalPage };

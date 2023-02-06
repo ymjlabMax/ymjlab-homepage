@@ -5,7 +5,7 @@ import { navVariants } from "../utils/motion";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Mainpage.module.css";
-import metaverse_main from "../public/images/metaverse_img/metaverse_main_img.png";
+import metaverse_main from "../public/images/metaverse_img/metaverse_main_img2x1.svg";
 
 const Mainpage = () => {
     return (
@@ -14,13 +14,13 @@ const Mainpage = () => {
                 <Image
                     alt="Mountains"
                     src={metaverse_main}
-                    placeholder="blur"
+                    // placeholder="blur"
                     quality={100}
                     fill
                     sizes="100%"
-                    style={{
-                        objectFit: "cover",
-                    }}
+                    // style={{
+                    //     objectFit: "cover",
+                    // }}
                 />
             </div>
             <div className="title">
