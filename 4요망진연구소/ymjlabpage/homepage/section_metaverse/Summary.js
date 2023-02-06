@@ -53,7 +53,7 @@ export default function Summary() {
 
                     h1 {
                         font-weight: var(--bold);
-                        font-size: var(--font_40);
+                        font-size: var(--font_32);
                         line-height: 50px;
                         display: flex;
                         align-items: center;

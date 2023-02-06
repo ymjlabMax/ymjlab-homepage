@@ -343,6 +343,17 @@ a {
     align-items: center;
 }
 
+.kkultrip-sub-title {
+    font-family: "Gmarket Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #181818;
+}
+
 @media only screen and (max-width: 1300px) {
     .scroll-box-history {
         width: 800px;

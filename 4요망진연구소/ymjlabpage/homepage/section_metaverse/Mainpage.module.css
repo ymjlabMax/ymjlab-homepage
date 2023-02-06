@@ -17,3 +17,9 @@
     z-index: -1;
     background: linear-gradient(to right, #3f6682, #263749);
 }
+
+@media only screen and (max-width: 600px) {
+    .bgWrap {
+        background: linear-gradient(to top, #3b4c66, #1c232d);
+    }
+}

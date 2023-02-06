@@ -6,7 +6,7 @@ export default function ModalPage({ setIsOpenModal }) {
         <section onClick={() => setIsOpenModal()}>
             <div className="modal-box" onClick={(e) => e.stopPropagation()}>
                 <h1>개인정보 수집·이용 동의서</h1>
-                <p>주식회사 요망진구소는(이하 "회사”) 회사에 문의하시는 분들을 대상으로 아래와 같이 개인정보를 수집·이용하고 있습니다.</p>
+                <p>주식회사 요망진구소는(이하 &quot;회사&quot;) 회사에 문의하시는 분들을 대상으로 아래와 같이 개인정보를 수집·이용하고 있습니다.</p>
                 <p>수집한 개인정보는 ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률‘ 및 기타 관계 법령에 의거하여 보호 됩니다.</p>
                 <br />
                 <p>1. 개인정보의 수집 및 이용 목적:</p>

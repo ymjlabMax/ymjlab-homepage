@@ -126,19 +126,32 @@ export default function Business() {
                 }
 
                 @media only screen and (max-width: 600px) {
-                    .business-wrap {
-                        flex-direction: column;
-                        align-items: center;
-                    }
-                    .business-wrap2 {
-                        flex-direction: column-reverse;
-                        align-items: center;
+                    h1 {
+                        font-weight: var(--bold);
+                        font-size: var(--font_32);
                     }
                     .left-box {
-                        margin-bottom: 32px;
+                        display: flex;
+                        align-items: center;
                     }
                     .right-box {
-                        margin-bottom: 32px;
+                        padding: 0 16px 0 16px;
+                    }
+
+                    .content-box {
+                        width: auto;
+                        padding: 0 16px 0 16px;
+                    }
+
+                    .pull-right {
+                        justify-content: center;
+                    }
+
+                    p {
+                        font-weight: var(--regular);
+                        font-size: var(--font_16);
+                        line-height: 32px;
+                        color: var(--font_500);
                     }
                 }
             `}</style>

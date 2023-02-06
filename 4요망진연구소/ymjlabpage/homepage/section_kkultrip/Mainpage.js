@@ -16,9 +16,7 @@ const Mainpage = () => {
                 <div className="title">
                     <h1>꿀 같은 여행</h1>
                     <h1>더 달콤하게 누리세요!</h1>
-                    <p>
-                        <TypingText title="신경쓰지 않아도 할인받은 꿀같은 여행앱" />
-                    </p>
+                    <TypingText className="sub-title" title="신경쓰지 않아도 할인받은 꿀같은 여행앱" />
                     <div className="width-div">&nbsp;</div>
                 </div>
                 <style jsx>{`
@@ -56,18 +54,27 @@ const Mainpage = () => {
                         margin-bottom: 16px;
                         font-stretch: expanded;
                     }
-                    p {
-                        font-family: "Gmarket Sans";
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 19px;
-                        line-height: 19px;
-                        display: flex;
-                        align-items: center;
-                        color: #181818;
+
+                    @media only screen and (max-width: 900px) {
+                        .width-div {
+                            display: none;
+                        }
+
+                        h1 {
+                            font-size: 48px;
+                        }
                     }
-                    
+
                     @media only screen and (max-width: 600px) {
+                        section {
+                            height: auto;
+                            padding-bottom: 100px;
+                        }
+
+                        h1 {
+                            font-size: 32px;
+                            line-height: 22px;
+                        }
                     }
                 `}</style>
             </section>

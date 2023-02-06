@@ -32,6 +32,11 @@ export default function LandingBtn() {
                     .btn-img {
                         box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
                     }
+                    @media only screen and (max-width: 600px) {
+                        .btn {
+                            display: none;
+                        }
+                    }
                 `}</style>
             </div>
         </>

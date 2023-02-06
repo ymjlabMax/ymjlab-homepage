@@ -210,7 +210,7 @@ export default function ProjectPage() {
                 }
                 h1 {
                     font-weight: var(--bold);
-                    font-size: var(--font_40);
+                    font-size: var(--font_32);
                     line-height: 40px;
                     display: flex;
                     color: var(--font_400);
