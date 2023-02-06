@@ -134,7 +134,7 @@ export default function Summary() {
 
                     h1 {
                         font-weight: var(--bold);
-                        font-size: var(--font_22);
+                        font-size: var(--font_28);
                         margin-bottom: 18px;
                     }
 
